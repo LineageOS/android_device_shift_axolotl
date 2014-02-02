@@ -152,9 +152,6 @@ TARGET_ENABLE_MEDIADRM_64 := true
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/rootdir/config.fs
 
-# FM
-BOARD_HAVE_QCOM_FM := true
-
 # GPS
 TARGET_NO_RPC := true
 
