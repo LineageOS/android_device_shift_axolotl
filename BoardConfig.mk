@@ -54,7 +54,6 @@ else
     TARGET_KERNEL_CONFIG := lineage_axolotl_defconfig
 endif
 TARGET_KERNEL_SOURCE := kernel/shift/sdm845
-TARGET_KERNEL_APPEND_DTB := false
 TARGET_USES_UNCOMPRESSED_KERNEL := false
 
 TARGET_KERNEL_ADDITIONAL_FLAGS := \
