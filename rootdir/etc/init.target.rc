@@ -65,6 +65,9 @@ on early-boot
     # wait for insmod_sh to finish loading all kernel modules
     wait_for_prop vendor.all.modules.ready 1
 
+    # Wait for insmod_sh to finish all boot devices
+    wait_for_prop vendor.all.devices.ready 1
+
     exec u:r:qti_init_shell:s0 -- /vendor/bin/init.qcom.early_boot.sh
 
     chown system system /mnt/vendor/persist/sensors
