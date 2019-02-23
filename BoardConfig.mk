@@ -83,7 +83,6 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 
 # Platform
 TARGET_BOARD_PLATFORM := sdm845
-TARGET_BOARD_PLATFORM_GPU := qcom-adreno630
 
 #####
 
