@@ -2,6 +2,8 @@
 persist.camera.arcsoft.    u:object_r:vendor_camera_prop:s0
 persist.camera.capture.    u:object_r:vendor_camera_prop:s0
 persist.vendor.camera.     u:object_r:camera_prop:s0
+ro.camera.req.fmq.size     u:object_r:vendor_ro_camera_prop:s0
+ro.camera.res.fmq.size     u:object_r:vendor_ro_camera_prop:s0
 vendor.debug.camera.       u:object_r:camera_prop:s0
 
 # Power
