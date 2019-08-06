@@ -600,7 +600,6 @@ vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so|6302b61d7d1580254c091c
 vendor/lib64/vendor.qti.imsrtpservice@3.0.so|25517caf74691b812320b46b477a3f4161cc1bcf
 
 # Init
-vendor/bin/init.class_main.sh
 vendor/bin/init.qcom.class_core.sh
 vendor/bin/init.qcom.post_boot.sh
 vendor/bin/init.qcom.sensors.sh
