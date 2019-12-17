@@ -9,4 +9,5 @@ vendor.goodix.hardware.biometrics.fingerprint::IGoodixFingerprintDaemonHbd   u:o
 vendor.goodix.hardware.fingerprint::IGoodixBiometricsFingerprint             u:object_r:hal_goodix_hwservice:s0
 
 # NFC
+vendor.nxp.nxpese::INxpEse                                                   u:object_r:nxpese_hwservice:s0
 vendor.nxp.nxpnfc::INxpNfc                                                   u:object_r:nxpnfc_hwservice:s0
