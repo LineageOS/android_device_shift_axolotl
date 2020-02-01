@@ -103,18 +103,12 @@ vendor/lib64/libspkrprot.so
 # Audio - Firmware
 vendor/firmware/tfa98xx.cnt
 
-# Audio FX modules - TODO: cleanup
+# Audio FX modules
 system/etc/permissions/audiosphere.xml
 system/framework/audiosphere.jar
 vendor/lib/soundfx/libasphere.so
-vendor/lib/soundfx/libqcbassboost.so
-vendor/lib/soundfx/libqcreverb.so
-vendor/lib/soundfx/libqcvirt.so
 vendor/lib/soundfx/libshoebox.so
 vendor/lib64/soundfx/libasphere.so
-vendor/lib64/soundfx/libqcbassboost.so
-vendor/lib64/soundfx/libqcreverb.so
-vendor/lib64/soundfx/libqcvirt.so
 vendor/lib64/soundfx/libshoebox.so
 
 # Bluetooth
