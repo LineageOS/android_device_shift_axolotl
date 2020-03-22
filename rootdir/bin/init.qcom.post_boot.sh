@@ -29,15 +29,6 @@
 
 target=`getprop ro.board.platform`
 
-function start_hbtp()
-{
-        # Start the Host based Touch processing but not in the power off mode.
-        #bootmode=`getprop ro.bootmode`
-        #if [ "charger" != $bootmode ]; then
-        #        start vendor.hbtp
-        #fi
-}
-
 case "$target" in
     "sdm845")
 
@@ -46,39 +37,6 @@ case "$target" in
         # to one of the CPU from the default IRQ affinity mask.
         echo f > /proc/irq/default_smp_affinity
 
-        if [ -f /sys/devices/soc0/soc_id ]; then
-                soc_id=`cat /sys/devices/soc0/soc_id`
-        else
-                soc_id=`cat /sys/devices/system/soc/soc0/id`
-        fi
-
-        if [ -f /sys/devices/soc0/hw_platform ]; then
-                hw_platform=`cat /sys/devices/soc0/hw_platform`
-        fi
-
-        if [ -f /sys/devices/soc0/platform_subtype_id ]; then
-                platform_subtype_id=`cat /sys/devices/soc0/platform_subtype_id`
-        fi
-
-        case "$soc_id" in
-                "321" | "341")
-                # Start Host based Touch processing
-                case "$hw_platform" in
-                    "QRD" )
-                            case "$platform_subtype_id" in
-                                   "32") #QVR845 do nothing
-                                     ;;
-                                   *)
-                                         start_hbtp
-                                     ;;
-                            esac
-                     ;;
-                    *)
-                          start_hbtp
-                     ;;
-                esac
-         ;;
-        esac
         # Core control parameters
         echo 2 > /sys/devices/system/cpu/cpu4/core_ctl/min_cpus
         echo 60 > /sys/devices/system/cpu/cpu4/core_ctl/busy_up_thres
