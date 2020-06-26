@@ -75,6 +75,13 @@ MeasurementAPIClient::~MeasurementAPIClient()
     LOC_LOGD("%s]: ()", __FUNCTION__);
 }
 
+void MeasurementAPIClient::clearInterfaces()
+{
+    mGnssMeasurementCbIface = nullptr;
+    mGnssMeasurementCbIface_1_1 = nullptr;
+    mGnssMeasurementCbIface_2_0 = nullptr;
+}
+
 // for GpsInterface
 Return<IGnssMeasurement::GnssMeasurementStatus>
 MeasurementAPIClient::measurementSetCallback(const sp<V1_0::IGnssMeasurementCallback>& callback)
@@ -82,6 +89,7 @@ MeasurementAPIClient::measurementSetCallback(const sp<V1_0::IGnssMeasurementCall
     LOC_LOGD("%s]: (%p)", __FUNCTION__, &callback);
 
     mMutex.lock();
+    clearInterfaces();
     mGnssMeasurementCbIface = callback;
     mMutex.unlock();
 
@@ -97,6 +105,7 @@ MeasurementAPIClient::measurementSetCallback_1_1(
             __FUNCTION__, &callback, (int)powerMode, timeBetweenMeasurement);
 
     mMutex.lock();
+    clearInterfaces();
     mGnssMeasurementCbIface_1_1 = callback;
     mMutex.unlock();
 
@@ -112,6 +121,7 @@ MeasurementAPIClient::measurementSetCallback_2_0(
         __FUNCTION__, &callback, (int)powerMode, timeBetweenMeasurement);
 
     mMutex.lock();
+    clearInterfaces();
     mGnssMeasurementCbIface_2_0 = callback;
     mMutex.unlock();
 
