@@ -10,8 +10,6 @@
 
 DEVICE_PATH := device/shift/axolotl
 
-BOARD_VENDOR := shift
-
 # We ship prebuilt files, which override source built components, eg "audio.primary.sdm845.so"
 BUILD_BROKEN_DUP_RULES := true
 
