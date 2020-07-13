@@ -48,8 +48,6 @@ TARGET_SCREEN_DENSITY := 420
 TARGET_NO_KERNEL := false
 TARGET_NO_KERNEL_OVERRIDE := false
 
-TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_HEADER_ARCH := arm64
 ifeq ($(TARGET_BUILD_VARIANT),eng)
     TARGET_KERNEL_CONFIG := lineage_axolotl_eng_defconfig
 else
@@ -176,9 +174,6 @@ TARGET_USES_ION := true
 # HIDL
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/vintf/manifest.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/vintf/compatibility_matrix.xml
-
-# Init
-TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
 
 # Light
 TARGET_PROVIDES_LIBLIGHT := true
