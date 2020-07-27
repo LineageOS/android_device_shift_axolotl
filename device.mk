@@ -15,6 +15,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # Inherit vendor blobs
 $(call inherit-product, vendor/shift/axolotl/axolotl-vendor.mk)
 
+# Enforce native interfaces of product partition as VNDK
+PRODUCT_PRODUCT_VNDK_VERSION := current
+
+# Enforce java interfaces of product partition
+PRODUCT_ENFORCE_PRODUCT_PARTITION_INTERFACE := true
+
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := 420dpi
