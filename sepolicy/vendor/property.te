@@ -1,6 +1,10 @@
 
-type power_prop, property_type;
-type vendor_camera_prop, property_type;
-type vendor_device_prop, property_type;
-type vendor_fm_prop, property_type;
-type vendor_shift_prop, property_type;
+vendor_internal_prop(power_prop)
+
+vendor_internal_prop(vendor_camera_prop)
+
+vendor_internal_prop(vendor_device_prop)
+
+vendor_public_prop(vendor_fm_prop)
+
+vendor_public_prop(vendor_shift_prop)
