@@ -89,6 +89,7 @@ static uint32_t gnssResetSvConfig();
 static uint32_t configLeverArm(const LeverArmConfigInfo& configInfo);
 static uint32_t configRobustLocation(bool enable, bool enableForE911);
 static bool isSS5HWEnabled();
+static void resetNetworkInfo();
 
 static const GnssInterface gGnssInterface = {
     sizeof(GnssInterface),
@@ -136,6 +137,7 @@ static const GnssInterface gGnssInterface = {
     configLeverArm,
     configRobustLocation,
     isSS5HWEnabled,
+    resetNetworkInfo,
 };
 
 #ifndef DEBUG_X86
@@ -408,6 +410,12 @@ static void injectLocationExt(const GnssLocationInfoNotification &locationInfo)
 static void updateBatteryStatus(bool charging) {
     if (NULL != gGnssAdapter) {
         gGnssAdapter->getSystemStatus()->updatePowerConnectState(charging);
+    }
+}
+
+static void resetNetworkInfo() {
+    if (NULL != gGnssAdapter) {
+        gGnssAdapter->getSystemStatus()->resetNetworkInfo();
     }
 }
 
