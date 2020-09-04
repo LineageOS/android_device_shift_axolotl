@@ -98,6 +98,7 @@ struct GnssInterface {
     uint32_t (*configLeverArm)(const LeverArmConfigInfo& configInfo);
     uint32_t (*configRobustLocation)(bool enable, bool enableForE911);
     bool (*isSS5HWEnabled)();
+    void (*resetNetworkInfo)();
 };
 
 struct BatchingInterface {
