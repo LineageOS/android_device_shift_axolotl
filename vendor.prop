@@ -201,5 +201,9 @@ ro.vendor.use_data_netmgrd=true
 # Sensors
 persist.vendor.sensors.enable.mag_filter=true
 
+# Watchdog - enable timeout loop breaker
+framework_watchdog.fatal_window.second=600
+framework_watchdog.fatal_count=3
+
 # Zygote
 zygote.critical_window.minute=10
