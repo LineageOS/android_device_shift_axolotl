@@ -180,3 +180,6 @@ ro.telephony.iwlan_operation_mode=legacy
 ro.shift.device.codename=axolotl
 ro.vendor.shift.device.codename=axolotl
 vendor.shift.device.codename=axolotl
+
+# Zygote
+zygote.critical_window.minute=10
