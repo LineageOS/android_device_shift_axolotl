@@ -37,10 +37,10 @@ vendor/lib/rfsa/adsp/libVC1DecDsp_skel.so
 vendor/lib/rfsa/adsp/libVC1Dec.so
 
 # ANT+ (system)
-product/lib64/com.qualcomm.qti.ant@1.0.so:system/lib64/com.qualcomm.qti.ant@1.0.so
-product/lib/com.qualcomm.qti.ant@1.0.so:system/lib/com.qualcomm.qti.ant@1.0.so
-system/lib64/libantradio.so
-system/lib/libantradio.so
+product/lib64/com.qualcomm.qti.ant@1.0.so:system_ext/lib64/com.qualcomm.qti.ant@1.0.so
+product/lib/com.qualcomm.qti.ant@1.0.so:system_ext/lib/com.qualcomm.qti.ant@1.0.so
+-system/lib64/libantradio.so:system_ext/lib64/libantradio.so
+-system/lib/libantradio.so:system_ext/lib/libantradio.so
 
 # ANT+ (vendor)
 vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so
