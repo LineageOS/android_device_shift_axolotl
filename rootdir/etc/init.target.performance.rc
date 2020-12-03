@@ -100,8 +100,6 @@ on boot
     write /sys/class/devfreq/soc:qcom,mincpubw/governor "cpufreq"
 
 on property:sys.boot_completed=1
-    setprop sys.read_ahead_kb ${ro.read_ahead_kb.bootcomplete:-128}
-
     # Re-enable sleep modes
     write /sys/module/lpm_levels/parameters/sleep_disabled 0
 
@@ -114,29 +112,6 @@ on property:sys.boot_completed=1
 
     # Enable PowerHAL hint processing
     #setprop vendor.powerhal.init 1
-
-# Device Mapper Storage Tuning
-
-on property:dev.mnt.blk.data=* && property:sys.read_ahead_kb=*
-    write /sys/block/${dev.mnt.blk.data}/queue/read_ahead_kb ${sys.read_ahead_kb:-2048}
-
-on property:dev.mnt.blk.metadata=* && property:sys.read_ahead_kb=*
-    write /sys/block/${dev.mnt.blk.metadata}/queue/read_ahead_kb ${sys.read_ahead_kb:-2048}
-
-on property:dev.mnt.blk.mnt.scratch=* && property:sys.read_ahead_kb=*
-    write /sys/block/${dev.mnt.blk.mnt.scratch}/queue/read_ahead_kb ${sys.read_ahead_kb:-2048}
-
-on property:dev.mnt.blk.mnt.vendor.persist=* && property:sys.read_ahead_kb=*
-    write /sys/block/${dev.mnt.blk.mnt.vendor.persist}/queue/read_ahead_kb ${sys.read_ahead_kb:-2048}
-
-on property:dev.mnt.blk.product=* && property:sys.read_ahead_kb=*
-    write /sys/block/${dev.mnt.blk.product}/queue/read_ahead_kb ${sys.read_ahead_kb:-2048}
-
-on property:dev.mnt.blk.root=* && property:sys.read_ahead_kb=*
-    write /sys/block/${dev.mnt.blk.root}/queue/read_ahead_kb ${sys.read_ahead_kb:-2048}
-
-on property:dev.mnt.blk.vendor=* && property:sys.read_ahead_kb=*
-    write /sys/block/${dev.mnt.blk.vendor}/queue/read_ahead_kb ${sys.read_ahead_kb:-2048}
 
 # Charger mode - conserve power and start thermal monitoring
 
