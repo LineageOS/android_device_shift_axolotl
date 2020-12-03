@@ -158,6 +158,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/camera/camxoverridesettings.txt:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camxoverridesettings.txt \
 
+# Configstore
+PRODUCT_PACKAGES += \
+    disable_configstore
+
 # DebugFS
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 
