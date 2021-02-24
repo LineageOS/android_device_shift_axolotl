@@ -249,7 +249,6 @@ vendor/etc/init/cnd.rc|3a5183df3479500fb729493bc56c71166fc10bce
 vendor/lib64/libcne.so|6df8c1ea8b00c46eaaabeffdfcf2323afff20094
 vendor/lib64/libcneapiclient.so|1e7564af8f912b6b9877666db755d0d52a4e6c4f
 vendor/lib64/libcneoplookup.so|14aedb62fb4e0171581347dd2dbadf9395bdd36a
-vendor/lib64/libcneqmiutils.so|a984bc760db218395bd663dcb83a28d4c76f97c6
 vendor/lib64/libwms.so|bab86eca3cf21c5150952dafe07ad9721aaaffe7
 vendor/lib64/libwqe.so|0a97099aa12cc8837b8fe7d532cbe3770b4d3edc
 vendor/lib64/libxml.so|af2ef501c85476a675b770fd03cf24e06a9a70f6
