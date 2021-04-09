@@ -5,8 +5,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Use the non-open-source parts, if they're present
--include vendor/shift/axolotl/BoardConfigVendor.mk
+# Use the non-open-source parts
+include vendor/shift/axolotl/BoardConfigVendor.mk
 
 DEVICE_PATH := device/shift/axolotl
 
