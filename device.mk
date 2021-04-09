@@ -13,7 +13,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # Inherit vendor blobs
-$(call inherit-product-if-exists, vendor/shift/axolotl/axolotl-vendor.mk)
+$(call inherit-product, vendor/shift/axolotl/axolotl-vendor.mk)
 
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
