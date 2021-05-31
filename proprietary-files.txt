@@ -78,10 +78,6 @@ vendor/lib/libcsd-client.so
 vendor/lib/libdrc.so
 vendor/lib/libqtigef.so
 
-# Audio - Bluetooth
-vendor/lib64/hw/com.qualcomm.qti.bluetooth_audio@1.0-impl.so
-vendor/lib/hw/com.qualcomm.qti.bluetooth_audio@1.0-impl.so
-
 # Audio - Extensions
 product/lib64/vendor.qti.hardware.audiohalext@1.0.so:system_ext/lib64/vendor.qti.hardware.audiohalext@1.0.so
 product/lib/vendor.qti.hardware.audiohalext@1.0.so:system_ext/lib/vendor.qti.hardware.audiohalext@1.0.so
@@ -136,15 +132,11 @@ vendor/lib64/libaptX_encoder.so:system_ext/lib64/libaptX_encoder.so
 vendor/lib64/libaptXHD_encoder.so:system_ext/lib64/libaptXHD_encoder.so
 
 # Bluetooth - Audio
-vendor/lib64/hw/audio.bluetooth_qti.default.so
-vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
 vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so
 vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
 vendor/lib64/btaudio_offload_if.so
 vendor/lib64/libbluetooth_audio_session_qti.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
-vendor/lib/hw/audio.bluetooth_qti.default.so
-vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
 vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so
 vendor/lib/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
 vendor/lib/btaudio_offload_if.so

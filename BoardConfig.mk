@@ -143,7 +143,6 @@ TARGET_PROVIDES_AUDIO_EXTNS := true
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
-TARGET_USE_QTI_BT_STACK := true
 
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/rootdir/config.fs
@@ -168,7 +167,6 @@ TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
 
 # Qualcomm BSP
 BOARD_USES_QCOM_HARDWARE := true
-TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
 
 # Recovery
 BOARD_INCLUDE_RECOVERY_DTBO := true
