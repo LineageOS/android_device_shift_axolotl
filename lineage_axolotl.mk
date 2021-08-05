@@ -21,5 +21,8 @@ $(call inherit-product, device/shift/axolotl/full_axolotl.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Inherit GSI product for now, until we support "normal" builds.
+$(call inherit-product, vendor/lineage/build/target/product/lineage_arm64_ab.mk)
+
 # Override product name for Lineage.
 PRODUCT_NAME := lineage_axolotl
