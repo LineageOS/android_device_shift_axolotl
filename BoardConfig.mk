@@ -1,18 +1,8 @@
 #
-# Copyright 2021 SHIFT GmbH
-# Copyright 2021 The LineageOS Project
+# Copyright (C) 2021 SHIFT GmbH
+# Copyright (C) 2021 The LineageOS Project
 #
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#      http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
+# SPDX-License-Identifier: Apache-2.0
 #
 
 # Use the non-open-source parts, if they're present
@@ -22,7 +12,10 @@ DEVICE_PATH := device/shift/axolotl
 
 BOARD_VENDOR := shift
 
-##########
+# We ship prebuilt files, which override source built components, eg "audio.primary.sdm845.so"
+BUILD_BROKEN_DUP_RULES := true
+
+#####
 
 # Architecture
 TARGET_ARCH := arm64
@@ -43,6 +36,9 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := kryo385
 TARGET_BOOTLOADER_BOARD_NAME := sdm845
 TARGET_NO_BOOTLOADER := true
 
+# Display
+TARGET_SCREEN_DENSITY := 420
+
 # Kernel
 TARGET_NO_KERNEL := false
 TARGET_NO_KERNEL_OVERRIDE := false
@@ -52,8 +48,12 @@ TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CONFIG := lineage_axolotl_defconfig
 TARGET_KERNEL_SOURCE := kernel/shift/sdm845
-#TARGET_NEEDS_DTBOIMAGE := true
+TARGET_KERNEL_APPEND_DTB := false
 TARGET_USES_UNCOMPRESSED_KERNEL := false
+
+TARGET_KERNEL_ADDITIONAL_FLAGS := \
+    MKDTIMG=$(shell pwd)/prebuilts/misc/$(HOST_OS)-x86/libufdt/mkdtimg \
+#    DTC_EXT=$(shell pwd)/prebuilts/misc/$(HOST_OS)-x86/dtc/dtc \
 
 BOARD_KERNEL_IMAGE_NAME  := Image.gz-dtb
 BOARD_KERNEL_BASE        := 0x00000000
@@ -69,79 +69,247 @@ BOARD_KERNEL_CMDLINE += service_locator.enable=1
 BOARD_KERNEL_CMDLINE += androidboot.memcg=1 cgroup.memory=nokmem
 BOARD_KERNEL_CMDLINE += androidboot.usbcontroller=a600000.dwc3 swiotlb=2048
 BOARD_KERNEL_CMDLINE += androidboot.boot_devices=soc/1d84000.ufshc
-BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 
+# (BOARD_KERNEL_PAGESIZE * 32)
+BOARD_FLASH_BLOCK_SIZE := 131072
+
+BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
-BOARD_MKBOOTIMG_ARGS := --header_version 2
+BOARD_BOOT_HEADER_VERSION := 2
+BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 
 # Platform
 TARGET_BOARD_PLATFORM := sdm845
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno630
 
-##########
+#####
 
 # AB
 AB_OTA_UPDATER := true
-#AB_OTA_PARTITIONS += boot dtbo system vendor vbmeta vbmeta_system vbmeta_vendor
-AB_OTA_PARTITIONS += system vbmeta
+AB_OTA_PARTITIONS += \
+    boot \
+    dtbo \
+    recovery \
+
+AB_OTA_PARTITIONS += \
+    product \
+    system \
+    system_ext \
+    vendor \
+
+AB_OTA_PARTITIONS += \
+    vbmeta \
+    vbmeta_system \
+    vbmeta_vendor \
+
+# AVB
+BOARD_AVB_VBMETA_SYSTEM := system system_ext
+BOARD_AVB_VBMETA_SYSTEM_KEY_PATH := external/avb/test/data/testkey_rsa4096.pem
+BOARD_AVB_VBMETA_SYSTEM_ALGORITHM := SHA256_RSA4096
+BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
+BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 2
+
+BOARD_AVB_VBMETA_VENDOR := vendor
+BOARD_AVB_VBMETA_VENDOR_KEY_PATH := external/avb/test/data/testkey_rsa4096.pem
+BOARD_AVB_VBMETA_VENDOR_ALGORITHM := SHA256_RSA4096
+BOARD_AVB_VBMETA_VENDOR_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
+BOARD_AVB_VBMETA_VENDOR_ROLLBACK_INDEX_LOCATION := 3
+
+# Enable AVB 2.0
+BOARD_AVB_ENABLE := true
+
+# Build the image with verity pre-disabled - https://android.googlesource.com/platform/external/avb/+/58305521295e51cb52a74d8d8bbaed738cf0767a
+BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --set_hashtree_disabled_flag
+BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 2
+
+#####
+
+# ANT+
+BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
 
 # APEX
 DEXPREOPT_GENERATE_APEX_IMAGE := true
 
 # Audio
+#AUDIO_FEATURE_ENABLED_AAC_ADTS_OFFLOAD := true
+#AUDIO_FEATURE_ENABLED_AHAL_EXT := true
+AUDIO_FEATURE_ENABLED_AUDIOSPHERE := true
+AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT := true
+AUDIO_FEATURE_ENABLED_EXTN_FORMATS := true
+AUDIO_FEATURE_ENABLED_FM_POWER_OPT := true
+AUDIO_FEATURE_ENABLED_GEF_SUPPORT := true
+AUDIO_FEATURE_ENABLED_HDMI_SPK := true
+AUDIO_FEATURE_ENABLED_PROXY_DEVICE := true
+BOARD_SUPPORTS_SOUND_TRIGGER := true
+BOARD_USES_ALSA_AUDIO := true
+TARGET_PROVIDES_AUDIO_EXTNS := true
+USE_CUSTOM_AUDIO_POLICY := 1
 USE_XML_AUDIO_POLICY_CONF := 1
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
+BOARD_HAVE_BLUETOOTH_QCOM := true
+TARGET_USE_QTI_BT_STACK := true
 
-# Treble
-BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
-BOARD_VNDK_VERSION := current
-TARGET_COPY_OUT_VENDOR := vendor
-TARGET_COPY_OUT_PRODUCT := product
-TARGET_USES_64_BIT_BINDER := true
+# Camera
+TARGET_USES_QTI_CAMERA_DEVICE := true
 
-# GSI forces product packages to /system for now.
-TARGET_COPY_OUT_PRODUCT := system/product
-BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE :=
+# DRM
+TARGET_ENABLE_MEDIADRM_64 := true
 
-# Partitions
-BOARD_BOOTIMAGE_PARTITION_SIZE := 0x04000000
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x06000000
-TARGET_USERIMAGES_USE_EXT4 := true
-TARGET_USERIMAGES_USE_F2FS := true
+# Filesystem
+TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/rootdir/config.fs
 
-# Partitions - DTBO
-BOARD_DTBOIMG_PARTITION_SIZE := 0x0800000
-#BOARD_PREBUILT_DTBOIMAGE := out/target/product/$(TARGET_PRODUCT)/prebuilt_dtbo.img
+# FM
+BOARD_HAVE_QCOM_FM := true
 
-# Enable dynamic system image size and reserved 64MB in it.
-BOARD_SYSTEMIMAGE_PARTITION_RESERVED_SIZE := 67108864
+# GPS
+TARGET_NO_RPC := true
 
-# Partition mount points under root
-BOARD_USES_METADATA_PARTITION := true
+# Graphics
+TARGET_USES_GRALLOC1 := true
+TARGET_USES_HWC2 := true
+TARGET_USES_ION := true
 
-# Dynamic Partitions
-BOARD_DYNAMIC_PARTITION_ENABLE := true
-BOARD_EXT4_SHARE_DUP_BLOCKS := true
-BOARD_QTI_DYNAMIC_PARTITIONS_SIZE := 6438256640
-#BOARD_QTI_DYNAMIC_PARTITIONS_PARTITION_LIST := system product vendor
-BOARD_QTI_DYNAMIC_PARTITIONS_PARTITION_LIST := system
-BOARD_SUPER_PARTITION_GROUPS := qti_dynamic_partitions
-BOARD_SUPER_PARTITION_SIZE := 12884901888
+# HIDL
+DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/vintf/manifest.xml
+DEVICE_MATRIX_FILE := $(DEVICE_PATH)/vintf/compatibility_matrix.xml
 
-# Recovery
-#BOARD_INCLUDE_RECOVERY_DTBO := true
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.recovery
-TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
-TARGET_RECOVERY_UI_LIB := \
-    libfstab \
+# Init
+TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
+#TARGET_INIT_VENDOR_LIB := libinit_msm
 
-# Verified Boot
-BOARD_AVB_ENABLE := true
+# Light
+TARGET_PROVIDES_LIBLIGHT := true
+
+# LMKD
+TARGET_LMKD_STATS_LOG := true
+
+# Media
+TARGET_USES_MEDIA_EXTENSIONS := true
+
+# Power
+TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
 
 # Qualcomm BSP
 BOARD_USES_QCOM_HARDWARE := true
-BUILD_WITHOUT_VENDOR := true
+TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
 
-TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
+# Recovery
+BOARD_INCLUDE_RECOVERY_DTBO := true
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.recovery
+TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
+TARGET_RECOVERY_UI_LIB := libfstab
+
+# RenderScript
+OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
+
+# RIL
+ENABLE_VENDOR_RIL_SERVICE := true
+
+# Security patch level
+VENDOR_SECURITY_PATCH := 2021-08-05
+
+# SELinux - TODO
+include device/qcom/sepolicy_vndr/SEPolicy.mk
+#BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
+#BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/public
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+
+# Treble
+BOARD_VNDK_VERSION := current
+BOARD_SYSTEMSDK_VERSIONS := 29
+
+# WLAN
+BOARD_WLAN_DEVICE := qcwcn
+BOARD_HOSTAPD_DRIVER := NL80211
+BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
+BOARD_WPA_SUPPLICANT_DRIVER := NL80211
+BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
+#WIFI_DRIVER_DEFAULT := qca_cld3
+WIFI_DRIVER_STATE_CTRL_PARAM := "/dev/wlan"
+WIFI_DRIVER_STATE_OFF := "OFF"
+WIFI_DRIVER_STATE_ON := "ON"
+WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
+WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
+WPA_SUPPLICANT_VERSION := VER_0_8_X
+
+##### Partition handling
+
+#BOARD_ROOT_EXTRA_FOLDERS += dsp bt_firmware firmware persist
+
+#BOARD_ROOT_EXTRA_SYMLINKS += /vendor/dsp:/dsp
+#BOARD_ROOT_EXTRA_SYMLINKS += /vendor/bt_firmware:/bt_firmware
+#BOARD_ROOT_EXTRA_SYMLINKS += /vendor/firmware_mnt:/firmware
+#BOARD_ROOT_EXTRA_SYMLINKS += /mnt/vendor/persist:/persist
+
+BOARD_DYNAMIC_PARTITION_ENABLE := true
+
+# Define the Dynamic Partition sizes and groups.
+BOARD_SUPER_PARTITION_SIZE := 12884901888
+BOARD_SUPER_PARTITION_GROUPS := axolotl_dynamic_partitions
+BOARD_AXOLOTL_DYNAMIC_PARTITIONS_SIZE := 6438256640
+BOARD_AXOLOTL_DYNAMIC_PARTITIONS_PARTITION_LIST := \
+    product \
+    system \
+    system_ext \
+    vendor \
+
+# Set error limit to BOARD_SUPER_PARTITON_SIZE - 500MB
+BOARD_SUPER_PARTITION_ERROR_LIMIT := 12360613888
+
+# boot.img
+BOARD_BOOTIMAGE_PARTITION_SIZE := 0x04000000
+
+# dtbo.img
+BOARD_DTBOIMG_PARTITION_SIZE := 0x0800000
+
+# metadata.img
+BOARD_METADATAIMAGE_PARTITION_SIZE := 16777216
+BOARD_USES_METADATA_PARTITION := true
+
+# persist.img
+BOARD_PERSISTIMAGE_PARTITION_SIZE := 33554432
+BOARD_PERSISTIMAGE_FILE_SYSTEM_TYPE := ext4
+
+# product.img
+BOARD_USES_PRODUCTIMAGE := true
+BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE := ext4
+TARGET_COPY_OUT_PRODUCT := product
+
+# recovery.img
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x06000000
+
+# system.img
+BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE := ext4
+
+# system_ext.img
+BOARD_SYSTEM_EXTIMAGE_FILE_SYSTEM_TYPE := ext4
+TARGET_COPY_OUT_SYSTEM_EXT := system_ext
+
+# userdata.img
+TARGET_USERIMAGES_USE_EXT4 := true
+TARGET_USERIMAGES_USE_F2FS := true
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 10737418240
+BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
+
+# vendor.img
+BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
+
+# vendor.img - split
+ENABLE_VENDOR_IMAGE := true
+TARGET_COPY_OUT_VENDOR := vendor
+BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
+
+# Reserve space for gapps installation and other customizations
+# product:    1500 MB
+# system:      500 MB
+# system_ext:  500 MB
+# vendor:      250 MB
+BOARD_PRODUCTIMAGE_EXTFS_INODE_COUNT := -1
+BOARD_PRODUCTIMAGE_PARTITION_RESERVED_SIZE := 1572864000
+BOARD_SYSTEM_EXTIMAGE_EXTFS_INODE_COUNT := -1
+BOARD_SYSTEM_EXTIMAGE_PARTITION_RESERVED_SIZE := 524288000
+BOARD_SYSTEMIMAGE_EXTFS_INODE_COUNT := -1
+BOARD_SYSTEMIMAGE_PARTITION_RESERVED_SIZE := 524288000
+BOARD_VENDORIMAGE_PARTITION_RESERVED_SIZE := 262144000
