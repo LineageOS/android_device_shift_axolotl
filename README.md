@@ -36,7 +36,8 @@ Display   | [DP over USB-C supported](https://www.displayport.org/displayport-ov
 See [LICENSE](LICENSE) in this repository.
 
 ```
-Copyright 2020-2021 SHIFT GmbH
+Copyright (C) 2020-2021 SHIFT GmbH
+Copyright (C) 2021 The LineageOS Project
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
