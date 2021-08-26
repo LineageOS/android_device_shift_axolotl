@@ -1,0 +1,2 @@
+
+allow mediaprovider gpuservice:binder call;

@@ -1,0 +1,2 @@
+
+binder_call(hal_imsrtp, radio)

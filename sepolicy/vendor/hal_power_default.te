@@ -1,0 +1,19 @@
+
+set_prop(hal_power_default, power_prop)
+
+dontaudit hal_power_default self:capability dac_override;
+
+allow hal_power_default input_device:dir search;
+allow hal_power_default input_device:chr_file rw_file_perms;
+
+allow hal_power_default sysfs_graphics:dir r_dir_perms;
+allow hal_power_default sysfs_graphics:file r_file_perms;
+
+# Allow doing powerhints on nodes defined in powerhint.json
+allow hal_power_default proc_sysctl_schedboost:file rw_file_perms;
+allow hal_power_default sysfs_devices_system_cpu:file rw_file_perms;
+allow hal_power_default sysfs_msm_subsys:dir r_dir_perms;
+allow hal_power_default sysfs_msm_subsys:file rw_file_perms;
+
+# Allow toggling double tap to wake gesture
+allow hal_power_default proc_touchpanel_gesture:file rw_file_perms;
