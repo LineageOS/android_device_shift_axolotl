@@ -1,0 +1,158 @@
+#
+# Copyright (c) 2019-2021, SHIFT GmbH. All rights reserved.
+#
+
+import /vendor/etc/init/hw/init.target.performance.rc
+
+on early-init
+    mount_all /vendor/etc/fstab.persist --early
+
+on init
+    start logd
+
+    wait /dev/block/platform/soc/1d84000.ufshc
+    symlink /dev/block/platform/soc/1d84000.ufshc /dev/block/bootdevice
+
+on fs
+    mount_all /vendor/etc/fstab.qcom --early
+    chown root system /mnt/vendor/persist
+    chmod 0771 /mnt/vendor/persist
+    restorecon_recursive /mnt/vendor/persist
+    mkdir /mnt/vendor/persist/data 0700 system system
+
+    chown system system /dev/goodix_fp
+    chmod 0777 /dev/goodix_fp
+
+on late-fs
+    # Start services for bootanim
+    start surfaceflinger
+    start bootanim
+    start vendor.hwcomposer-2-3
+    start vendor.configstore-hal
+    start vendor.qti.hardware.display.allocator
+    start vendor.light-hal-2-0
+
+    # Wait for hwservicemanager ready since fsck might be triggered in mount_all --late
+    # In such case, init won't responce the property_set from hwservicemanager and then
+    # cause services for bootanim not running.
+    wait_for_prop hwservicemanager.ready true
+
+    # Wait for keymaster
+    exec_start wait_for_keymaster
+
+    mount_all /vendor/etc/fstab.qcom --late
+
+on post-fs
+    # set RLIMIT_MEMLOCK to 64MB
+    setrlimit 8 67108864 67108864
+
+    write /dev/ipa 1
+
+on post-fs-data
+    chown system system /data/vendor_de/
+    chmod 0777 /data/vendor_de/
+
+    mkdir /data/vendor/nnhal 0700 system system
+
+on early-boot
+    # Set subsys restart level to RELATED
+    #   RELATED - Only restart subsystem
+    #   SYSTEM  - Restart whole system
+    write /sys/bus/msm_subsys/devices/subsys0/restart_level RELATED
+    write /sys/bus/msm_subsys/devices/subsys1/restart_level RELATED
+    write /sys/bus/msm_subsys/devices/subsys2/restart_level RELATED
+    write /sys/bus/msm_subsys/devices/subsys3/restart_level RELATED
+    write /sys/bus/msm_subsys/devices/subsys4/restart_level RELATED
+    write /sys/bus/msm_subsys/devices/subsys5/restart_level RELATED
+    write /sys/bus/msm_subsys/devices/subsys6/restart_level RELATED
+    write /sys/bus/msm_subsys/devices/subsys7/restart_level RELATED
+
+on boot
+    start rmt_storage
+    start rfs_access
+
+    # Gestures
+    chown system system /proc/touchpanel/double_tap_enable
+
+    # USB controller configuration
+    setprop vendor.usb.rndis.func.name "gsi"
+    setprop vendor.usb.rmnet.func.name "gsi"
+    setprop vendor.usb.rmnet.inst.name "rmnet"
+    setprop vendor.usb.dpl.inst.name "dpl"
+    setprop vendor.usb.qdss.inst.name "qdss"
+    setprop vendor.usb.controller a600000.dwc3
+
+    # Load WLAN driver
+    #insmod /vendor/lib/modules/wlan.ko
+
+on charger
+    start vendor.power_off_alarm
+    setprop sys.usb.configfs 1
+
+on boot && property:persist.vendor.usb.controller.default=*
+    setprop vendor.usb.controller ${persist.vendor.usb.controller.default}
+
+on property:vendor.usb.controller=*
+    setprop sys.usb.controller ${vendor.usb.controller}
+
+on property:sys.boot_completed=1
+    swapon_all /vendor/etc/fstab.qcom
+    write /proc/sys/vm/swappiness 100
+
+on property:init.svc.vendor.per_mgr=running
+    start vendor.per_proxy
+
+on property:sys.shutdown.requested=*
+    stop vendor.per_proxy
+
+on property:vold.decrypt=trigger_restart_framework
+   start cnss_diag
+
+on property:init.svc.vendor.hwcomposer-2-3=stopped
+    stop ppd
+
+on property:init.svc.vendor.hwcomposer-2-3=running
+    start ppd
+
+on property:init.svc.vendor.hwcomposer-2-3=restarting
+    stop ppd
+
+service vendor.pd_mapper /vendor/bin/pd-mapper
+    class core
+    user system
+    group system
+
+service vendor.per_mgr /vendor/bin/pm-service
+    class core
+    user system
+    group system
+    ioprio rt 4
+
+service vendor.per_proxy /vendor/bin/pm-proxy
+    class core
+    user system
+    group system
+    disabled
+
+service thermal-engine /system/vendor/bin/thermal-engine
+   class main
+   user root
+   socket thermal-send-client stream 0666 system system
+   socket thermal-recv-client stream 0660 system system
+   socket thermal-recv-passive-client stream 0666 system system
+   socket thermal-send-rule stream 0660 system system
+   group root
+   writepid /dev/cpuset/system-background/tasks
+
+service cnss_diag /system/vendor/bin/cnss_diag -q -f -t HELIUM
+   class main
+   user system
+   group system wifi inet sdcard_rw media_rw diag
+   oneshot
+
+service ppd /vendor/bin/mm-pp-dpps
+    class late_start
+    user system
+    group system graphics
+    socket pps stream 0660 system system
+    disabled
