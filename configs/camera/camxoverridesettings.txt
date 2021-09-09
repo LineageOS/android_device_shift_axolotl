@@ -1,0 +1,7 @@
+multiCameraEnable=TRUE
+enableSensorHWSync=TRUE
+enableSensorFpsMatch=TRUE
+multiCamera3ASync=QTI
+advanceFeatureMask=0x41
+disableFocusIndication=1
+FDFilterEngine=0
