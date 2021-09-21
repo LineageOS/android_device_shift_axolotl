@@ -53,7 +53,6 @@ TARGET_USES_UNCOMPRESSED_KERNEL := false
 
 TARGET_KERNEL_ADDITIONAL_FLAGS := \
     MKDTIMG=$(shell pwd)/prebuilts/misc/$(HOST_OS)-x86/libufdt/mkdtimg \
-#    DTC_EXT=$(shell pwd)/prebuilts/misc/$(HOST_OS)-x86/dtc/dtc \
 
 BOARD_KERNEL_IMAGE_NAME  := Image.gz-dtb
 BOARD_KERNEL_BASE        := 0x00000000
@@ -177,7 +176,6 @@ DEVICE_MATRIX_FILE := $(DEVICE_PATH)/vintf/compatibility_matrix.xml
 
 # Init
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
-#TARGET_INIT_VENDOR_LIB := libinit_msm
 
 # Light
 TARGET_PROVIDES_LIBLIGHT := true
@@ -235,13 +233,6 @@ WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 ##### Partition handling
-
-#BOARD_ROOT_EXTRA_FOLDERS += dsp bt_firmware firmware persist
-
-#BOARD_ROOT_EXTRA_SYMLINKS += /vendor/dsp:/dsp
-#BOARD_ROOT_EXTRA_SYMLINKS += /vendor/bt_firmware:/bt_firmware
-#BOARD_ROOT_EXTRA_SYMLINKS += /vendor/firmware_mnt:/firmware
-#BOARD_ROOT_EXTRA_SYMLINKS += /mnt/vendor/persist:/persist
 
 BOARD_DYNAMIC_PARTITION_ENABLE := true
 

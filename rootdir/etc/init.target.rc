@@ -68,9 +68,6 @@ on early-boot
     write /sys/bus/msm_subsys/devices/subsys7/restart_level RELATED
 
 on boot
-    start rmt_storage
-    start rfs_access
-
     # Gestures
     chown system system /proc/touchpanel/double_tap_enable
 
