@@ -110,6 +110,9 @@ on property:sys.boot_completed=1
     # Disable sched_boost
     write /proc/sys/kernel/sched_boost 0
 
+    # Limit 4KB discards to 2GB of space
+    write /dev/sys/fs/by-name/userdata/max_small_discards 5120
+
     # Enable PowerHAL hint processing
     #setprop vendor.powerhal.init 1
 
