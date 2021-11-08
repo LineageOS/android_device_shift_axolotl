@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "18450954_624018f3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19282
+      },
+      "writtenOn": "2021-11-08T16:23:10Z",
+      "side": 1,
+      "message": "New kernel got force pushed, landing this.",
+      "revId": "c61256d9f8ac15cbdd856cb6bc0ba9dd0ec5d44e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
