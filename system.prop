@@ -39,9 +39,7 @@ media.stagefright.thumbnail.prefer_hw_codecs=true
 #media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 mmp.enable.3g2=true
 media.aac_51_output_enabled=true
-#131071999 is decimal sum of supported codecs in AAL
-#codecs:(PARSER_)AAC AC3 AMR_NB AMR_WB ASF AVI DTS FLV 3GP 3G2 MKV MP2PS MP2TS MP3 OGG QCP WAV FLAC AIFF APE DSD MOV XVID MHAS
-vendor.mm.enable.qcom_parser=131071999
+vendor.mm.enable.qcom_parser=13629439
 persist.mm.enable.prefetch=true
 
 #
