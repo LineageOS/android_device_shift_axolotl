@@ -77,7 +77,6 @@ PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio.r_submix.default \
     audio.usb.default \
-    libaudioalsa \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
