@@ -23,6 +23,9 @@ PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := 420dpi
 PRODUCT_AAPT_PREBUILT_DPI := xxhdpi xhdpi hdpi
 
+# APEX
+PRODUCT_COMPRESSED_APEX := false
+
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2160
 TARGET_SCREEN_WIDTH  := 1080
@@ -60,13 +63,13 @@ AB_OTA_POSTINSTALL_CONFIG += \
 PRODUCT_PACKAGES += \
     fs_config_files \
 
-# ANT+
-PRODUCT_COPY_FILES += \
-    external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:system/etc/permissions/com.dsi.ant.antradio_library.xml \
-
-PRODUCT_PACKAGES += \
-    AntHalService \
-    com.dsi.ant.antradio_library \
+## ANT+
+#PRODUCT_COPY_FILES += \
+#    external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:system/etc/permissions/com.dsi.ant.antradio_library.xml \
+#
+#PRODUCT_PACKAGES += \
+#    AntHalService \
+#    com.dsi.ant.antradio_library \
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -152,8 +155,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml \
 
 # Device-specific settings
-PRODUCT_PACKAGES += \
-    AxolotlParts \
+#PRODUCT_PACKAGES += \
+#    AxolotlParts \
 
 # Display
 PRODUCT_PACKAGES += \
@@ -459,6 +462,7 @@ PRODUCT_PACKAGES += \
 
 # Treble
 PRODUCT_USE_VNDK_OVERRIDE := true
+PRODUCT_EXTRA_VNDK_VERSIONS := 29 30
 
 # Trust HAL
 PRODUCT_PACKAGES += \
