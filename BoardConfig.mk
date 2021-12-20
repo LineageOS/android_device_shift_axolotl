@@ -15,6 +15,10 @@ BOARD_VENDOR := shift
 # We ship prebuilt files, which override source built components, eg "audio.primary.sdm845.so"
 BUILD_BROKEN_DUP_RULES := true
 
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+BUILD_BROKEN_ENFORCE_SYSPROP_OWNER := true
+BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
+
 #####
 
 # Architecture
@@ -68,6 +72,7 @@ BOARD_KERNEL_CMDLINE += service_locator.enable=1
 BOARD_KERNEL_CMDLINE += androidboot.memcg=1 cgroup.memory=nokmem
 BOARD_KERNEL_CMDLINE += androidboot.usbcontroller=a600000.dwc3 swiotlb=2048
 BOARD_KERNEL_CMDLINE += androidboot.boot_devices=soc/1d84000.ufshc
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 
 # (BOARD_KERNEL_PAGESIZE * 32)
 BOARD_FLASH_BLOCK_SIZE := 131072
@@ -124,7 +129,7 @@ BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 2
 #####
 
 # ANT+
-BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
+#BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
 
 # APEX
 DEXPREOPT_GENERATE_APEX_IMAGE := true
@@ -209,7 +214,7 @@ ENABLE_VENDOR_RIL_SERVICE := true
 VENDOR_SECURITY_PATCH := 2021-08-05
 
 # SELinux - TODO
-include device/qcom/sepolicy_vndr/SEPolicy.mk
+include device/qcom/sepolicy-legacy-um/SEPolicy.mk
 #BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
 #BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/public
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
