@@ -18,6 +18,10 @@ BUILD_BROKEN_DUP_RULES := true
 # We copy prebuilt binaries and libs instead of packaging them
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
+# Our properties are not fully compliant with Android S+ yet
+BUILD_BROKEN_ENFORCE_SYSPROP_OWNER := true
+BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
+
 #####
 
 # Architecture
