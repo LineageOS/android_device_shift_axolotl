@@ -84,6 +84,7 @@ BOARD_KERNEL_CMDLINE += service_locator.enable=1
 BOARD_KERNEL_CMDLINE += androidboot.memcg=1 cgroup.memory=nokmem
 BOARD_KERNEL_CMDLINE += androidboot.usbcontroller=a600000.dwc3 swiotlb=2048
 BOARD_KERNEL_CMDLINE += androidboot.boot_devices=soc/1d84000.ufshc
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 
 # (BOARD_KERNEL_PAGESIZE * 32)
 BOARD_FLASH_BLOCK_SIZE := 131072
@@ -134,8 +135,7 @@ BOARD_AVB_VBMETA_VENDOR_ROLLBACK_INDEX_LOCATION := 3
 BOARD_AVB_ENABLE := true
 
 # Build the image with verity pre-disabled - https://android.googlesource.com/platform/external/avb/+/58305521295e51cb52a74d8d8bbaed738cf0767a
-BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --set_hashtree_disabled_flag
-BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 2
+BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
 
 #####
 
@@ -233,7 +233,8 @@ ENABLE_VENDOR_RIL_SERVICE := true
 VENDOR_SECURITY_PATCH := 2021-12-05
 
 # SELinux - TODO
-include device/qcom/sepolicy_vndr/SEPolicy.mk
+#include device/qcom/sepolicy_vndr/SEPolicy.mk
+include device/qcom/sepolicy-legacy-um/SEPolicy.mk
 #BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
 #BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/public
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
