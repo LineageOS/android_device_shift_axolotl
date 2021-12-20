@@ -154,8 +154,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml \
 
 # Device-specific settings
-PRODUCT_PACKAGES += \
-    AxolotlParts \
+#PRODUCT_PACKAGES += \
+#    AxolotlParts \
 
 # Display
 PRODUCT_PACKAGES += \
@@ -461,6 +461,7 @@ PRODUCT_PACKAGES += \
 
 # Treble
 PRODUCT_USE_VNDK_OVERRIDE := true
+PRODUCT_EXTRA_VNDK_VERSIONS := 29 30
 
 # Trust HAL
 PRODUCT_PACKAGES += \
