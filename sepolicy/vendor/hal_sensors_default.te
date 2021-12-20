@@ -2,4 +2,4 @@
 allow hal_sensors_default sysfs:dir { open read };
 allow hal_sensors_default sysfs:file { open read };
 
-set_prop(hal_sensors_default, sensors_prop)
+set_prop(hal_sensors_default, vendor_sensors_prop)
