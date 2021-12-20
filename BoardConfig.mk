@@ -15,6 +15,9 @@ BOARD_VENDOR := shift
 # We ship prebuilt files, which override source built components, eg "audio.primary.sdm845.so"
 BUILD_BROKEN_DUP_RULES := true
 
+# Our properties are not fully compliant with Android S+ yet
+BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
+
 #####
 
 # Architecture
