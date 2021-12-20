@@ -13,7 +13,7 @@ vendor.powerhal.rendering  u:object_r:power_prop:s0
 
 # Camera
 camera.                                             u:object_r:camera_prop:s0
-camera.qcom.misc.disable                            u:object_r:default_prop:s0
+camera.qcom.misc.disable                            u:object_r:camera_prop:s0
 media.camera.debug.loglevel                         u:object_r:camera_prop:s0
 persist.camera.                                     u:object_r:camera_prop:s0
 persist.vendor.camera.                              u:object_r:camera_prop:s0
