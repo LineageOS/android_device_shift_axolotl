@@ -8,7 +8,7 @@ vendor                          /vendor         ext4    ro,barrier=1            
 /dev/block/by-name/metadata     /metadata       ext4    noatime,nosuid,nodev,discard,data=journal,commit=1    wait,formattable,first_stage_mount,check
 
 # Your data lives here, treat it well :-)
-/dev/block/bootdevice/by-name/userdata  /data   f2fs    noatime,nosuid,nodev,discard,reserve_root=32768,resgid=1065,fsync_mode=nobarrier    latemount,wait,check,quota,formattable,fileencryption=ice,reservedsize=128M,sysfs_path=/sys/devices/platform/soc/1d84000.ufshc,keydirectory=/metadata/vold/metadata_encryption,checkpoint=fs
+/dev/block/bootdevice/by-name/userdata  /data   f2fs    noatime,nosuid,nodev,discard,reserve_root=32768,resgid=1065,fsync_mode=nobarrier    latemount,wait,check,quota,formattable,fileencryption=ice,reservedsize=128M,sysfs_path=/sys/devices/platform/soc/1d84000.ufshc,keydirectory=/metadata/vold/metadata_encryption
 
 # Firmware files
 /dev/block/bootdevice/by-name/bluetooth /vendor/bt_firmware     vfat    ro,shortname=lower,uid=1002,gid=3002,dmask=227,fmask=337,context=u:object_r:bt_firmware_file:s0     wait,slotselect
