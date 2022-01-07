@@ -12,6 +12,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
+# Retrofit virtual A/B
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota_retrofit.mk)
+
 # Inherit vendor blobs
 $(call inherit-product-if-exists, vendor/shift/axolotl/axolotl-vendor.mk)
 
@@ -116,12 +119,10 @@ PRODUCT_PACKAGES += \
 
 # Boot control
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.0-impl:64 \
-    android.hardware.boot@1.0-service \
+    android.hardware.boot@1.1-impl-qti \
+    android.hardware.boot@1.1-impl-qti.recovery \
+    android.hardware.boot@1.1-service \
     bootctrl.sdm845 \
-
-PRODUCT_PACKAGES += \
-    android.hardware.boot@1.0-impl.recovery \
     bootctrl.sdm845.recovery \
 
 PRODUCT_PACKAGES_DEBUG += \
