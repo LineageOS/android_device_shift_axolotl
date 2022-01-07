@@ -67,10 +67,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.audio@2.0.vendor \
     android.hardware.audio@4.0.vendor \
-    android.hardware.audio@5.0-impl \
+    android.hardware.audio@5.0.vendor \
+    android.hardware.audio@6.0-impl \
     android.hardware.audio.effect@2.0.vendor \
     android.hardware.audio.effect@4.0.vendor \
-    android.hardware.audio.effect@5.0-impl \
+    android.hardware.audio.effect@5.0.vendor \
+    android.hardware.audio.effect@6.0-impl \
     android.hardware.audio.service \
     android.hardware.soundtrigger@2.2-impl \
     audio.a2dp.default \
