@@ -6,7 +6,7 @@
 //
 
 soong_namespace {
-    imports: ["hardware/qcom/bootctrl"],
+    imports: ["hardware/qcom-caf/bootctrl"],
 }
 
 prebuilt_hidl_interfaces {
