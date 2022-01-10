@@ -8,3 +8,17 @@
 soong_namespace {
     imports: ["hardware/qcom/bootctrl"],
 }
+
+prebuilt_hidl_interfaces {
+    name: "hidl_vendor_qti_hardware_alarm_interface",
+    interfaces: [
+        "vendor.qti.hardware.alarm@1.0::IAlarm",
+    ],
+}
+
+prebuilt_hidl_interfaces {
+    name: "hidl_vendor_qti_hardware_wifi_wifilearner_interface",
+    interfaces: [
+        "vendor.qti.hardware.wifi.wifilearner@1.0::IWifiStats",
+    ],
+}
