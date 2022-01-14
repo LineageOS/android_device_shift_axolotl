@@ -46,7 +46,11 @@ TARGET_NO_KERNEL_OVERRIDE := false
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_CONFIG := lineage_axolotl_defconfig
+ifeq ($(TARGET_BUILD_VARIANT),eng)
+    TARGET_KERNEL_CONFIG := lineage_axolotl_eng_defconfig
+else
+    TARGET_KERNEL_CONFIG := lineage_axolotl_defconfig
+endif
 TARGET_KERNEL_SOURCE := kernel/shift/sdm845
 TARGET_KERNEL_APPEND_DTB := false
 TARGET_USES_UNCOMPRESSED_KERNEL := false
@@ -60,8 +64,13 @@ BOARD_KERNEL_PAGESIZE    := 4096
 BOARD_KERNEL_TAGS_OFFSET := 0x01E00000
 BOARD_RAMDISK_OFFSET     := 0x02000000
 
-BOARD_KERNEL_CMDLINE := androidboot.console=ttyMSM0 printk.devkmsg=on
-BOARD_KERNEL_CMDLINE += androidboot.hardware=qcom video=vfb:640x400,bpp=32,memsize=3072000 androidboot.configfs=true loop.max_part=7
+BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom
+# Enable console for eng builds
+ifeq ($(TARGET_BUILD_VARIANT),eng)
+    BOARD_KERNEL_CMDLINE += console=ttyMSM0,115200n8 earlycon=msm_geni_serial,0xA84000
+endif
+BOARD_KERNEL_CMDLINE += androidboot.console=ttyMSM0 printk.devkmsg=on
+BOARD_KERNEL_CMDLINE += video=vfb:640x400,bpp=32,memsize=3072000 androidboot.configfs=true loop.max_part=7
 BOARD_KERNEL_CMDLINE += msm_rtb.filter=0x237
 BOARD_KERNEL_CMDLINE += ehci-hcd.park=3
 BOARD_KERNEL_CMDLINE += service_locator.enable=1
