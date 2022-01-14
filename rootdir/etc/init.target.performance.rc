@@ -94,10 +94,6 @@ on property:sys.boot_completed=1
     # Enable PowerHAL hint processing
     #setprop vendor.powerhal.init 1
 
-# If UART is on, enable console_suspend on boot_complete to save power
-on property:sys.boot_completed=1 && property:init.svc.console=running
-    write /sys/module/printk/parameters/console_suspend Y
-
 # Device Mapper Storage Tuning
 
 on property:dev.mnt.blk.data=* && property:sys.read_ahead_kb=*
