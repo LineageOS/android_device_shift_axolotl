@@ -1320,7 +1320,6 @@ vendor/bin/wdsdaemon
 vendor/bin/wifilearner
 
 # etc
-vendor/etc/audio_configs.xml
 vendor/etc/audio_platform_info_i2s.xml
 vendor/etc/audio_policy.conf
 vendor/etc/bluetooth_qti_audio_policy_configuration.xml
