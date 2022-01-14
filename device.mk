@@ -63,10 +63,6 @@ AB_OTA_POSTINSTALL_CONFIG += \
 PRODUCT_PACKAGES += \
     fs_config_files \
 
-# ANT+
-PRODUCT_PACKAGES += \
-    AntHalService \
-
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@2.0.vendor \

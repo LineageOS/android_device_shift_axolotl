@@ -135,9 +135,6 @@ BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 2
 
 #####
 
-# ANT+
-BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
-
 # APEX
 DEXPREOPT_GENERATE_APEX_IMAGE := true
 
