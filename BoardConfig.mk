@@ -198,6 +198,14 @@ TARGET_USES_MEDIA_EXTENSIONS := true
 # Power
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
 
+# Properties
+BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
+TARGET_ODM_PROP        += $(DEVICE_PATH)/odm.prop
+TARGET_PRODUCT_PROP    += $(DEVICE_PATH)/product.prop
+TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/system_ext.prop
+TARGET_SYSTEM_PROP     += $(DEVICE_PATH)/system.prop
+TARGET_VENDOR_PROP     += $(DEVICE_PATH)/vendor.prop
+
 # Qualcomm BSP
 BOARD_USES_QCOM_HARDWARE := true
 TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
@@ -298,7 +306,6 @@ BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 
 # vendor.img - split
 TARGET_COPY_OUT_VENDOR := vendor
-BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 
 # Reserve space for gapps installation and other customizations
 # product:    1500 MB
