@@ -46,7 +46,11 @@ TARGET_NO_KERNEL_OVERRIDE := false
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_CONFIG := lineage_axolotl_defconfig
+ifeq ($(TARGET_BUILD_VARIANT),eng)
+    TARGET_KERNEL_CONFIG := lineage_axolotl_eng_defconfig
+else
+    TARGET_KERNEL_CONFIG := lineage_axolotl_defconfig
+endif
 TARGET_KERNEL_SOURCE := kernel/shift/sdm845
 TARGET_KERNEL_APPEND_DTB := false
 TARGET_USES_UNCOMPRESSED_KERNEL := false
@@ -68,6 +72,11 @@ BOARD_KERNEL_CMDLINE += service_locator.enable=1
 BOARD_KERNEL_CMDLINE += androidboot.memcg=1 cgroup.memory=nokmem
 BOARD_KERNEL_CMDLINE += androidboot.usbcontroller=a600000.dwc3 swiotlb=2048
 BOARD_KERNEL_CMDLINE += androidboot.boot_devices=soc/1d84000.ufshc
+
+# Enable console for eng builds
+ifeq ($(TARGET_BUILD_VARIANT),eng)
+    BOARD_KERNEL_CMDLINE += console=ttyMSM0,115200n8 earlycon=msm_geni_serial,0xA84000
+endif
 
 # (BOARD_KERNEL_PAGESIZE * 32)
 BOARD_FLASH_BLOCK_SIZE := 131072
