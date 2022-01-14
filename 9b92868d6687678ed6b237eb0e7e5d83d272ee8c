@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5150b231_5921bdce",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19282
+      },
+      "writtenOn": "2022-01-14T08:47:38Z",
+      "side": 1,
+      "message": "Works with UART hooked up to the device and `sudo minicom -D /dev/ttyUSB0`.\n\nSome more information regarding how to set up UART physically on the device itself:\nhttps://gitlab.com/postmarketOS/pmaports/-/issues/1315",
+      "revId": "9b92868d6687678ed6b237eb0e7e5d83d272ee8c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
