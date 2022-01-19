@@ -10,3 +10,13 @@ cc_library {
     compile_multilib: "64",
     vendor: true,
 }
+
+cc_library_shared {
+    name: "libshim_imsvideocodec",
+    srcs: ["libshim_imsvideocodec.cpp"],
+    shared_libs: [
+        "libgui",
+    ],
+    compile_multilib: "64",
+    system_ext_specific: true,
+}

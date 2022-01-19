@@ -55,6 +55,9 @@ fi
 
 function blob_fixup() {
     case "${1}" in
+        system_ext/lib64/lib-imsvideocodec.so)
+            $PATCHELF --add-needed libshim_imsvideocodec.so "${2}"
+            ;;
         vendor/lib64/hw/camera.qcom.so)
             $PATCHELF --add-needed libcomparetf2.so "${2}"
             ;;
