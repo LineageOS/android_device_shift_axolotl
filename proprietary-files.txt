@@ -1325,7 +1325,6 @@ vendor/bin/seemp_healthd
 vendor/bin/shell_11ad
 vendor/bin/sigma_dut
 vendor/bin/spectraltool
-vendor/bin/ssgqmigd
 vendor/bin/StoreKeybox
 vendor/bin/vendor_cmd_tool
 vendor/bin/wdsdaemon

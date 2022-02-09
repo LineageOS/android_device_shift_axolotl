@@ -15,6 +15,9 @@ BOARD_VENDOR := shift
 # We ship prebuilt files, which override source built components, eg "audio.primary.sdm845.so"
 BUILD_BROKEN_DUP_RULES := true
 
+# We copy prebuilt binaries and libs instead of packaging them
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+
 #####
 
 # Architecture
