@@ -16,6 +16,24 @@
       "message": "What does this besides physical_fingerprint_sensor_center_screen_location_y being used to visually locate power button fps in fingerprint enrollment screen (https://github.com/LineageOS/android_device_samsung_gts4lv-common/commit/69ebd4623aea6be3376319afcf0374bbf06d869b)?",
       "revId": "975011624fe41b77c22336fc6e3a6178165ebe63",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6f6af56d_4152ba27",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19282
+      },
+      "writtenOn": "2022-02-09T18:24:37Z",
+      "side": 1,
+      "message": "If you enable AOD, it will visualize when you unlock via FP (ripple going out from the position specified) or when you press the power button.",
+      "parentUuid": "b567789e_8be1a620",
+      "revId": "975011624fe41b77c22336fc6e3a6178165ebe63",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
