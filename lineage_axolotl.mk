@@ -1,11 +1,11 @@
 #
-# Copyright (C) 2021 SHIFT GmbH
-# Copyright (C) 2021 The LineageOS Project
+# Copyright (C) 2021-2022 SHIFT GmbH
+# Copyright (C) 2021-2022 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Inherit from AOSP device.
+# Inherit from full device.
 $(call inherit-product, device/shift/axolotl/full_axolotl.mk)
 
 # Inherit some common Lineage stuff.
