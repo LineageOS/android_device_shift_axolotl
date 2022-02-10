@@ -17,6 +17,11 @@ PRODUCT_MANUFACTURER := SHIFT
 PRODUCT_GMS_CLIENTID_BASE := android-malata
 PRODUCT_SHIPPING_API_LEVEL := 29
 
+# GMS (EEA - v2 - 4c)
+GMS_MAKEFILE := gms_eea_v2_type4c.mk
+# Explicitly set to enforce existance of the makefile
+MAINLINE_MODULES_MAKEFILE := mainline_modules.mk
+
 # ShiftOS - 3.5 G (20211124)
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE=axolotl \
