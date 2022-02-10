@@ -1,6 +1,6 @@
 #
-# Copyright (C) 2021 SHIFT GmbH
-# Copyright (C) 2021 The LineageOS Project
+# Copyright (C) 2021-2022 SHIFT GmbH
+# Copyright (C) 2021-2022 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -16,6 +16,10 @@ PRODUCT_MANUFACTURER := SHIFT
 
 PRODUCT_GMS_CLIENTID_BASE := android-malata
 PRODUCT_SHIPPING_API_LEVEL := 29
+
+# GMS (EEA - v2 - 4c)
+GMS_MAKEFILE := gms_eea_v2_type4c.mk
+#MAINLINE_MODULES_MAKEFILE := mainline_modules.mk
 
 # ShiftOS - 3.5 G (20211124)
 PRODUCT_BUILD_PROP_OVERRIDES += \
