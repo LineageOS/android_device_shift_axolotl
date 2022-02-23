@@ -405,3 +405,7 @@ firmware_directories /vendor/firmware_mnt/image/
 /sys/class/kgsl/kgsl-3d0    force_bus_on             0664    root  system
 /sys/class/kgsl/kgsl-3d0    force_clk_on             0664    root  system
 /sys/class/kgsl/kgsl-3d0    bus_split                0664    root  system
+
+# display calibration
+/sys/devices/platform/soc/soc:qcom,dsi-display*    shift/gamma            0664 system graphics
+/sys/devices/platform/soc/soc:qcom,dsi-display*    shift/gamma_default    0444 system graphics
