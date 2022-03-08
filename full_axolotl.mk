@@ -20,11 +20,3 @@ PRODUCT_SHIPPING_API_LEVEL := 29
 # GMS (EEA - v2 - 4c)
 GMS_MAKEFILE := gms_eea_v2_type4c.mk
 #MAINLINE_MODULES_MAKEFILE := mainline_modules.mk
-
-# ShiftOS - 3.5 G (20211124)
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_DEVICE=axolotl \
-    PRODUCT_NAME=axolotl \
-    PRIVATE_BUILD_DESC="axolotl-user 10 QKQ1.201126.002 20211124 release-keys"
-
-BUILD_FINGERPRINT := SHIFT/axolotl/axolotl:10/QKQ1.201126.002/20211124:user/release-keys

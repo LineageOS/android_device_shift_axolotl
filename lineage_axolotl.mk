@@ -13,3 +13,11 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Override product name for Lineage.
 PRODUCT_NAME := lineage_axolotl
+
+# ShiftOS - 3.5 G (20211124)
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    TARGET_DEVICE=axolotl \
+    PRODUCT_NAME=axolotl \
+    PRIVATE_BUILD_DESC="axolotl-user 10 QKQ1.201126.002 20211124 release-keys"
+
+BUILD_FINGERPRINT := SHIFT/axolotl/axolotl:10/QKQ1.201126.002/20211124:user/release-keys
