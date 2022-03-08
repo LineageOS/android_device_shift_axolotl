@@ -1293,7 +1293,6 @@ vendor/bin/ccid_daemon
 vendor/bin/chre
 vendor/bin/climax_hostSW
 vendor/bin/cnss_cli
-vendor/bin/cnss_diag
 vendor/bin/e_loop
 vendor/bin/fmconfig
 vendor/bin/fm_qsoc_patches
