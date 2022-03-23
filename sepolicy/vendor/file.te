@@ -4,3 +4,4 @@ type proc_sysctl_schedboost, proc_type, fs_type;
 type proc_touchpanel_gesture, proc_type, fs_type;
 
 type sysfs_msm_subsys, sysfs_type, fs_type;
+type sysfs_usb_data_enabled, sysfs_type, fs_type;
