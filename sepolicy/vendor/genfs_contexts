@@ -12,3 +12,5 @@ genfscon sysfs /devices/platform/soc/soc:qcom,cpubw            u:object_r:sysfs_
 genfscon sysfs /devices/platform/soc/soc:qcom,llccbw           u:object_r:sysfs_msm_subsys:s0
 
 #genfscon sysfs /devices/platform/soc/5000000.qcom,kgsl-3d0                       u:object_r:sysfs_msm_subsys:s0
+
+genfscon sysfs /devices/platform/soc/a600000.ssusb/usb_data_enabled              u:object_r:sysfs_usb_data_enabled:s0
