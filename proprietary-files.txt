@@ -270,8 +270,8 @@ system_ext/lib64/vendor.qti.hardware.data.connection@1.1.so|edb234e41d31c9f00826
 system_ext/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so|007c1b5c79b8e2298ae2ab11ad7bb53ae8fd3c80
 system_ext/lib64/vendor.qti.hardware.data.iwlan@1.0.so|160f8ad491d683b1a41291a9cff0d32e0d0929c2
 system_ext/lib64/vendor.qti.hardware.data.qmi@1.0.so|638e86dd871ebf37517c5f29ce5c65e95f36ffdf
--vendor/app/CneApp/CneApp.apk|c6cc677ff82cab39e4029c7d6419ab6e7783eca5
--vendor/app/IWlanService/IWlanService.apk|92168bf713f66a400122e7357f981be106cde39e
+vendor/app/CneApp/CneApp.apk|c6cc677ff82cab39e4029c7d6419ab6e7783eca5
+vendor/app/IWlanService/IWlanService.apk|92168bf713f66a400122e7357f981be106cde39e
 vendor/bin/cnd|a2c8edcbcc58dbe0092cd38efd0f5540ee5530e4
 vendor/etc/cne/profileSlm.xml|947917691684584b7e2ddf3588cd6f8e99f3804f
 vendor/etc/cne/slm.conf|089de5d9382331791088edd9b4bce13bfa5ea336
@@ -414,7 +414,7 @@ system_ext/lib64/libdpmfdmgr.so|bd1bbd376c2bdfac2f3a4c230ce65cd35cb1c6bd
 system_ext/lib64/libdpmframework.so|67ebd736333ae7158632735e3db06a4f9664f6a6
 system_ext/lib64/libdpmtcm.so|ddef98d55e3045ebac458b38165acd5d2f75cd7a
 system_ext/lib64/vendor.qti.diaghal@1.0.so|c188fabf49a0fc8bfede65a701c6a8dc1a5aef40
--system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk|53c2d0eb6669a983db80562aa8c10653ac78c01d
+system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk|53c2d0eb6669a983db80562aa8c10653ac78c01d
 system/framework/tcmclient.jar|22858e8bb7e3f956e487dc6764ad8250f118d7ac
 vendor/bin/dpmQmiMgr|4fe936478b0da1ee20c6222234b80d478a72cc2a
 vendor/etc/init/dpmQmiMgr.rc|1538743661a5c48c15cd105beaad20f72953885a
@@ -514,8 +514,8 @@ vendor/bin/xtwifi-client|442e0c8166eea0a0d6cfd9432f945faa59c34d80
 vendor/bin/xtwifi-inet-agent|f805841e5c8ca3b0af620486a64a37148daa0980
 vendor/etc/cacert_location.pem|0789bf799c7e45d352a83e2f79ddb0cea86db85b
 vendor/etc/init/android.hardware.gnss@2.1-service-qti.rc|d3844699c845ce5de4c8b50548a2095f92dd0235
--vendor/etc/vintf/manifest/android.hardware.gnss@2.1-service-qti.xml|1c344aacaa6d17a1585ba58b2e6d438dcfe31fad
--vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml|6514b13f55abc0acc28e004c35ff93fb972d61a9
+vendor/etc/vintf/manifest/android.hardware.gnss@2.1-service-qti.xml|1c344aacaa6d17a1585ba58b2e6d438dcfe31fad
+vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml|6514b13f55abc0acc28e004c35ff93fb972d61a9
 vendor/etc/xtra_root_cert.pem|f55a31ec4d9cf8ce2724acadecf00c779f8767db
 vendor/lib64/hw/android.hardware.gnss@2.1-impl-qti.so|6e4305828e4d42111aaa28167f0d260bfa13b83d
 vendor/lib64/hw/vendor.qti.gnss@4.0-impl.so|b94476f03424846bcf2bcecbf290d992a5cdbc09
@@ -604,7 +604,7 @@ vendor/lib/hw/vulkan.adreno.so|b2680e5b899d75fa3f82b457635e15c6998202a4
 vendor/lib64/hw/vulkan.adreno.so|fcc99045aaf7eed0925ac2b64ff2af085212954a
 
 # IMS - from PNX - RKQ1.200906.002
--system_ext/app/uceShimService/uceShimService.apk|644eec82ed9ecf1c1324241271ac5c9b5fe68f8b
+system_ext/app/uceShimService/uceShimService.apk|644eec82ed9ecf1c1324241271ac5c9b5fe68f8b
 system_ext/lib64/com.qualcomm.qti.imscmservice@1.0.so|41a6b6ad78341405de60c1fd3c8f202fb3908329
 system_ext/lib64/com.qualcomm.qti.imscmservice@2.0.so|7ec78e4d8fd428ac7fab2b12f34dd0d65b5e53db
 system_ext/lib64/com.qualcomm.qti.imscmservice@2.1.so|9e29f18494de25de70a751a40ba20787e92470dd
@@ -626,7 +626,7 @@ system_ext/lib64/vendor.qti.hardware.radio.ims@1.4.so|1df84a178e8f86ca928c5790c0
 system_ext/lib64/vendor.qti.ims.callinfo@1.0.so|789718b5600f048cbe12f7807bc5a88fbd801954
 system_ext/lib64/vendor.qti.ims.rcsconfig@1.0.so|0f5b149fd936f04262aa74b3a953d3a06e4452f7
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so|393c5affc1e8e36470705ec44396d1ffa603a541
--system_ext/priv-app/ims/ims.apk|f87eba10af95d6d7fe3b0f1b9e145e00ccdf69f8
+system_ext/priv-app/ims/ims.apk|f87eba10af95d6d7fe3b0f1b9e145e00ccdf69f8
 vendor/bin/ims_rtp_daemon|2c995a884bbde9f37a44a10ac8fb694b30af97ea
 vendor/bin/imsdatadaemon|eb09aed86816127ef752c07c027d3ede9000f549
 vendor/bin/imsqmidaemon|72f9810942d727b7608a96dc481346ec3c97b9c6
@@ -832,7 +832,7 @@ vendor/lib/libqti-util.so
 vendor/lib/libqti-utils.so
 
 # Power-off alarm
--product/app/PowerOffAlarm/PowerOffAlarm.apk:system_ext/app/PowerOffAlarm/PowerOffAlarm.apk
+product/app/PowerOffAlarm/PowerOffAlarm.apk:system_ext/app/PowerOffAlarm/PowerOffAlarm.apk
 vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service
 vendor/bin/power_off_alarm
 vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
@@ -879,11 +879,11 @@ vendor/lib/libqmi.so|1003a02d1f20a388f19d3a62a924b6a0cb297852
 vendor/lib/libqmiservices.so|4b8aece94c02b56474b6044e4bdef749a4d91822
 
 # RIL - from PNX - RKQ1.200906.002
--system_ext/app/QtiTelephonyService/QtiTelephonyService.apk|5d0fe3593ef98ebd307d50e0c1a3b4857b607935
+system_ext/app/QtiTelephonyService/QtiTelephonyService.apk|5d0fe3593ef98ebd307d50e0c1a3b4857b607935
 system_ext/etc/permissions/qcrilhook.xml|30397e293b2c40e6b7a1d11c2a615cdd05de625a
 system_ext/etc/permissions/telephonyservice.xml|b7831598d3c19c6ce4ef431d1cc44d94c3c35a8d
 system_ext/framework/qcrilhook.jar|6cead102805109095cabe4bf932dec079d93314e
--system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|fedfbafec61a0672f01b45ab9a43c9e8a153feae
+system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|fedfbafec61a0672f01b45ab9a43c9e8a153feae
 vendor/bin/hw/qcrild|3eea6728924507e6200a2a58c827bf1235eba28f
 vendor/bin/adpl|4ee2aa7fb4363ddfcacf67800e61e5b68aedae20
 vendor/bin/ATFWD-daemon|9b61dc74e23392110b6716e4a1558e2468f344de
@@ -1110,14 +1110,14 @@ vendor/lib64/libthermalclient.so
 vendor/lib/libthermalclient.so
 
 # Time services
--vendor/app/TimeService/TimeService.apk
+vendor/app/TimeService/TimeService.apk
 vendor/bin/time_daemon
 vendor/etc/init/init.time_daemon.rc
 vendor/lib64/libtime_genoff.so
 vendor/lib/libtime_genoff.so
 
 # Trusted Execution Environment
--vendor/app/TrustZoneAccessService/TrustZoneAccessService.apk;PRESIGNED
+vendor/app/TrustZoneAccessService/TrustZoneAccessService.apk;PRESIGNED
 vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service
 vendor/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so
@@ -1155,7 +1155,7 @@ vendor/lib/vendor.qti.hardware.vpp@1.2.so|edd5e3b33c51c31c8e9e54912269e893c4e3c7
 # Widevine DRM
 vendor/bin/hw/android.hardware.drm@1.4-service.widevine|0918336440ba0464f93fee97925b94ad12b7ef5d
 vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc|992f63e9700da29099e0590858a6becaaadb2976
--vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml|91d7c0996133556cb7f7c5d1b7e5d9e7f07b78b2
+vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml|91d7c0996133556cb7f7c5d1b7e5d9e7f07b78b2
 vendor/lib64/mediadrm/libwvdrmengine.so|e27cb10d16d05dca9f79ea4c5dafce4370aad024
 vendor/lib64/liboemcrypto.so
 vendor/lib64/libwvhidl.so|75322834e2c7c0dbeb9f6b76aa9a5f8f210d491e
