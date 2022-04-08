@@ -325,3 +325,6 @@ ifneq ($(WITH_GMS),true)
     BOARD_SYSTEMIMAGE_PARTITION_RESERVED_SIZE := 524288000
     BOARD_VENDORIMAGE_PARTITION_RESERVED_SIZE := 262144000
 endif
+
+# Include ShiftOS specific BoardConfig if existing
+-include device/shift/axolotl/shiftos/BoardConfig.mk
