@@ -54,10 +54,6 @@ AB_OTA_POSTINSTALL_CONFIG += \
     FILESYSTEM_TYPE_vendor=ext4 \
     POSTINSTALL_OPTIONAL_vendor=true \
 
-# AID/fs configs
-PRODUCT_PACKAGES += \
-    fs_config_files \
-
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService \
