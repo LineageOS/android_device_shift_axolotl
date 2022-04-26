@@ -499,6 +499,14 @@ PRODUCT_PACKAGES += \
     libcomparetf2 \
     libgui_vendor \
 
+# Widevine
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.4-service.widevine \
+
+PRODUCT_PACKAGES += \
+    libwvdrmengine \
+    libwvhidl \
+
 # WiFi
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
