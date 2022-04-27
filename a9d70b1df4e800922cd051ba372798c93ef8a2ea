@@ -16,6 +16,29 @@
       "message": "Needs to be merged together with: https://github.com/TheMuppets/proprietary_vendor_shift/pull/4",
       "revId": "a9d70b1df4e800922cd051ba372798c93ef8a2ea",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4d2ca064_9ab75dfd",
+        "filename": "device.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 508,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2022-04-27T19:31:43Z",
+      "side": 1,
+      "message": "Why do you have this here if it is proprietary?",
+      "range": {
+        "startLine": 503,
+        "startChar": 0,
+        "endLine": 508,
+        "endChar": 15
+      },
+      "revId": "a9d70b1df4e800922cd051ba372798c93ef8a2ea",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
