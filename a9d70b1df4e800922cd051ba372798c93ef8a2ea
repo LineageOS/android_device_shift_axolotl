@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1b489ff6_ae457d1d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19282
+      },
+      "writtenOn": "2022-04-27T14:54:05Z",
+      "side": 1,
+      "message": "Needs to be merged together with: https://github.com/TheMuppets/proprietary_vendor_shift/pull/4",
+      "revId": "a9d70b1df4e800922cd051ba372798c93ef8a2ea",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
