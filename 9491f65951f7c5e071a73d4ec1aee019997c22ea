@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a120d9fa_0eab75e6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19282
+      },
+      "writtenOn": "2022-04-28T19:51:44Z",
+      "side": 1,
+      "message": "As reference, this is needed for VTS to pass.\n\nThe level was \"3\" at the Q release [1] but was later on revised to be \"4\" [2].\naxolotl only needed a bump of android.hardware.thermal to be FCM target level 4 compliant.\n\n[1] - https://android.googlesource.com/platform/system/libvintf/+/refs/tags/android-10.0.0_r47/include/vintf/Level.h\n[2] - https://android.googlesource.com/platform/system/libvintf/+/refs/tags/android-12.1.0_r4/include/vintf/Level.h#26",
+      "revId": "9491f65951f7c5e071a73d4ec1aee019997c22ea",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
