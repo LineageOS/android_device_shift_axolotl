@@ -63,6 +63,30 @@
       },
       "revId": "a9d70b1df4e800922cd051ba372798c93ef8a2ea",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4f542328_96fa9ca0",
+        "filename": "device.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 508,
+      "author": {
+        "id": 19282
+      },
+      "writtenOn": "2022-04-28T08:14:37Z",
+      "side": 1,
+      "message": "Dropped the packages and instead moved it to a optional subdirectory.\n\nhttps://review.lineageos.org/c/LineageOS/android_device_shift_axolotl/+/330315",
+      "parentUuid": "1155050b_5db2578f",
+      "range": {
+        "startLine": 503,
+        "startChar": 0,
+        "endLine": 508,
+        "endChar": 15
+      },
+      "revId": "a9d70b1df4e800922cd051ba372798c93ef8a2ea",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
