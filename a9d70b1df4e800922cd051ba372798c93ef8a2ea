@@ -39,6 +39,30 @@
       },
       "revId": "a9d70b1df4e800922cd051ba372798c93ef8a2ea",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1155050b_5db2578f",
+        "filename": "device.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 508,
+      "author": {
+        "id": 19282
+      },
+      "writtenOn": "2022-04-28T07:32:10Z",
+      "side": 1,
+      "message": "I am building the proprietary parts from source with this device tree.\n\nThough i think i can move these specific changes to a different location and not check it into the lineage tree, if preferred.",
+      "parentUuid": "4d2ca064_9ab75dfd",
+      "range": {
+        "startLine": 503,
+        "startChar": 0,
+        "endLine": 508,
+        "endChar": 15
+      },
+      "revId": "a9d70b1df4e800922cd051ba372798c93ef8a2ea",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
