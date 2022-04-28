@@ -16,6 +16,24 @@
       "message": "This should be enough to allow reusing the same device tree for lineage and stock.\n\nadding this to the local manifest enables building stock and shipping firmware:\n```\n  \u003cproject path\u003d\"device/shift/axolotl/radio/axolotl\"     name\u003d\"SHIFTPHONES/android/device/shift/firmware\"         remote\u003d\"shift\" revision\u003d\"sos-4.x-axolotl\" /\u003e\n  \u003cproject path\u003d\"device/shift/axolotl/radio/axolotl_row\" name\u003d\"SHIFTPHONES/android/device/shift/firmware\"         remote\u003d\"shift\" revision\u003d\"sos-4.x-axolotl_row\" /\u003e\n  \u003cproject path\u003d\"device/shift/axolotl/shiftos\"           name\u003d\"SHIFTPHONES/android/device/shift/axolotl-shiftos\"  remote\u003d\"shift\" /\u003e\n```\n\nOnce i finish work on infra, our gerrit instance will be public and mirror repos to https://gitlab.com/SHIFTPHONES/android as well.",
       "revId": "b897ab32c3d679b310a3986ecee3a43286517576",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "36f8a59b_b897e577",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2022-04-28T17:40:25Z",
+      "side": 1,
+      "message": "you can actually ship firmware in vendor/firmware for lineage if you want - might be able to cut down even more. DM me if interested.",
+      "parentUuid": "c02a4928_7b567980",
+      "revId": "b897ab32c3d679b310a3986ecee3a43286517576",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
