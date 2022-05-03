@@ -16,6 +16,23 @@
       "message": "I am able to obtain L1.",
       "revId": "6fb24edfef6fb267b8d559f9a8e646a8a36390ca",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f818e676_f47d8d67",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19282
+      },
+      "writtenOn": "2022-05-03T13:54:50Z",
+      "side": 1,
+      "message": "Joey also verified he got L1.",
+      "revId": "6fb24edfef6fb267b8d559f9a8e646a8a36390ca",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
