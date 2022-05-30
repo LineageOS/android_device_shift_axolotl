@@ -144,9 +144,6 @@ TARGET_PROVIDES_AUDIO_EXTNS := true
 # Bluetooth
 TARGET_USE_QTI_BT_STACK := true
 
-# DRM
-TARGET_ENABLE_MEDIADRM_64 := true
-
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/rootdir/config.fs
 
