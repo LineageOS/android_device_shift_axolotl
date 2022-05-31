@@ -11,6 +11,9 @@ $(call inherit-product, device/shift/axolotl/full_axolotl.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Retrofit virtual A/B
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota_retrofit.mk)
+
 # Override product name for Lineage.
 PRODUCT_NAME := lineage_axolotl
 
