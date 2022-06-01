@@ -17,10 +17,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota_retrofit.mk)
 # Override product name for Lineage.
 PRODUCT_NAME := lineage_axolotl
 
-# ShiftOS - 3.6 G (20220225)
+# ShiftOS - 3.8 G (20220824)
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE=axolotl \
     PRODUCT_NAME=axolotl \
-    PRIVATE_BUILD_DESC="axolotl-user 10 QKQ1.201126.002 20220225 release-keys"
+    PRIVATE_BUILD_DESC="axolotl-user 10 QSV1.210329.038 20220824 release-keys"
 
-BUILD_FINGERPRINT := SHIFT/axolotl/axolotl:10/QKQ1.201126.002/20220225:user/release-keys
+BUILD_FINGERPRINT := SHIFT/axolotl/axolotl:10/QSV1.210329.038/20220824:user/release-keys
