@@ -55,9 +55,6 @@ else
 endif
 TARGET_KERNEL_SOURCE := kernel/shift/sdm845
 
-TARGET_KERNEL_ADDITIONAL_FLAGS := \
-    MKDTIMG=$(shell pwd)/prebuilts/misc/$(HOST_OS)-x86/libufdt/mkdtimg \
-
 BOARD_KERNEL_IMAGE_NAME  := Image.gz-dtb
 BOARD_KERNEL_BASE        := 0x00000000
 BOARD_KERNEL_PAGESIZE    := 4096
