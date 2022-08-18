@@ -17,6 +17,13 @@ prebuilt_hidl_interfaces {
 }
 
 prebuilt_hidl_interfaces {
+    name: "hidl_vendor_qti_hardware_vpp_interface",
+    interfaces: [
+        "vendor.qti.hardware.vpp@1.1::IHidlVppService",
+    ],
+}
+
+prebuilt_hidl_interfaces {
     name: "hidl_vendor_qti_hardware_wifi_wifilearner_interface",
     interfaces: [
         "vendor.qti.hardware.wifi.wifilearner@1.0::IWifiStats",
