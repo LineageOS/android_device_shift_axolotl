@@ -19,4 +19,4 @@ PRODUCT_SHIPPING_API_LEVEL := 29
 
 # GMS (EEA - v2 - 4c)
 GMS_MAKEFILE := gms_eea_v2_type4c.mk
-#MAINLINE_MODULES_MAKEFILE := mainline_modules.mk
+MAINLINE_MODULES_MAKEFILE := mainline_modules.mk
