@@ -185,6 +185,7 @@ OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 ENABLE_VENDOR_RIL_SERVICE := true
 
 # Security patch level
+BOOT_SECURITY_PATCH := 2023-10-05
 VENDOR_SECURITY_PATCH := 2023-10-05
 
 # SELinux
