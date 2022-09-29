@@ -1153,15 +1153,15 @@ vendor/lib/vendor.qti.hardware.vpp@1.1.so|8df356bc93951b2072590ff17c5d7af08b4e82
 vendor/lib/vendor.qti.hardware.vpp@1.2.so|edd5e3b33c51c31c8e9e54912269e893c4e3c730
 
 # Widevine DRM
-vendor/bin/hw/android.hardware.drm@1.4-service.widevine
-vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc
--vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml
-vendor/lib64/mediadrm/libwvdrmengine.so
+vendor/bin/hw/android.hardware.drm@1.4-service.widevine|0918336440ba0464f93fee97925b94ad12b7ef5d
+vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc|992f63e9700da29099e0590858a6becaaadb2976
+-vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml|91d7c0996133556cb7f7c5d1b7e5d9e7f07b78b2
+vendor/lib64/mediadrm/libwvdrmengine.so|e27cb10d16d05dca9f79ea4c5dafce4370aad024
 vendor/lib64/liboemcrypto.so
-vendor/lib64/libwvhidl.so
-vendor/lib/mediadrm/libwvdrmengine.so
+vendor/lib64/libwvhidl.so|75322834e2c7c0dbeb9f6b76aa9a5f8f210d491e
+vendor/lib/mediadrm/libwvdrmengine.so|2f933ed1a0aa9ac28f6b1937db60672efcab007f
 vendor/lib/liboemcrypto.so
-vendor/lib/libwvhidl.so
+vendor/lib/libwvhidl.so|05054b19be7da5034ecaeb37f0dd99582fb9f89a
 
 # Widevine DRM firmware
 vendor/firmware/cppf.b00
