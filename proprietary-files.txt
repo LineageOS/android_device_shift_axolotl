@@ -763,7 +763,6 @@ system_ext/framework/qcrilhook.jar|6cead102805109095cabe4bf932dec079d93314e
 system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|fedfbafec61a0672f01b45ab9a43c9e8a153feae
 
 # RIL
-vendor/bin/ATFWD-daemon
 vendor/bin/adpl
 vendor/bin/hw/qcrild
 vendor/bin/netmgrd
@@ -817,7 +816,6 @@ vendor/lib64/qcrild_librilutils.so
 vendor/lib64/qtibus.so
 vendor/lib64/qtimutex.so
 vendor/lib64/vendor.qti.hardware.radio.am@1.0.so
-vendor/lib64/vendor.qti.hardware.radio.atcmdfwd@1.0.so
 vendor/lib64/vendor.qti.hardware.radio.internal.deviceinfo@1.0.so
 vendor/lib64/vendor.qti.hardware.radio.lpa@1.0.so
 vendor/lib64/vendor.qti.hardware.radio.lpa@1.1.so
