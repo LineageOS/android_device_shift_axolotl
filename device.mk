@@ -164,7 +164,6 @@ PRODUCT_PACKAGES += \
     libdisplayconfig.qti \
     libqdMetaData \
     libtinyxml \
-    libtinyxml.vendor \
     memtrack.sdm845 \
     vendor.display.config@1.0.vendor \
     vendor.display.config@2.0 \
@@ -286,7 +285,6 @@ PRODUCT_PACKAGES += \
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.allocator@1.0.vendor \
-    android.hidl.base@1.0_system \
     android.hidl.memory@1.0.vendor \
     libhidltransport \
     libhidltransport.vendor \
@@ -409,7 +407,6 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.config@1.2.vendor \
     android.hardware.radio.deprecated@1.0.vendor \
     libjson \
-    libjson.vendor \
     librmnetctl \
 
 # RenderScript
@@ -429,8 +426,6 @@ PRODUCT_PACKAGES += \
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@2.0.vendor \
-    android.hardware.sensors@2.0-impl \
-    android.hardware.sensors@2.0-service \
     libsensorndkbridge \
 
 # Soong namespaces
