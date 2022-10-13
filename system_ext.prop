@@ -4,7 +4,6 @@
 
 # Camera
 persist.vendor.camera.privapp.list=org.codeaurora.snapcam,com.shift.shutter
-vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.shift.shutter
 
 # DPM
 persist.vendor.dpm.feature=1
