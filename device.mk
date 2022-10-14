@@ -375,7 +375,6 @@ PRODUCT_PACKAGES += \
 
 # Properties
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
-$(call inherit-product, $(LOCAL_PATH)/properties.mk)
 
 # Protobuf
 PRODUCT_PACKAGES += \
