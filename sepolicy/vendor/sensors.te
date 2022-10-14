@@ -1,0 +1,2 @@
+# For reading sensors_prop
+get_prop(sensors, sensors_prop)
