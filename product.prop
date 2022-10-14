@@ -7,7 +7,6 @@ persist.demo.hdmirotationlock=false
 
 # Display - Color
 persist.sys.sf.color_saturation=1.0
-persist.sys.sf.native_mode=0
 
 # Display - Enable GL backpressure
 debug.sf.enable_gl_backpressure=1
@@ -24,9 +23,6 @@ drm.service.enabled=true
 # LMKD
 ro.lmk.critical=1
 ro.lmk.log_stats=true
-
-# Modem - Enable NV
-persist.vendor.bluetooth.modem_nv_support=true
 
 # UDC
 ro.sys.cp_msleeptime=30000
