@@ -165,14 +165,6 @@ PRODUCT_PACKAGES += \
     vendor.display.config@2.0 \
     vendor.qti.hardware.display.allocator@1.0-service \
 
-# Display - Phase Offsets
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
-    ro.surface_flinger.max_frame_buffer_acquired_buffers=2 \
-    ro.surface_flinger.max_virtual_display_dimension=4096 \
-    ro.surface_flinger.vsync_event_phase_offset_ns=2000000 \
-    ro.surface_flinger.vsync_sf_event_phase_offset_ns=6000000 \
-
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.3.vendor \
