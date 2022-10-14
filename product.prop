@@ -28,10 +28,6 @@ ro.lmk.log_stats=true
 # Modem - Enable NV
 persist.vendor.bluetooth.modem_nv_support=true
 
-# Recovery - Set margin
-ro.recovery.ui.margin_height=16
-ro.recovery.ui.margin_width=16
-
 # UDC
 ro.sys.cp_msleeptime=30000
 
