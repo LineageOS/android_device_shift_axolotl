@@ -5,7 +5,6 @@
 # Dex2oat
 dalvik.vm.dex2oat64.enabled=true
 
-#rild.libargs=-d /dev/smd0
 persist.rild.nitz_plmn=
 persist.rild.nitz_long_ons_0=
 persist.rild.nitz_long_ons_1=
@@ -22,8 +21,6 @@ ro.telephony.default_network=22,22
 
 dev.pm.dyn_samplingrate=1
 
-#ro.hdmi.enable=true
-#persist.speaker.prot.enable=false
 qcom.hw.aac.encoder=true
 
 #system props for the MM modules
@@ -34,7 +31,6 @@ media.stagefright.enable-qcp=true
 media.stagefright.enable-fma2dp=true
 media.stagefright.enable-scan=true
 media.stagefright.thumbnail.prefer_hw_codecs=true
-#media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 mmp.enable.3g2=true
 media.aac_51_output_enabled=true
 vendor.mm.enable.qcom_parser=13629439
@@ -146,9 +142,6 @@ persist.backup.ntpServer="0.pool.ntp.org"
 
 #Property to enable Mag filter
 persist.vendor.sensors.enable.mag_filter=true
-
-#Partition source order for Product/Build properties pickup.
-#ro.product.property_source_order=odm,vendor,product,product_services,system
 
 #Property to enable Codec2 for audio and OMX for Video
 debug.stagefright.ccodec=1
