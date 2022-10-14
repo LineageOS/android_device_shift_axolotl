@@ -9,9 +9,6 @@ allow fingerprintd goodixfingerprintd_service:service_manager { add find };
 allow fingerprintd fingerprint_service:service_manager { find };
 allow fingerprintd power_service:service_manager { find };
 
-#allow system_app goodix_fingerprint_service:service_manager { add find };
-#allow untrusted_app goodix_fingerprint_service:service_manager { find };
-
 # Access file
 allow fingerprintd fingerprintd_data_file:file rw_file_perms;
 
