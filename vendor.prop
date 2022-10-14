@@ -107,6 +107,14 @@ vendor.chre.enabled=0
 # CNE
 persist.vendor.cne.feature=1
 
+# Dalvik
+dalvik.vm.heapstartsize=16m
+dalvik.vm.heapgrowthlimit=256m
+dalvik.vm.heapsize=512m
+dalvik.vm.heaptargetutilization=0.5
+dalvik.vm.heapminfree=32m
+dalvik.vm.heapmaxfree=64m
+
 # Disable SPU
 vendor.gatekeeper.disable_spu=true
 
