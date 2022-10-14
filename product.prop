@@ -2,9 +2,6 @@
 # product.prop for axolotl
 #
 
-# Display
-persist.demo.hdmirotationlock=false
-
 # Display - Color
 persist.sys.sf.color_saturation=1.0
 
