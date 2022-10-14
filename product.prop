@@ -2,21 +2,6 @@
 # product.prop for axolotl
 #
 
-# Display - Color
-persist.sys.sf.color_saturation=1.0
-
-# Display - Enable GL backpressure
-debug.sf.enable_gl_backpressure=1
-
-# Display - Phase offsets
-debug.sf.early_app_phase_offset_ns=500000
-debug.sf.early_gl_app_phase_offset_ns=15000000
-debug.sf.early_gl_phase_offset_ns=3000000
-debug.sf.early_phase_offset_ns=500000
-
-# DRM
-drm.service.enabled=true
-
 # LMKD
 ro.lmk.critical=1
 ro.lmk.log_stats=true
