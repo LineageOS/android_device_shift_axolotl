@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b9b0b2d2_ec714de5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19282
+      },
+      "writtenOn": "2022-10-17T15:51:10Z",
+      "side": 1,
+      "message": "afaicr these are at product because it broke some CTS-on-GSI tests way back then.\nwill reverify.",
+      "revId": "b566cb29a864b0e01ff2dccc7294f6a9acde6956",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
