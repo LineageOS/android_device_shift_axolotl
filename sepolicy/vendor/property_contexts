@@ -16,3 +16,6 @@ vendor.debug.camera.                                u:object_r:camera_prop:s0
 
 # FM
 ro.vendor.fm.use_audio_session                      u:object_r:vendor_fm_prop:s0
+
+# Radio
+vendor.net.qmi.rev_ip_info    u:object_r:vendor_radio_prop:s0
