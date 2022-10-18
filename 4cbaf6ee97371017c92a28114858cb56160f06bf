@@ -34,6 +34,24 @@
       "parentUuid": "9b5c8984_83766fe7",
       "revId": "4cbaf6ee97371017c92a28114858cb56160f06bf",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "07b6ac40_5a27dfbf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19282
+      },
+      "writtenOn": "2022-10-18T20:44:23Z",
+      "side": 1,
+      "message": "\u003e This is a merge commit. What exactly fixed it?\n\n* 31efcbf4 ICE, pfk: fix to set dio_inode precisely\n\nas well as sepolicy:\n\nhttps://review.lineageos.org/c/LineageOS/android_device_qcom_sepolicy_vndr/+/341985",
+      "parentUuid": "ca78d573_3cb47153",
+      "revId": "4cbaf6ee97371017c92a28114858cb56160f06bf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
