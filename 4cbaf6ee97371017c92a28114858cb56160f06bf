@@ -16,6 +16,24 @@
       "message": "Requires https://review.lineageos.org/341965",
       "revId": "4cbaf6ee97371017c92a28114858cb56160f06bf",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ca78d573_3cb47153",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2022-10-18T20:38:12Z",
+      "side": 1,
+      "message": "This is a merge commit. What exactly fixed it?",
+      "parentUuid": "9b5c8984_83766fe7",
+      "revId": "4cbaf6ee97371017c92a28114858cb56160f06bf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
