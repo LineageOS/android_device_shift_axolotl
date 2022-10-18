@@ -291,10 +291,6 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     ueventd.qcom.rc \
 
-PRODUCT_PACKAGES += \
-    init.insmod.cfg \
-    init.insmod.sh \
-
 # IPA
 PRODUCT_PACKAGES += \
     ipacm \
