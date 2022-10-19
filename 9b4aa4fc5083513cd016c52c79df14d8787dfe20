@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9ef0cb0b_0c813033",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2022-10-19T08:31:31Z",
+      "side": 1,
+      "message": "Like I wrote in some other cases where people pick this to lineage-20 branch: due to what\u0027s written in the commit message this should be commited only to \u003c\u003d 19.1. Back then it was built by default, whereas in 20 the module no longer exists.",
+      "revId": "9b4aa4fc5083513cd016c52c79df14d8787dfe20",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
