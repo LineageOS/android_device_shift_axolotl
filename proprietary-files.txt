@@ -1326,7 +1326,6 @@ vendor/etc/charger_fstab.qti
 vendor/etc/gpfspath_oem_config.xml
 
 # lib64
-vendor/lib64/android.hidl.base@1.0.so
 vendor/lib64/ftm_fm_lib.so
 vendor/lib64/libadaptlaunch.so
 vendor/lib64/libappclassifier.so
@@ -1375,7 +1374,6 @@ vendor/lib64/vendor.qti.power.pasrmanager@1.0.so
 vendor/lib64/vendor.qti.voiceprint@1.0.so
 
 # lib
-vendor/lib/android.hidl.base@1.0.so
 vendor/lib/ftm_fm_lib.so
 vendor/lib/libasn1cper.so
 vendor/lib/libasn1crt.so
