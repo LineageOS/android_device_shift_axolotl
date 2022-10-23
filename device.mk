@@ -66,19 +66,24 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_PACKAGES += \
-    android.hardware.audio@2.0.vendor \
-    android.hardware.audio@4.0.vendor \
     android.hardware.audio@5.0-impl \
-    android.hardware.audio.effect@2.0.vendor \
-    android.hardware.audio.effect@4.0.vendor \
     android.hardware.audio.effect@5.0-impl \
     android.hardware.audio.service \
     android.hardware.soundtrigger@2.2-impl \
+    audio.primary.sdm845 \
     audio.r_submix.default \
     audio.usb.default \
+    liba2dpoffload \
+    libbatterylistener \
+    libcomprcapture \
+    libexthwplugin \
+    libhdmiedid \
+    libhfp \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
+    libsndmonitor \
+    libspkrprot \
     libtinycompress \
     libvolumelistener \
     tinymix \
