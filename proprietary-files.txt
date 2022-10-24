@@ -1175,8 +1175,6 @@ vendor/etc/hostapd/hostapd_default.conf
 vendor/etc/wifi/WCNSS_qcom_cfg.ini
 vendor/etc/wifi/aoa_cldb_falcon.bin
 vendor/etc/wifi/aoa_cldb_swl14.bin
-vendor/etc/wifi/fstman.ini
-vendor/etc/wifi/icm.conf
 vendor/etc/wifi/p2p_supplicant_overlay.conf
 vendor/etc/wifi/wpa_supplicant_overlay.conf
 
@@ -1244,8 +1242,6 @@ vendor/etc/init/qdcmss.rc
 vendor/etc/init/ssgtzd.rc
 vendor/etc/init/tloc_daemon.rc
 vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc
-vendor/etc/init/vendor.qti.hardware.fstman@1.0-service.rc
-vendor/etc/init/vendor.qti.hardware.wifi.wifilearner@1.0-service.rc
 
 # VINTF
 #vendor/etc/vintf/manifest/android.hardware.atrace@1.0-service.xml
@@ -1284,7 +1280,6 @@ vendor/bin/cnss_cli
 vendor/bin/e_loop
 vendor/bin/fm_qsoc_patches
 vendor/bin/fmconfig
-vendor/bin/fstman
 vendor/bin/ftmdaemon
 vendor/bin/ftmtest
 vendor/bin/garden_app
@@ -1311,7 +1306,6 @@ vendor/bin/sigma_dut
 vendor/bin/spectraltool
 vendor/bin/vendor_cmd_tool
 vendor/bin/wdsdaemon
-vendor/bin/wifilearner
 
 # etc
 vendor/etc/charger_fstab.qti
@@ -1361,7 +1355,6 @@ vendor/lib64/libsynergy_loc_api.so
 vendor/lib64/vendor.qti.data.mwqem@1.0.so
 vendor/lib64/vendor.qti.hardware.automotive.vehicle@1.0.so
 vendor/lib64/vendor.qti.hardware.sigma_miracast@1.0.so
-vendor/lib64/vendor.qti.hardware.wifi.wifilearner@1.0.so
 vendor/lib64/vendor.qti.power.pasrmanager@1.0.so
 vendor/lib64/vendor.qti.voiceprint@1.0.so
 
