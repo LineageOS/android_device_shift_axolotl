@@ -101,9 +101,6 @@ vendor.qcom.bluetooth.soc=cherokee
 ro.soc.manufacturer=Qualcomm
 ro.soc.model=SDM845
 
-# CHRE
-vendor.chre.enabled=0
-
 # CNE
 persist.vendor.cne.feature=1
 
