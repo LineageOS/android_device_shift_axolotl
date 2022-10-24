@@ -12,9 +12,6 @@ vendor.powerhal.init       u:object_r:power_prop:s0
 vendor.powerhal.rendering  u:object_r:power_prop:s0
 
 # Camera
-camera.                                             u:object_r:camera_prop:s0
-camera.qcom.misc.disable                            u:object_r:camera_prop:s0
-media.camera.debug.loglevel                         u:object_r:camera_prop:s0
 persist.camera.                                     u:object_r:camera_prop:s0
 persist.vendor.camera.                              u:object_r:camera_prop:s0
 vendor.debug.camera.                                u:object_r:camera_prop:s0
@@ -24,10 +21,3 @@ ro.vendor.fm.use_audio_session                      u:object_r:vendor_fm_prop:s0
 
 # Init
 vendor.all.modules.ready                            u:object_r:vendor_device_prop:s0
-
-# NFC
-persist.nfc.core_reset_debug_info                   u:object_r:nfc_nq_prop:s0
-persist.nfc.hci_network_reset_req                   u:object_r:nfc_nq_prop:s0
-
-# RIL
-persist.data.iwlan.enable                           u:object_r:vendor_default_prop:s0
