@@ -2,9 +2,15 @@
 # product.prop for axolotl
 #
 
+# Dex2oat
+dalvik.vm.dex2oat64.enabled=true
+
 # LMKD
 ro.lmk.critical=1
 ro.lmk.log_stats=true
+
+# System prop to turn on CdmaLTEPhone always
+telephony.lteOnCdmaDevice=1
 
 # UDC
 ro.sys.cp_msleeptime=30000
