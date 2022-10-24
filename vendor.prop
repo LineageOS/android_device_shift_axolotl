@@ -7,19 +7,11 @@ af.fast_track_multiplier=1
 audio.deep_buffer.media=true
 audio.offload.min.duration.secs=30
 audio.offload.video=true
-audio.sys.noisy.broadcast.delay=600
-audio.sys.offload.pstimeout.secs=3
-persist.audio.fluence.speaker=false
-persist.audio.fluence.voicecall=true
-persist.audio.fluence.voicecomm=true
-persist.audio.fluence.voicerec=false
 persist.vendor.audio.fluence.speaker=false
 persist.vendor.audio.fluence.voicecall=true
 persist.vendor.audio.fluence.voicerec=false
 persist.vendor.audio.ras.enabled=false
 ro.af.client_heap_size_kbyte=7168
-ro.qc.sdk.audio.fluencetype=fluence
-ro.qc.sdk.audio.ssr=false
 ro.vendor.audio.sdk.fluencetype=fluence
 ro.vendor.audio.sdk.ssr=false
 vendor.audio.adm.buffering.ms=2
@@ -91,10 +83,8 @@ vendor.voice.path.for.pcm.voip=true
 # Bluetooth
 persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac
 persist.bluetooth.a2dp_offload.disabled=false
-persist.vendor.bt.a2dp_offload_cap=sbc-aac-aptx-aptxhd-ldac
 ro.bluetooth.a2dp_offload.supported=true
 ro.vendor.bluetooth.wipower=false
-vendor.bluetooth.soc=cherokee
 vendor.qcom.bluetooth.soc=cherokee
 
 # Chipset
@@ -129,7 +119,9 @@ debug.sf.early_gl_app_phase_offset_ns=15000000
 debug.sf.early_gl_phase_offset_ns=3000000
 debug.sf.early_phase_offset_ns=500000
 debug.sf.enable_gl_backpressure=1
+debug.sf.enable_hwc_vds=1
 debug.sf.hw=0
+debug.sf.latch_unsignaled=1
 persist.sys.sf.color_saturation=1.0
 persist.sys.sf.native_mode=0
 ro.hardware.egl=adreno
@@ -144,16 +136,13 @@ ro.surface_flinger.vsync_sf_event_phase_offset_ns=6000000
 # Factory Reset Protection
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
-# FM
-vendor.hw.fm.init=0
-
 # Keystore
 ro.hardware.keystore_desede=true
 
 # Media
+debug.stagefright.ccodec=1
 debug.stagefright.omx_default_rank.sw-audio=1
 debug.stagefright.omx_default_rank=0
-vendor.mm.enable.qcom_parser=13629439
 
 # Modem - Enable NV
 persist.vendor.bluetooth.modem_nv_support=true
@@ -169,14 +158,15 @@ vendor.power.pasr.enabled=true
 
 # Radio
 persist.radio.multisim.config=dsds
+persist.vendor.data.mode=concurrent
 persist.vendor.radio.apm_sim_not_pwdn=1
 persist.vendor.radio.custom_ecc=1
 persist.vendor.radio.procedure_bytes=SKIP
 persist.vendor.radio.rat_on=combine
 persist.vendor.radio.sib16_support=1
+ro.telephony.default_network=22,22
 ro.telephony.iwlan_operation_mode=legacy
+ro.vendor.use_data_netmgrd=true
 
-# SHIFT
-ro.shift.device.codename=axolotl
-ro.vendor.shift.device.codename=axolotl
-vendor.shift.device.codename=axolotl
+# Sensors
+persist.vendor.sensors.enable.mag_filter=true

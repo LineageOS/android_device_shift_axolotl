@@ -3,8 +3,6 @@ persist.camera.arcsoft.log          u:object_r:vendor_camera_prop:s0
 persist.camera.capture.hdr_enable   u:object_r:vendor_camera_prop:s0
 persist.camera.capture.auto.iso     u:object_r:vendor_camera_prop:s0
 
-vendor.shift.device.codename        u:object_r:vendor_shift_prop:s0
-
 vendor.powerhal.state      u:object_r:power_prop:s0
 vendor.powerhal.audio      u:object_r:power_prop:s0
 vendor.powerhal.lpm        u:object_r:power_prop:s0
