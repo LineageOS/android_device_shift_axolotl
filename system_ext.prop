@@ -2,6 +2,19 @@
 # system_ext.prop for axolotl
 #
 
+# Camera
+persist.vendor.camera.privapp.list=org.codeaurora.snapcam,com.shift.shutter
+vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.shift.shutter
+
 # DPM
 persist.vendor.dpm.feature=1
 persist.vendor.dpm.loglevel=0
+
+# Media
+media.stagefright.thumbnail.prefer_hw_codecs=true
+
+# Radio
+ril.subscription.types=NV,RUIM
+
+# Vendor
+ro.vendor.qti.va_aosp.support=1
