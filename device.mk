@@ -178,6 +178,10 @@ PRODUCT_PACKAGES += \
     f2fs_io \
     sg_write_buffer \
 
+# Fingerprint
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint@2.1-service \
+
 # FM packages
 PRODUCT_PACKAGES += \
     FM2 \
