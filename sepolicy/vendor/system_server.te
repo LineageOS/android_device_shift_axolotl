@@ -1,3 +1,0 @@
-
-#get_prop(system_server, persist_camera_prop)
-get_prop(system_server, vendor_shift_prop)
