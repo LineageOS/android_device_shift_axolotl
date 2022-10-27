@@ -39,6 +39,30 @@
       },
       "revId": "5676689502adeded11b21027eb9c0f1da0371d0f",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f35c50bb_12f64def",
+        "filename": "device.mk",
+        "patchSetId": 3
+      },
+      "lineNbr": 171,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2022-10-27T13:52:42Z",
+      "side": 1,
+      "message": "Not even G does that.",
+      "parentUuid": "20475a29_759aaf80",
+      "range": {
+        "startLine": 171,
+        "startChar": 4,
+        "endLine": 171,
+        "endChar": 43
+      },
+      "revId": "5676689502adeded11b21027eb9c0f1da0371d0f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
