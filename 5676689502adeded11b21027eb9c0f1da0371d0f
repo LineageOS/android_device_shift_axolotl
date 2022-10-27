@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "39325e3e_53487e00",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19282
+      },
+      "writtenOn": "2022-10-27T11:48:09Z",
+      "side": 1,
+      "message": "frameworks/av/drm/mediadrm/plugins/clearkey/service.mk",
+      "revId": "5676689502adeded11b21027eb9c0f1da0371d0f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "20475a29_759aaf80",
+        "filename": "device.mk",
+        "patchSetId": 3
+      },
+      "lineNbr": 171,
+      "author": {
+        "id": 19282
+      },
+      "writtenOn": "2022-10-27T11:48:09Z",
+      "side": 1,
+      "message": "it is recommended to use an include instead:\n\n```\ninclude frameworks/av/drm/mediadrm/plugins/clearkey/service.mk\n```",
+      "range": {
+        "startLine": 171,
+        "startChar": 4,
+        "endLine": 171,
+        "endChar": 43
+      },
+      "revId": "5676689502adeded11b21027eb9c0f1da0371d0f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
