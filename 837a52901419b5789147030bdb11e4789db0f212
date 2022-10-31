@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "622808a0_221a114c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19282
+      },
+      "writtenOn": "2022-10-31T15:02:29Z",
+      "side": 1,
+      "message": "needs to go after https://review.lineageos.org/c/LineageOS/android_device_shift_axolotl/+/342495",
+      "revId": "837a52901419b5789147030bdb11e4789db0f212",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
