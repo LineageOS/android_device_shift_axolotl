@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "228e9f9c_22105747",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19282
+      },
+      "writtenOn": "2022-10-31T17:01:48Z",
+      "side": 1,
+      "message": "Urgent pick, as i assume the chain at https://review.lineageos.org/342545 won\u0027t be handled that soon.",
+      "revId": "c236e2d77fe4bb17392f2b0f3b7fb0712defd182",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
