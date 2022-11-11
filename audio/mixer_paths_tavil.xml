@@ -3402,10 +3402,6 @@
         <path name="incall_music_uplink" />
     </path>
 
-    <path name="incall_music_uplink afe-proxy">
-        <path name="incall_music_uplink" />
-    </path>
-
     <path name="incall_music_uplink usb-headphones">
         <path name="incall_music_uplink" />
     </path>
@@ -3535,10 +3531,6 @@
     </path>
 
     <path name="incall_music_uplink2 bt-a2dp">
-        <path name="incall_music_uplink2" />
-    </path>
-
-    <path name="incall_music_uplink2 afe-proxy">
         <path name="incall_music_uplink2" />
     </path>
 
