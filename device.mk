@@ -69,7 +69,6 @@ PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl \
     android.hardware.audio.effect@6.0-impl \
     android.hardware.audio.service \
-    android.hardware.soundtrigger@2.2-impl \
     audio.primary.sdm845 \
     audio.r_submix.default \
     audio.usb.default \
@@ -87,6 +86,10 @@ PRODUCT_PACKAGES += \
     libtinycompress \
     libvolumelistener \
     tinymix \
+
+PRODUCT_PACKAGES += \
+    android.hardware.soundtrigger@2.2-impl \
+    sound_trigger.primary.sdm845 \
 
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/a2dp_in_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_in_audio_policy_configuration.xml \
