@@ -626,14 +626,6 @@
         <ctl name="AFE_PCM_RX Audio Mixer MultiMedia1" value="1" />
     </path>
 
-    <path name="incall-rec-uplink call-proxy-in">
-        <path name="incall-rec-uplink" />
-    </path>
-
-    <path name="incall-rec-downlink call-proxy-in">
-        <path name="incall-rec-downlink" />
-    </path>
-
     <path name="deep-buffer-playback usb-headphones">
         <ctl name="USB_AUDIO_RX Audio Mixer MultiMedia1" value="1" />
     </path>
@@ -1863,6 +1855,10 @@
         <ctl name="MultiMedia9 Mixer VOC_REC_UL" value="1" />
     </path>
 
+    <path name="incall-rec-uplink afe-proxy">
+        <path name="incall-rec-uplink" />
+    </path>
+
     <path name="incall-rec-uplink bt-sco">
         <path name="incall-rec-uplink" />
     </path>
@@ -1871,11 +1867,11 @@
         <path name="incall-rec-uplink" />
     </path>
 
-    <path name="incall-rec-uplink usb-headset-mic">
+    <path name="incall-rec-uplink call-proxy-in">
         <path name="incall-rec-uplink" />
     </path>
 
-    <path name="incall-rec-uplink afe-proxy">
+    <path name="incall-rec-uplink usb-headset-mic">
         <path name="incall-rec-uplink" />
     </path>
 
@@ -1903,6 +1899,10 @@
         <ctl name="MultiMedia9 Mixer VOC_REC_DL"  value="1" />
     </path>
 
+    <path name="incall-rec-downlink afe-proxy">
+        <path name="incall-rec-downlink" />
+    </path>
+
     <path name="incall-rec-downlink bt-sco">
         <path name="incall-rec-downlink" />
     </path>
@@ -1911,11 +1911,11 @@
         <path name="incall-rec-downlink" />
     </path>
 
-    <path name="incall-rec-downlink usb-headset-mic">
+    <path name="incall-rec-downlink call-proxy-in">
         <path name="incall-rec-downlink" />
     </path>
 
-    <path name="incall-rec-downlink afe-proxy">
+    <path name="incall-rec-downlink usb-headset-mic">
         <path name="incall-rec-downlink" />
     </path>
 
