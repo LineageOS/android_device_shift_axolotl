@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1db00b4a_642334e7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19282
+      },
+      "writtenOn": "2022-11-25T13:21:50Z",
+      "side": 1,
+      "message": "depends on these two kernel changes: https://review.lineageos.org/344088",
+      "revId": "a4a7c8008abaef00e19d9a77eb7c8e7f83b3d35d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
