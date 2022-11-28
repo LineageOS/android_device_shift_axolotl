@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2c8f4e39_a38e1959",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19282
+      },
+      "writtenOn": "2022-11-28T08:09:16Z",
+      "side": 1,
+      "message": "Getting this in early, following up with ACDB adjustments later.",
+      "revId": "8fab105ab35403f5d9f17e1129a8765790b0668d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
