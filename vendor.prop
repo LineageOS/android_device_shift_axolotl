@@ -169,6 +169,9 @@ persist.vendor.bluetooth.modem_nv_support=true
 # Netflix - BSP / Target identification
 ro.netflix.bsp_rev=Q845-14477-1
 
+# OEM Unlock
+ro.oem_unlock_supported=1
+
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 
