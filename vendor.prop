@@ -172,3 +172,6 @@ ro.vendor.use_data_netmgrd=true
 
 # Sensors
 persist.vendor.sensors.enable.mag_filter=true
+
+# Allow oem unlock (aka 'fastboot flashing unlock')
+ro.oem_unlock_supported=1
