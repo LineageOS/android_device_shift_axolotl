@@ -1,8 +1,8 @@
 # Widevine DRM - built from proprietary source
-vendor/bin/hw/android.hardware.drm@1.4-service.widevine|0918336440ba0464f93fee97925b94ad12b7ef5d
+vendor/bin/hw/android.hardware.drm@1.4-service.widevine|69334e7d21574a508d992592628dba119c2979f5
 vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc|992f63e9700da29099e0590858a6becaaadb2976
 vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml|91d7c0996133556cb7f7c5d1b7e5d9e7f07b78b2
-vendor/lib/mediadrm/libwvdrmengine.so|2f933ed1a0aa9ac28f6b1937db60672efcab007f
-vendor/lib/libwvhidl.so|05054b19be7da5034ecaeb37f0dd99582fb9f89a
-vendor/lib64/mediadrm/libwvdrmengine.so|e27cb10d16d05dca9f79ea4c5dafce4370aad024
-vendor/lib64/libwvhidl.so|75322834e2c7c0dbeb9f6b76aa9a5f8f210d491e
+vendor/lib/mediadrm/libwvdrmengine.so|8c6f083c717c7766015a857a335205e3c8abd076
+vendor/lib/libwvhidl.so|f0ff6de1d0e5e4948186d3d991e77eb7b994d01d
+vendor/lib64/mediadrm/libwvdrmengine.so|4aa69b7f525af0fe58d04c755687c5cf0362f75e
+vendor/lib64/libwvhidl.so|0d859f64d717158a4930aa6aff3081524cd635d3
