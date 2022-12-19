@@ -1,4 +1,4 @@
-# Proprietary files - from SHIFT6MQ.SOS.3.3.G.20210726-RELEASE, unless pinned
+# Proprietary files - from SHIFT6MQ.SOS.3.8.G.20220824-RELEASE, unless pinned
 
 # ADSP
 vendor/bin/adsprpcd
@@ -289,12 +289,14 @@ vendor/lib/hw/vendor.qti.hardware.cvp@1.0-impl.so
 vendor/lib/libcvp.so
 vendor/lib/libcvp_common.so
 vendor/lib/libcvp_stub.so
+vendor/lib/libcvpcpuRev_skel.so
 vendor/lib/vendor.qti.hardware.cvp@1.0-halimpl.so
 vendor/lib/vendor.qti.hardware.cvp@1.0.so
 vendor/lib64/hw/vendor.qti.hardware.cvp@1.0-impl.so
 vendor/lib64/libcvp.so
 vendor/lib64/libcvp_common.so
 vendor/lib64/libcvp_stub.so
+vendor/lib64/libcvpcpuRev_skel.so
 vendor/lib64/vendor.qti.hardware.cvp@1.0-halimpl.so
 vendor/lib64/vendor.qti.hardware.cvp@1.0.so
 
@@ -941,7 +943,6 @@ vendor/bin/sscrpcd
 vendor/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc
 vendor/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml
 vendor/lib/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
-vendor/lib/libcvpcpuRev_skel.so
 vendor/lib/libsensorcal.so
 vendor/lib/libsensorslog.so
 vendor/lib/libsns_device_mode_stub.so
@@ -954,7 +955,6 @@ vendor/lib/libssc_default_listener.so
 vendor/lib/sensors.ssc.so
 vendor/lib/vendor.qti.hardware.sensorscalibrate@1.0.so
 vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
-vendor/lib64/libcvpcpuRev_skel.so
 vendor/lib64/libsensorcal.so
 vendor/lib64/libsensorslog.so
 vendor/lib64/libsns_device_mode_stub.so
