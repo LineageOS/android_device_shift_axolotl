@@ -55,6 +55,12 @@ fi
 
 function blob_fixup() {
     case "${1}" in
+        vendor/bin/hw/vendor.qti.hardware.cvp@1.0-service)
+            $PATCHELF --remove-needed "android.hidl.base@1.0.so" "${2}"
+            ;;
+        vendor/lib/vendor.qti.hardware.cvp@1.0-halimpl.so|vendor/lib64/vendor.qti.hardware.cvp@1.0-halimpl.so)
+            $PATCHELF --remove-needed "android.hidl.base@1.0.so" "${2}"
+            ;;
         vendor/lib64/hw/camera.qcom.so)
             $PATCHELF --add-needed libcomparetf2.so "${2}"
             ;;
