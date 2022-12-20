@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "91feb661_d7a8acf8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19282
+      },
+      "writtenOn": "2022-12-20T13:53:09Z",
+      "side": 1,
+      "message": "This allows relocking the bootloader when setting a custom avb key.\n\nhttps://wiki.postmarketos.org/wiki/SHIFT_SHIFT6mq_(shift-axolotl)#Custom_AVB_key",
+      "revId": "aaff769f7f0ef2889f5dbe6019482879a7d5cb2a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
