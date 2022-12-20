@@ -16,6 +16,24 @@
       "message": "Shouldn\u0027t this be in VENDOR?\n\nhttps://review.lineageos.org/c/LineageOS/android_device_fairphone_FP3/+/330545\n\nhttps://android.googlesource.com/device/google/crosshatch/+/cb4fcd45b9087ad2de539ac099a6475443a542da",
       "revId": "98c10e9d9ceef5b3540c9cd7f0035f171fb25429",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fea8397f_c43fd203",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19282
+      },
+      "writtenOn": "2022-12-20T16:39:00Z",
+      "side": 1,
+      "message": "yes, it should be, thanks for the heads up :)",
+      "parentUuid": "59905e94_dcce324c",
+      "revId": "98c10e9d9ceef5b3540c9cd7f0035f171fb25429",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ],
   "submitRequirementResults": []
