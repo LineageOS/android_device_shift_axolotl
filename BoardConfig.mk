@@ -114,8 +114,8 @@ BOARD_AVB_VBMETA_VENDOR_ALGORITHM := SHA256_RSA4096
 BOARD_AVB_VBMETA_VENDOR_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
 BOARD_AVB_VBMETA_VENDOR_ROLLBACK_INDEX_LOCATION := 3
 
-# Enable AVB 2.0
-BOARD_AVB_ENABLE := true
+# Only needed for signing
+BOARD_AVB_ENABLE := false
 
 # Build the image with verity pre-disabled - https://android.googlesource.com/platform/external/avb/+/58305521295e51cb52a74d8d8bbaed738cf0767a
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
