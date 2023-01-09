@@ -16,6 +16,24 @@
       "message": "\u003e Patch Set 1:\n\u003e \n\u003e ldac encoder needs a license?\n\nAccording to their website SRC should not require anything, thanks for the heads up, need to double check that!\n\nBack then (in ~2019) we contacted their licensing office and we had to go through some steps, but stopped the process as we went with aptX instead and did not have enough resources to do both.\n\nCould be that something has changed, but we did not re-evaluate LDAC support since then.\n",
       "revId": "ab967a0d2e272a93de6c5d6b2a9ee6651226fdd5",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b843ceed_6d8a7e9c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2023-01-09T15:50:01Z",
+      "side": 1,
+      "message": "well, ldac encoder is shipped by default with AOSP so I assumed it didn\u0027t need any license.",
+      "parentUuid": "672fc007_e1ae359a",
+      "revId": "ab967a0d2e272a93de6c5d6b2a9ee6651226fdd5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
