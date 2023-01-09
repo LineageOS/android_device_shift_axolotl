@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e036f75c_1744e203",
+        "filename": "vendor.prop",
+        "patchSetId": 2
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 19282
+      },
+      "writtenOn": "2023-01-09T17:00:31Z",
+      "side": 1,
+      "message": "Actually these are not used by blobs and are not getting set either.\n\n`init    : Do not have permissions to set \u0027persist.vendor.bt.a2dp_offload_cap\u0027 to \u0027sbc-aac-aptx-aptxhd\u0027 in property file \u0027/vendor/build.prop\u0027: SELinux permission check failed`",
+      "range": {
+        "startLine": 105,
+        "startChar": 0,
+        "endLine": 106,
+        "endChar": 42
+      },
+      "revId": "d69926dc5e044a2e076a94a0c22fa66e0ebce40b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
