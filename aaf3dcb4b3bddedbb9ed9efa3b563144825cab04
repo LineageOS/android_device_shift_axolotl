@@ -34,6 +34,24 @@
       "parentUuid": "31c90889_2fff893a",
       "revId": "aaf3dcb4b3bddedbb9ed9efa3b563144825cab04",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "33db2cfa_0b79d148",
+        "filename": "rootdir/etc/init.qcom.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 19282
+      },
+      "writtenOn": "2023-01-11T15:45:11Z",
+      "side": 1,
+      "message": "Could we comment that, so in case someone (who does not know about this conversation) reads the source does not freak out or in case we forget in a few weeks? 😊",
+      "parentUuid": "82d85c92_e7e73339",
+      "revId": "aaf3dcb4b3bddedbb9ed9efa3b563144825cab04",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
