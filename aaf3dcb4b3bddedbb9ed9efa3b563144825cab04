@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "31c90889_2fff893a",
+        "filename": "rootdir/etc/init.qcom.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 2195
+      },
+      "writtenOn": "2023-01-11T13:24:16Z",
+      "side": 1,
+      "message": "That doesn\u0027t look good.",
+      "revId": "aaf3dcb4b3bddedbb9ed9efa3b563144825cab04",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
