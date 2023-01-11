@@ -154,6 +154,7 @@ ro.surface_flinger.vsync_event_phase_offset_ns=2000000
 ro.surface_flinger.vsync_sf_event_phase_offset_ns=6000000
 vendor.display.disable_metadata_dynamic_fps=1
 vendor.display.disable_scaler=1
+vendor.display.disable_skip_validate=1
 vendor.display.perf_hint_window=50
 vendor.gralloc.enable_fb_ubwc=1
 
