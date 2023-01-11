@@ -52,6 +52,24 @@
       "parentUuid": "82d85c92_e7e73339",
       "revId": "aaf3dcb4b3bddedbb9ed9efa3b563144825cab04",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "97779157_7c97ab61",
+        "filename": "rootdir/etc/init.qcom.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2023-01-11T17:10:19Z",
+      "side": 1,
+      "message": "If Georg or someone else can write a detailed message sure, as I don\u0027t fully get the original problems either",
+      "parentUuid": "33db2cfa_0b79d148",
+      "revId": "aaf3dcb4b3bddedbb9ed9efa3b563144825cab04",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
