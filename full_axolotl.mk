@@ -11,7 +11,7 @@ $(call inherit-product, device/shift/axolotl/device.mk)
 PRODUCT_NAME := full_axolotl
 PRODUCT_DEVICE := axolotl
 PRODUCT_BRAND := SHIFT
-PRODUCT_MODEL := axolotl
+PRODUCT_MODEL := SHIFT6mq
 PRODUCT_MANUFACTURER := SHIFT
 
 PRODUCT_GMS_CLIENTID_BASE := android-malata
