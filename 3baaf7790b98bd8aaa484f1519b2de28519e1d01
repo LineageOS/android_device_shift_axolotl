@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "58d54acc_7fe9a4ff",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19282
+      },
+      "writtenOn": "2023-01-18T11:25:21Z",
+      "side": 1,
+      "message": "https://github.com/TheMuppets/proprietary_vendor_shift_axolotl/pull/4",
+      "revId": "3baaf7790b98bd8aaa484f1519b2de28519e1d01",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
