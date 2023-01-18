@@ -18,5 +18,5 @@ PRODUCT_GMS_CLIENTID_BASE := android-malata
 PRODUCT_SHIPPING_API_LEVEL := 29
 
 # GMS (EEA - v2 - 4c)
-GMS_MAKEFILE := gms_eea_v2_type4c.mk
+#GMS_MAKEFILE := gms_eea_v2_type4c.mk
 #MAINLINE_MODULES_MAKEFILE := mainline_modules.mk
