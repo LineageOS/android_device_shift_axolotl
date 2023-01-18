@@ -447,10 +447,6 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0-service.qti \
 
-# Treble
-PRODUCT_USE_VNDK_OVERRIDE := true
-PRODUCT_EXTRA_VNDK_VERSIONS := 29 30
-
 # Trust HAL
 PRODUCT_PACKAGES += \
     vendor.lineage.trust@1.0-service \
