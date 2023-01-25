@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "25e095e9_e88922e7",
+        "filename": "configs/media/media_profiles_V1_0.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 2257,
+      "author": {
+        "id": 19282
+      },
+      "writtenOn": "2023-01-25T10:36:03Z",
+      "side": 1,
+      "message": "actually this change is not right, checking if this whole block can be dropped by now.",
+      "range": {
+        "startLine": 2256,
+        "startChar": 0,
+        "endLine": 2257,
+        "endChar": 48
+      },
+      "revId": "e206f56c6130a120f196fd22f958aec79bd7580f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
