@@ -2,5 +2,5 @@
 vendor/bin/hw/android.hardware.drm@1.3-service.widevine|9c0dd84297efd40b3cad6f698d62cafbbb1bea79
 vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc|a9ce64f68c86725c06c1b1429e90b04ff96ebf60
 vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml|ebebcf8f367641480cf7d512fc06e6ab777527be
-vendor/lib/libwvhidl.so|4ee34a17ca5d07fdc77c43e334a61cbb6e24584d
-vendor/lib64/libwvhidl.so|b85c2cb24cc20ef3cdeffac079b8515c4cb7d7ec
+vendor/lib/libwvhidl@1.3.so|0b0205ba44abdf8f24e28d9a46e2fdeaddbc7fb1
+vendor/lib64/libwvhidl@1.3.so|e3426d442d79e053d47bfa00513763e3745b384a
