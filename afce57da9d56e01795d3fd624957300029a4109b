@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4a11c7f9_7b7dc236",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19282
+      },
+      "writtenOn": "2023-01-31T19:10:33Z",
+      "side": 1,
+      "message": "also, this is done with sos-5.x, which is not officially out yet.\n\ncurrent stock uses 2 and 3, in case that matters.",
+      "revId": "afce57da9d56e01795d3fd624957300029a4109b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
