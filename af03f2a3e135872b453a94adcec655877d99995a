@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0d13313f_6b82dc9d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2023-02-01T22:27:50Z",
+      "side": 1,
+      "message": "shouldn\u0027t we just vendor/lineage these at this point?",
+      "revId": "af03f2a3e135872b453a94adcec655877d99995a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
