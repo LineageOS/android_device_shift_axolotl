@@ -16,6 +16,24 @@
       "message": "also, this is done with sos-5.x, which is not officially out yet.\n\ncurrent stock uses 2 and 3, in case that matters.",
       "revId": "afce57da9d56e01795d3fd624957300029a4109b",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e01e9d95_631c71a0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2195
+      },
+      "writtenOn": "2023-02-01T20:56:29Z",
+      "side": 1,
+      "message": "We could just make the change at the same time then.",
+      "parentUuid": "4a11c7f9_7b7dc236",
+      "revId": "afce57da9d56e01795d3fd624957300029a4109b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
