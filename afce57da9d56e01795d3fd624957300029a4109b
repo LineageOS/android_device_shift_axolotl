@@ -52,6 +52,24 @@
       "parentUuid": "e01e9d95_631c71a0",
       "revId": "afce57da9d56e01795d3fd624957300029a4109b",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ef415f83_c9f155f0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19282
+      },
+      "writtenOn": "2023-02-02T16:47:25Z",
+      "side": 1,
+      "message": "ah, yes, sorry i did a fatal typo there :D",
+      "parentUuid": "9243af0e_9e343f94",
+      "revId": "afce57da9d56e01795d3fd624957300029a4109b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
