@@ -34,6 +34,24 @@
       "parentUuid": "4a11c7f9_7b7dc236",
       "revId": "afce57da9d56e01795d3fd624957300029a4109b",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9243af0e_9e343f94",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2195
+      },
+      "writtenOn": "2023-02-02T15:53:15Z",
+      "side": 1,
+      "message": "AFAICT stock uses 1 and 2\n\nhttps://zifb.in/raw/EuYbxEIEof \n\n`avbtool info_image --image $i` output of all images from \n SHIFT6MQ.SOS.3.8.G.20220824-RELEASE-OTA",
+      "parentUuid": "e01e9d95_631c71a0",
+      "revId": "afce57da9d56e01795d3fd624957300029a4109b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
