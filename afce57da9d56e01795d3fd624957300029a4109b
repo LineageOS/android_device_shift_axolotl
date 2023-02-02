@@ -70,6 +70,24 @@
       "parentUuid": "9243af0e_9e343f94",
       "revId": "afce57da9d56e01795d3fd624957300029a4109b",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bebf9f8a_65600b19",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2195
+      },
+      "writtenOn": "2023-02-02T16:50:54Z",
+      "side": 1,
+      "message": "Do we want to change to 1 and 2 here for now then, and the update to 11 and 12 can be done when stock does it.\n\nI guess in theory it doesn\u0027t really matter that much, but why don\u0027t we keep it synced.",
+      "parentUuid": "ef415f83_c9f155f0",
+      "revId": "afce57da9d56e01795d3fd624957300029a4109b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
