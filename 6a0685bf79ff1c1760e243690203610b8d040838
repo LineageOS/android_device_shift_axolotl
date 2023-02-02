@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d8bafd57_d223a0f3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 2195
+      },
+      "writtenOn": "2023-02-02T13:20:39Z",
+      "side": 1,
+      "message": "Also fixes:\nadb reboot fastbootd (or fastboot reboot fastboot)\nfastboot update image-...zip",
+      "revId": "6a0685bf79ff1c1760e243690203610b8d040838",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
