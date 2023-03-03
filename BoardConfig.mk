@@ -157,6 +157,11 @@ DEVICE_MATRIX_FILE := $(DEVICE_PATH)/vintf/compatibility_matrix.xml
 # Light
 TARGET_PROVIDES_LIBLIGHT := true
 
+# Lineage Health
+TARGET_HEALTH_CHARGING_CONTROL_PATH := /sys/class/power_supply/battery/charging_enabled
+TARGET_HEALTH_CHARGING_CONTROL_ENABLE := 1
+TARGET_HEALTH_CHARGING_CONTROL_DISABLE := 0
+
 # LMKD
 TARGET_LMKD_STATS_LOG := true
 
