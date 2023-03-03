@@ -40,6 +40,8 @@ vendor.audio.feature.external_speaker_tfa.enable=false
 vendor.audio.feature.ext_hw_plugin.enable=false
 vendor.audio.feature.fluence.enable=true
 vendor.audio.feature.fm.enable=true
+client_heap_size_kbyte=7168
+
 vendor.audio.feature.hdmi_edid.enable=true
 vendor.audio.feature.hdmi_passthrough.enable=true
 vendor.audio.feature.hfp.enable=true
