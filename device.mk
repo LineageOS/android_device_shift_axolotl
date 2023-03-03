@@ -342,6 +342,10 @@ PRODUCT_PACKAGES += \
     hardware.shift.light@1.0-impl \
     hardware.shift.light@1.0-service \
 
+# Lineage Health
+PRODUCT_PACKAGES += \
+    vendor.lineage.health-service.default
+
 # LiveDisplay
 #PRODUCT_PACKAGES += \
 #    vendor.lineage.livedisplay@2.0-service-sdm \
