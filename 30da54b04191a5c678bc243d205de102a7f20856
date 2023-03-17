@@ -1,6 +1,29 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "9aecb0cb_d7e70ba9",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 19282
+      },
+      "writtenOn": "2023-03-17T12:55:33Z",
+      "side": 1,
+      "message": "I just hit rebase",
+      "range": {
+        "startLine": 3,
+        "startChar": 12,
+        "endLine": 3,
+        "endChar": 37
+      },
+      "revId": "30da54b04191a5c678bc243d205de102a7f20856",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "6ea723e5_60e3c280",
