@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d781a5c9_a1d14406",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19282
+      },
+      "writtenOn": "2023-03-21T08:50:56Z",
+      "side": 1,
+      "message": "Thanks!\n\nAnother thing i noticed on GSI: if you plug in the headset and go to sound settings to change the call volume, it tries to deafen you.\n\nIt blasts in very high volume, not reacting to setting low or high volume.\n\nBut i think that is for another CL.",
+      "revId": "f46a90879658d6d8c112fc308b244d2353c7d937",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
