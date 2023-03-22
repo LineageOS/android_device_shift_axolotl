@@ -16,6 +16,23 @@
       "message": "Tests pass again with it reverted.\n\nI assume AIDL and HIDL conflict with each other.\nAs we can not use the AIDL widevine HAL (needs updated liboemcrypto, which is pretty hard for us to obtain), we are stuck with the HIDL clearkey one for now.",
       "revId": "c3ebe8fdddc033cc0999c73e85b56fd66712e475",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7e3991b2_8d90b305",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19282
+      },
+      "writtenOn": "2023-03-22T07:41:30Z",
+      "side": 1,
+      "message": "Sad :/",
+      "revId": "c3ebe8fdddc033cc0999c73e85b56fd66712e475",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
