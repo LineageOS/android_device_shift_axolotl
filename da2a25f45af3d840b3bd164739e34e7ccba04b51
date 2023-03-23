@@ -16,6 +16,24 @@
       "message": "Is Calyx shipping any apps, which are 32 bit only?",
       "revId": "da2a25f45af3d840b3bd164739e34e7ccba04b51",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0088e50a_b8dea0cb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2195
+      },
+      "writtenOn": "2023-03-23T15:24:04Z",
+      "side": 1,
+      "message": "Doesn\u0027t look like it from a quick check.",
+      "parentUuid": "65a04fec_df8ffedc",
+      "revId": "da2a25f45af3d840b3bd164739e34e7ccba04b51",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
