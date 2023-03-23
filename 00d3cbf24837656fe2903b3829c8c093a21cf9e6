@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5a132a9a_7a4c24ae",
+        "filename": "configs/media/media_codecs.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 210,
+      "author": {
+        "id": 19282
+      },
+      "writtenOn": "2023-03-23T10:31:09Z",
+      "side": 1,
+      "message": "cogsi wants 12, cts wants 14, lovely 😄",
+      "range": {
+        "startLine": 210,
+        "startChar": 47,
+        "endLine": 210,
+        "endChar": 55
+      },
+      "revId": "00d3cbf24837656fe2903b3829c8c093a21cf9e6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
