@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "65a04fec_df8ffedc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19282
+      },
+      "writtenOn": "2023-03-23T10:42:56Z",
+      "side": 1,
+      "message": "Is Calyx shipping any apps, which are 32 bit only?",
+      "revId": "da2a25f45af3d840b3bd164739e34e7ccba04b51",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
