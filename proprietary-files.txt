@@ -935,7 +935,7 @@ vendor/lib64/libsns_registry_skel.so
 vendor/lib64/libsnsdiaglog.so
 vendor/lib64/libssc.so
 vendor/lib64/libssc_default_listener.so
-vendor/lib64/sensors.ssc.so
+vendor/lib64/sensors.ssc.so|9d8dbb36cf249f1915817db8eaae8ee10fd10e4e
 vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
 
 # Sensors configs
