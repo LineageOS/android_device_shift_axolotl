@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1c000440_d065b86a",
+        "filename": "device.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 297,
+      "author": {
+        "id": 19282
+      },
+      "writtenOn": "2023-04-17T17:05:24Z",
+      "side": 1,
+      "message": "Setting this will issue a powerhint[1], which can be optionally handled.\n\n[1] - https://cs.android.com/android/platform/superproject/+/master:hardware/interfaces/power/1.3/types.hal",
+      "range": {
+        "startLine": 297,
+        "startChar": 4,
+        "endLine": 297,
+        "endChar": 33
+      },
+      "revId": "9933638ed14a7e7cb6fe1a580b822dec78db58a0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
