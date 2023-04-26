@@ -110,24 +110,77 @@
         <item>3000</item>
     </integer-array>
 
-    <!-- Array of output values for LCD backlight corresponding to the LUX values
-         in the config_autoBrightnessLevels array.  This array should have size one greater
-         than the size of the config_autoBrightnessLevels array.
-         The brightness values must be between 0 and 255 and be non-decreasing.
-         This must be overridden in platform specific overlays -->
-    <integer-array name="config_autoBrightnessLcdBacklightValues">
+    <!-- Array of desired screen brightness in nits corresponding to the lux values
+         in the config_autoBrightnessLevels array. As with config_screenBrightnessMinimumNits and
+         config_screenBrightnessMaximumNits, the display brightness is defined as the measured
+         brightness of an all-white image.
+
+         If this is defined then:
+            - config_autoBrightnessLcdBacklightValues should not be defined
+            - config_screenBrightnessNits must be defined
+            - config_screenBrightnessBacklight must be defined
+
+         This array should have size one greater than the size of the config_autoBrightnessLevels
+         array. The brightness values must be non-negative and non-decreasing. This must be
+         overridden in platform specific overlays -->
+    <array name="config_autoBrightnessDisplayValuesNits">
         <item>20</item>  <!--    0 -   10 -->
-        <item>25</item>  <!--   10 -   13 -->
-        <item>30</item>  <!--   13 -   15 -->
-        <item>45</item>  <!--   15 -   30 -->
-        <item>70</item>  <!--   30 -   70 -->
-        <item>120</item> <!--   70 -  150 -->
-        <item>150</item> <!--  150 -  200 -->
-        <item>195</item> <!--  200 -  500 -->
-        <item>210</item> <!--  500 - 1000 -->
-        <item>225</item> <!-- 1000 - 3000 -->
-        <item>255</item> <!-- 3000+ -->
-    </integer-array>
+        <item>30</item>  <!--   10 -   13 -->
+        <item>45</item>  <!--   13 -   15 -->
+        <item>70</item>  <!--   15 -   30 -->
+        <item>95</item>  <!--   30 -   70 -->
+        <item>111</item> <!--   70 -  150 -->
+        <item>149</item> <!--  150 -  200 -->
+        <item>192</item> <!--  200 -  500 -->
+        <item>252</item> <!--  500 - 1000 -->
+        <item>376</item> <!-- 1000 - 3000 -->
+        <item>500</item> <!-- 3000+ -->
+    </array>
+
+
+    <!-- An array describing the screen's backlight values corresponding to the brightness
+         values in the config_screenBrightnessNits array.
+
+         This array should be equal in size to config_screenBrightnessBacklight. -->
+    <array name="config_screenBrightnessBacklight">
+        <item>0</item>
+        <item>1</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>12</item>
+        <item>48</item>
+        <item>57</item>
+        <item>76</item>
+        <item>98</item>
+        <item>129</item>
+        <item>255</item>
+    </array>
+
+    <!-- An array of floats describing the screen brightness in nits corresponding to the backlight
+         values in the config_screenBrightnessBacklight array.  On OLED displays these  values
+         should be measured with an all white image while the display is in the fully on state.
+         Note that this value should *not* reflect the maximum brightness value for any high
+         brightness modes but only the maximum brightness value obtainable in a sustainable manner.
+
+         This array should be equal in size to config_screenBrightnessBacklight -->
+    <array name="config_screenBrightnessNits">
+        <item>0</item>
+        <item>2</item>
+        <item>7</item>
+        <item>10</item>
+        <item>12</item>
+        <item>24</item>
+        <item>95</item>
+        <item>111</item>
+        <item>149</item>
+        <item>192</item>
+        <item>252</item>
+        <item>500</item>
+    </array>
+
+
+
 
     <!-- Stability requirements in milliseconds for accepting a new brightness level.  This is used
          for debouncing the light sensor.  Different constants are used to debounce the light sensor
