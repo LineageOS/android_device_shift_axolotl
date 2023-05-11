@@ -626,7 +626,6 @@ vendor/bin/init.qcom.class_core.sh
 vendor/bin/init.qcom.post_boot.sh
 vendor/bin/init.qcom.sensors.sh
 vendor/bin/init.qcom.sh
-vendor/bin/init.qcom.usb.sh
 vendor/etc/init/hw/init.msm.usb.configfs.rc
 vendor/etc/init/hw/init.qcom.usb.rc
 
