@@ -15,20 +15,8 @@
 -->
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Determine whether we should show the "listen for instructions" screen after
-         successfully placing the OTA call -->
-    <integer name="OtaShowListeningScreen">1</integer>
-
-    <!-- Flag indicating if the phone is a world phone -->
-    <!-- DEPRECATED: Use CarrierConfigManager#KEY_WORLD_PHONE_BOOL -->
-    <bool name="world_phone">true</bool>
-
     <!-- Flag indicating if hac is enabled -->
     <bool name="hac_enabled">true</bool>
-
-    <!-- Flag indicating if dtmf tone type is enabled -->
-    <!-- DEPRECATED: Use CarrierConfigManager#KEY_DTMF_TYPE_ENABLED_BOOL -->
-    <bool name="dtmf_type_enabled">true</bool>
 
     <!-- String indicating the package name of the device ImsService implementation for MMTEL. -->
     <string name="config_ims_mmtel_package" translatable="false">org.codeaurora.ims</string>
