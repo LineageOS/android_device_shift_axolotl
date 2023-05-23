@@ -39,6 +39,30 @@
       },
       "revId": "6b1ac7eba38bf04dcb6713363421aaf6267bac59",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "106d8e66_873a3907",
+        "filename": "proprietary-files-widevine.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 19282
+      },
+      "writtenOn": "2023-05-23T09:49:08Z",
+      "side": 1,
+      "message": "Yes",
+      "parentUuid": "ad7a2e9a_2b2f3324",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 70
+      },
+      "revId": "6b1ac7eba38bf04dcb6713363421aaf6267bac59",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
