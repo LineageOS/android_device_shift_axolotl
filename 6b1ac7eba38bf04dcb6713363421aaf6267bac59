@@ -16,6 +16,29 @@
       "message": "https://github.com/TheMuppets/proprietary_vendor_shift_axolotl/pull/10",
       "revId": "6b1ac7eba38bf04dcb6713363421aaf6267bac59",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ad7a2e9a_2b2f3324",
+        "filename": "proprietary-files-widevine.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2023-05-23T09:45:39Z",
+      "side": 1,
+      "message": "Is this on purpose?",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 70
+      },
+      "revId": "6b1ac7eba38bf04dcb6713363421aaf6267bac59",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
