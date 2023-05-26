@@ -203,6 +203,16 @@ ro.vendor.use_data_netmgrd=true
 # Sensors
 persist.vendor.sensors.enable.mag_filter=true
 
+# USB
+vendor.usb.diag.func.name=diag
+vendor.usb.dpl.inst.name=dpl
+vendor.usb.qdss.inst.name=qdss
+vendor.usb.rmnet.func.name=gsi
+vendor.usb.rmnet.inst.name=rmnet
+vendor.usb.rndis.func.name=gsi
+vendor.usb.use_ffs_mtp=0
+vendor.usb.use_gadget_hal=0
+
 # Watchdog - enable timeout loop breaker
 framework_watchdog.fatal_window.second=600
 framework_watchdog.fatal_count=3
