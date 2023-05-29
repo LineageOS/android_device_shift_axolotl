@@ -984,7 +984,6 @@ vendor/etc/sensors/hals.conf
 vendor/etc/sensors/sns_reg_config
 
 # Snapdragon Computer Vision Engine
-###vendor/lib64/libscveScan3D.so
 vendor/etc/scve/facereco/gModel.dat
 vendor/lib/rfsa/adsp/libfastcvadsp.so
 vendor/lib/rfsa/adsp/libfastcvdsp_skel.so
@@ -1035,8 +1034,6 @@ vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.soter@1.0.so
 
 # Thermal engine
-###vendor/lib/hw/thermal.sdm845.so
-###vendor/lib64/hw/thermal.sdm845.so
 vendor/bin/thermal-engine
 vendor/etc/thermal-engine.conf
 vendor/lib/libthermalclient.so
