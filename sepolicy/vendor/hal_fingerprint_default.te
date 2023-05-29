@@ -1,4 +1,3 @@
-
 hal_client_domain(system_app, hal_fingerprint)
 
 binder_call(hal_fingerprint_default, system_app);
