@@ -1,4 +1,3 @@
-
 # Fingerprint
 /dev/goodix_fp                                                           u:object_r:fingerprintd_device:s0
 

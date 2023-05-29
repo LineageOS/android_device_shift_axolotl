@@ -1,4 +1,3 @@
-
 set_prop(hal_power_default, power_prop)
 
 dontaudit hal_power_default self:capability dac_override;

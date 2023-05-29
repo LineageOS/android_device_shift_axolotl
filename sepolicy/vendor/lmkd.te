@@ -1,3 +1,2 @@
-
 allow lmkd hal_iop_hwservice:hwservice_manager { find };
 allow lmkd hal_iop_default:binder { call };

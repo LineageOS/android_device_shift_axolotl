@@ -1,4 +1,3 @@
-
 dontaudit thermal-engine self:capability dac_override;
 
 allow thermal-engine init:unix_stream_socket connectto;
