@@ -16,6 +16,23 @@
       "message": "```\n******************************\n2 violations found:\nro.camera.req.fmq.size     u:object_r:vendor_ro_camera_prop:s0\nro.camera.res.fmq.size     u:object_r:vendor_ro_camera_prop:s0\n******************************\ndevice/shift/axolotl/sepolicy/vendor/property_contexts contains properties which are not properly namespaced.\nThis is enforced by VTS, so please fix such offending properties.\nAllowed property prefixes for device/shift/axolotl/sepolicy/vendor/property_contexts: [\u0027ctl.odm.\u0027, \u0027ctl.vendor.\u0027, \u0027ctl.start$odm.\u0027, \u0027ctl.start$vendor.\u0027, \u0027ctl.stop$odm.\u0027, \u0027ctl.stop$vendor.\u0027, \u0027init.svc.odm.\u0027, \u0027init.svc.vendor.\u0027, \u0027ro.boot.\u0027, \u0027ro.hardware.\u0027, \u0027ro.odm.\u0027, \u0027ro.vendor.\u0027, \u0027odm.\u0027, \u0027persist.odm.\u0027, \u0027persist.vendo\nr.\u0027, \u0027vendor.\u0027, \u0027persist.camera.\u0027]\nYou can temporarily disable this check with setting BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE :\u003d true in BoardConfig.mk.\nBut property namespace is enforced by VTS, and you will need to fix such violations to pass VTS.\nSee test/vts-testcase/security/system_property/vts_treble_sys_prop_test.py for the detail of the VTS.\n```",
       "revId": "7b6ef8b3244725314033652c4ece195e2278a12c",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9c246713_52f3f6c6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2023-05-30T20:40:48Z",
+      "side": 1,
+      "message": "I guess we can just ignore this",
+      "revId": "7b6ef8b3244725314033652c4ece195e2278a12c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
