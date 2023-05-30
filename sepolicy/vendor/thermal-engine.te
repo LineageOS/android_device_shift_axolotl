@@ -1,9 +1,7 @@
 dontaudit thermal-engine self:capability dac_override;
 
-allow thermal-engine init:unix_stream_socket connectto;
-allow thermal-engine proc:file { open read write };
-allow thermal-engine property_socket:sock_file write;
-allow thermal-engine sysfs:dir { open read };
+# /sys/class/kgsl
+allow thermal-engine sysfs:dir r_dir_perms;
 
 allow thermal-engine sysfs_devfreq:dir r_dir_perms;
 allow thermal-engine sysfs_devfreq:file rw_file_perms;

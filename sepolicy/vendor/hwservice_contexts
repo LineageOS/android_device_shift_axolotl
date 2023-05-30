@@ -1,11 +1,8 @@
-hardware.shift.light::ILight                         u:object_r:hal_light_hwservice:s0
-
 # Fingerprint
 vendor.goodix.hardware.biometrics.fingerprint::IGoodixFingerprintDaemon      u:object_r:hal_fingerprint_hwservice:s0
-vendor.goodix.hardware.biometrics.fingerprint::IGoodixFingerprintDaemonFido  u:object_r:hal_fingerprint_hwservice:s0
-vendor.goodix.hardware.biometrics.fingerprint::IGoodixFingerprintDaemonHbd   u:object_r:hal_fingerprint_hwservice:s0
 
-vendor.goodix.hardware.fingerprint::IGoodixBiometricsFingerprint             u:object_r:hal_goodix_hwservice:s0
+# Light
+hardware.shift.light::ILight                                                 u:object_r:hal_light_hwservice:s0
 
 # NFC
 vendor.nxp.nxpese::INxpEse                                                   u:object_r:nxpese_hwservice:s0
