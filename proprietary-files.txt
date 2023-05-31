@@ -434,8 +434,8 @@ vendor/lib64/libizat_client_api.so
 vendor/lib64/libizat_core.so
 vendor/lib64/libjnihelper.so
 vendor/lib64/liblbs_core.so
-vendor/lib64/libloc_api_v02.so
-vendor/lib64/libloc_socket.so
+vendor/lib64/libloc_api_v02.so|102ae80b20d1300a66a09f56b667a3b0f05d8642
+vendor/lib64/libloc_socket.so|bd99742beb9436322b26ae9cab97304b825ea8ab
 vendor/lib64/liblocationservice.so
 vendor/lib64/liblocationservice_glue.so
 vendor/lib64/liblowi_client.so
