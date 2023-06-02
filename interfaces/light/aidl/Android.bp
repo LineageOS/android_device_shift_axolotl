@@ -1,0 +1,29 @@
+/*
+ * Copyright (C) 2023 SHIFT GmbH
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+aidl_interface {
+    name: "hardware.shift.light",
+    vendor_available: true,
+    srcs: ["hardware/shift/light/*.aidl"],
+    stability: "vintf",
+    owner: "shift",
+
+    backend: {
+        cpp: {
+            enabled: false,
+        },
+        java: {
+            sdk_version: "module_current",
+        },
+    },
+    versions_with_info: [
+        {
+            version: "1",
+            imports: [],
+        },
+    ],
+
+}
