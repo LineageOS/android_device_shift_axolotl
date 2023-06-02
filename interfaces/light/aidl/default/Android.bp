@@ -1,0 +1,29 @@
+/*
+ * Copyright (C) 2023 SHIFT GmbH
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+cc_binary {
+    name: "hardware.shift.light-service.default",
+    vendor: true,
+    relative_install_path: "hw",
+    init_rc: ["hardware.shift.light-service.default.rc"],
+    vintf_fragments: ["hardware.shift.light-service.default.xml"],
+    srcs: [
+        "main.cpp",
+        "Lights.cpp",
+    ],
+    shared_libs: [
+        "libbase",
+        "libbinder_ndk",
+        "hardware.shift.light-V1-ndk",
+    ],
+    product_variables: {
+        debuggable: {
+            cflags: [
+                "-DLOG_NDEBUG=0",
+            ],
+        },
+    },
+}
