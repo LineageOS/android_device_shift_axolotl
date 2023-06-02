@@ -1,1 +1,5 @@
+# Fingerprint HAL
 android.hardware.fingerprint.IGoodixFingerprintDaemon  u:object_r:goodixfingerprintd_service:s0
+
+# Lights HAL
+hardware.shift.light.ILights/default                   u:object_r:hal_light_service:s0
