@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4aff5b6b_d708e825",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2023-06-03T19:41:02Z",
+      "side": 1,
+      "message": "We don\u0027t really want to enable qualcomm location (and we also recently removed all the blobs for it.",
+      "revId": "a68b3a36d4307150b8e4b1ced8eda5127546956c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
