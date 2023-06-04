@@ -8,17 +8,3 @@
 soong_namespace {
     imports: ["hardware/qcom-caf/bootctrl"],
 }
-
-prebuilt_hidl_interfaces {
-    name: "hidl_vendor_qti_hardware_alarm_interface",
-    interfaces: [
-        "vendor.qti.hardware.alarm@1.0::IAlarm",
-    ],
-}
-
-prebuilt_hidl_interfaces {
-    name: "hidl_vendor_qti_hardware_vpp_interface",
-    interfaces: [
-        "vendor.qti.hardware.vpp@1.1::IHidlVppService",
-    ],
-}
