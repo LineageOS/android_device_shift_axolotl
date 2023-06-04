@@ -16,6 +16,23 @@
       "message": "We don\u0027t really want to enable qualcomm location (and we also recently removed all the blobs for it.",
       "revId": "a68b3a36d4307150b8e4b1ced8eda5127546956c",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "104bea46_aab1ef41",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19282
+      },
+      "writtenOn": "2023-06-04T12:52:37Z",
+      "side": 1,
+      "message": "turning this into a stock only patch then, to better support microG out of the box.",
+      "revId": "a68b3a36d4307150b8e4b1ced8eda5127546956c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
