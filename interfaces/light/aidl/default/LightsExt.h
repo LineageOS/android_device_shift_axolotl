@@ -26,10 +26,16 @@ struct TorchNode {
 };
 
 struct LightsExt : public BnLights {
+  public:
+    LightsExt();
+
     ndk::ScopedAStatus setTorchState(const Torch& in_torch, const TorchState& in_state) override;
     ndk::ScopedAStatus getTorches(std::vector<Torch>* torches) override;
 
     binder_status_t dump(int fd, const char** args, uint32_t numArgs) override;
+
+  private:
+    std::vector<Torch> mTorches;
 };
 
 }  // namespace light

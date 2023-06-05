@@ -116,6 +116,21 @@ TEST_P(SHIFT_LightsAidl, TestInvalidTorchUnsupported) {
     EXPECT_TRUE(status.getExceptionCode() == EX_UNSUPPORTED_OPERATION);
 }
 
+/**
+ * Ensure a logical torch is reported if there are at least two torches.
+ */
+TEST_P(SHIFT_LightsAidl, TestLogicalTorchReported) {
+    const auto supportedTorchCount = supportedTorches.size();
+    EXPECT_FALSE(supportedTorchCount == 2);
+
+    if (supportedTorchCount < 2) {
+        GTEST_SKIP() << "Only a single torch supported";
+        return;
+    }
+
+    EXPECT_TRUE(kAllTorchTypes.find(TorchType::NORMAL) != kAllTorchTypes.end());
+}
+
 GTEST_ALLOW_UNINSTANTIATED_PARAMETERIZED_TEST(SHIFT_LightsAidl);
 INSTANTIATE_TEST_SUITE_P(SHIFT_Lights, SHIFT_LightsAidl,
                          testing::ValuesIn(android::getAidlHalInstanceNames(ILightsExt::descriptor)),
