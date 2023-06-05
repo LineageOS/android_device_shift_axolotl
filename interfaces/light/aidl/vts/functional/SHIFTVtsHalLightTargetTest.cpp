@@ -105,6 +105,17 @@ TEST_P(SHIFT_LightsAidl, TestUniqueIds) {
     }
 }
 
+/**
+ * Ensure EX_UNSUPPORTED_OPERATION is returns for an invalid torch.
+ */
+TEST_P(SHIFT_LightsAidl, TestInvalidTorchUnsupported) {
+    Torch invalidTorch;
+    invalidTorch.id = -1;
+
+    auto status = lightsExt->setTorchState(invalidTorch, TorchState());
+    EXPECT_TRUE(status.getExceptionCode() == EX_UNSUPPORTED_OPERATION);
+}
+
 GTEST_ALLOW_UNINSTANTIATED_PARAMETERIZED_TEST(SHIFT_LightsAidl);
 INSTANTIATE_TEST_SUITE_P(SHIFT_Lights, SHIFT_LightsAidl,
                          testing::ValuesIn(android::getAidlHalInstanceNames(ILightsExt::descriptor)),
