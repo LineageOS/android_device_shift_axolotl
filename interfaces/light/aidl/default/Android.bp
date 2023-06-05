@@ -13,10 +13,12 @@ cc_binary {
     srcs: [
         "main.cpp",
         "Lights.cpp",
+        "LightsExt.cpp",
     ],
     shared_libs: [
         "libbase",
         "libbinder_ndk",
+        "android.hardware.light-V1-ndk",
         "hardware.shift.light-V1-ndk",
     ],
     product_variables: {
