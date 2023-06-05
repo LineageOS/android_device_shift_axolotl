@@ -16,6 +16,24 @@
       "message": "Missing newline",
       "revId": "e55fe9272165164ab27401ec00b61d1201205cc0",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3efac7fd_deaa554f",
+        "filename": "interfaces/light/aidl/default/LightsExt.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 19282
+      },
+      "writtenOn": "2023-06-05T13:00:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "096e5d62_4c1b2ecc",
+      "revId": "e55fe9272165164ab27401ec00b61d1201205cc0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
