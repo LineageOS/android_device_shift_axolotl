@@ -49,6 +49,38 @@ static const std::vector<TorchNode> kTorchNodes = {
          "/sys/class/leds/led:torch_1/max_brightness", "/sys/class/leds/led:torch_1/trigger"},
 };
 
+LightsExt::LightsExt() {
+    for (const auto& node : kTorchNodes) {
+        if (!fileExists(node.brightnessPath) || !fileExists(node.brightnessMaxPath) ||
+            !fileExists(node.triggerPath)) {
+            continue;
+        }
+
+        std::string maxBrightnessStr;
+        if (!android::base::ReadFileToString(node.brightnessMaxPath, &maxBrightnessStr, true)) {
+            LOG(ERROR) << "Failed to read max brightness value value for torch with id " << node.id;
+            continue;
+        }
+        maxBrightnessStr = android::base::Trim(maxBrightnessStr);
+
+        Torch torch;
+        torch.id = node.id;
+        torch.type = node.type;
+        torch.maxBrightness = std::stoi(maxBrightnessStr);
+        mTorches.push_back(torch);
+    }
+
+    // If there are at least 2 torches, add a logical torch node
+    const int torchCount = mTorches.size();
+    if (torchCount >= 2) {
+        Torch logicalTorch;
+        logicalTorch.id = torchCount;
+        logicalTorch.type = TorchType::NORMAL;
+        logicalTorch.maxBrightness = 100;
+        mTorches.push_back(logicalTorch);
+    }
+}
+
 ndk::ScopedAStatus LightsExt::setTorchState(const Torch& in_torch, const TorchState& in_state) {
     bool on = (in_state.brightness > 0);
 
@@ -64,6 +96,12 @@ ndk::ScopedAStatus LightsExt::setTorchState(const Torch& in_torch, const TorchSt
         case 1: {
             LOG(DEBUG) << "Handling Torch::ONE, on=" << (on ? "true" : "false");
             torchZeroValue = "0";
+            torchOneValue = (on ? "100" : "0");
+            break;
+        }
+        case 2: {
+            LOG(DEBUG) << "Handling logical torch, on=" << (on ? "true" : "false");
+            torchZeroValue = (on ? "100" : "0");
             torchOneValue = (on ? "100" : "0");
             break;
         }
@@ -100,26 +138,9 @@ ndk::ScopedAStatus LightsExt::setTorchState(const Torch& in_torch, const TorchSt
 }
 
 ndk::ScopedAStatus LightsExt::getTorches(std::vector<Torch>* torches) {
-    for (const auto& node : kTorchNodes) {
-        if (!fileExists(node.brightnessPath) || !fileExists(node.brightnessMaxPath) ||
-            !fileExists(node.triggerPath)) {
-            continue;
-        }
-
-        std::string maxBrightnessStr;
-        if (!android::base::ReadFileToString(node.brightnessMaxPath, &maxBrightnessStr, true)) {
-            LOG(ERROR) << "Failed to read max brightness value value for torch with id " << node.id;
-            continue;
-        }
-        maxBrightnessStr = android::base::Trim(maxBrightnessStr);
-
-        Torch torch;
-        torch.id = node.id;
-        torch.type = node.type;
-        torch.maxBrightness = std::stoi(maxBrightnessStr);
+    for (const auto& torch : mTorches) {
         torches->push_back(torch);
     }
-
     return ndk::ScopedAStatus::ok();
 }
 
