@@ -1,4 +1,0 @@
-# HALs released in ShiftOS 3.0
-
-0cb3ebe649827252fcaea55f632b29e77c2b8b4e957c91aaa39f761db0f33619 hardware.shift.light@1.0::ILight
-1d34607d8aba4d488ba8bf905db7e445ebea3e18758a49c63437eaf765066f73 hardware.shift.light@1.0::types
