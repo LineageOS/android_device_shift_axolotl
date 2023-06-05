@@ -68,10 +68,8 @@ ndk::ScopedAStatus LightsExt::setTorchState(const Torch& in_torch, const TorchSt
             break;
         }
         default: {
-            LOG(WARNING) << "Unknown torch, on=" << (on ? "true" : "false");
-            torchZeroValue = "0";
-            torchOneValue = "0";
-            break;
+            LOG(ERROR) << "Unknown torch, on=" << (on ? "true" : "false");
+            return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
         }
     }
 
