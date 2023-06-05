@@ -39,13 +39,13 @@ static T get(const std::string& path, const T& def) {
     { .id = (int32_t)light, .type = light, .ordinal = 0 }
 
 static const HwLight kAttentionHwLight = AutoHwLight(LightType::ATTENTION);
-static const HwLight kBacklightHwLight = AutoHwLight(LightType::BACKLIGHT);
+//static const HwLight kBacklightHwLight = AutoHwLight(LightType::BACKLIGHT);
 static const HwLight kBatteryHwLight = AutoHwLight(LightType::BATTERY);
 static const HwLight kNotificationHwLight = AutoHwLight(LightType::NOTIFICATIONS);
 
 Lights::Lights() {
     mLights.push_back(kAttentionHwLight);
-    mLights.push_back(kBacklightHwLight);
+    //mLights.push_back(kBacklightHwLight);
     mLights.push_back(kBatteryHwLight);
     mLights.push_back(kNotificationHwLight);
 }
