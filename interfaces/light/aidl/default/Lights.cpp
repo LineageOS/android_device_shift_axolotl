@@ -1,144 +1,175 @@
 /*
+ * Copyright (C) 2019 The Android Open Source Project
  * Copyright (C) 2023 SHIFT GmbH
  *
  * SPDX-License-Identifier: Apache-2.0
  */
 
-#define LOG_TAG "hardware.shift.light-service.default"
-
 #include "Lights.h"
 
-#include <android-base/file.h>
 #include <android-base/logging.h>
-#include <android-base/strings.h>
-#include <android/binder_status.h>
+#include <android-base/stringprintf.h>
 #include <fstream>
-#include "android/binder_auto_utils.h"
+#include <map>
 
 namespace aidl {
+namespace android {
 namespace hardware {
-namespace shift {
 namespace light {
 
-static bool fileExists(const std::string& path) {
-    if (path.empty()) {
-        return false;
-    }
-
-    int retries = 10;
-
-    while (retries--) {
-        android::base::unique_fd fd(TEMP_FAILURE_RETRY(open(path.c_str(), O_RDWR)));
-
-        if (fd > -1) {
-            return true;
-        }
-
-        usleep(100000);
-    }
-
-    return false;
+/*
+ * Write value to path and close file.
+ */
+template <typename T>
+static void set(const std::string& path, const T& value) {
+    std::ofstream file(path);
+    file << value;
 }
 
-static const std::string kSwitchBrightnessNode = "/sys/class/leds/led:switch_0/brightness";
+template <typename T>
+static T get(const std::string& path, const T& def) {
+    std::ifstream file(path);
+    T result;
 
-static const std::vector<TorchNode> kTorchNodes = {
-        {0, TorchType::COLD, "/sys/class/leds/led:torch_0/brightness",
-         "/sys/class/leds/led:torch_0/max_brightness", "/sys/class/leds/led:torch_0/trigger"},
-        {1, TorchType::WARM, "/sys/class/leds/led:torch_1/brightness",
-         "/sys/class/leds/led:torch_1/max_brightness", "/sys/class/leds/led:torch_1/trigger"},
-};
+    file >> result;
+    return file.fail() ? def : result;
+}
 
-ndk::ScopedAStatus Lights::setTorchState(const Torch& in_torch, const TorchState& in_state) {
-    bool on = (in_state.brightness > 0);
+#define AutoHwLight(light) \
+    { .id = (int32_t)light, .type = light, .ordinal = 0 }
 
-    std::string torchZeroValue;
-    std::string torchOneValue;
-    switch (in_torch.id) {
-        case 0: {
-            LOG(DEBUG) << "Handling Torch::ZERO, on=" << (on ? "true" : "false");
-            torchZeroValue = (on ? "100" : "0");
-            torchOneValue = "0";
+static const HwLight kAttentionHwLight = AutoHwLight(LightType::ATTENTION);
+static const HwLight kBatteryHwLight = AutoHwLight(LightType::BATTERY);
+static const HwLight kNotificationHwLight = AutoHwLight(LightType::NOTIFICATIONS);
+
+Lights::Lights() {
+    mLights.push_back(kAttentionHwLight);
+    mLights.push_back(kBatteryHwLight);
+    mLights.push_back(kNotificationHwLight);
+}
+
+ndk::ScopedAStatus Lights::handleBacklight(const HwLightState& /*state*/) {
+    // TODO: implement
+    return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
+}
+
+ndk::ScopedAStatus Lights::handleRgb(const HwLightState& state, size_t index) {
+    mLightStates.at(index) = state;
+
+    HwLightState stateToUse = mLightStates.front();
+    for (const auto& lightState : mLightStates) {
+        if (lightState.color & 0xffffff) {
+            stateToUse = lightState;
             break;
         }
-        case 1: {
-            LOG(DEBUG) << "Handling Torch::ONE, on=" << (on ? "true" : "false");
-            torchZeroValue = "0";
-            torchOneValue = (on ? "100" : "0");
-            break;
+    }
+
+    std::map<std::string, int> colorValues;
+    colorValues["red"] = (stateToUse.color >> 16) & 0xff;
+    // lower green and blue brightness to adjust for the (lower) brightness of red
+    colorValues["green"] = ((stateToUse.color >> 8) & 0xff) / 2;
+    colorValues["blue"] = (stateToUse.color & 0xff) / 2;
+
+    int onMs = stateToUse.flashMode == FlashMode::TIMED ? stateToUse.flashOnMs : 0;
+    int offMs = stateToUse.flashMode == FlashMode::TIMED ? stateToUse.flashOffMs : 0;
+
+    // LUT has 63 entries, we could theoretically use them as 3 (colors) * 21 (steps).
+    // However, the last LUT entries don't seem to behave correctly for unknown
+    // reasons, so we use 17 steps for a total of 51 LUT entries only.
+    static constexpr int kRampSteps = 16;
+    static constexpr int kRampMaxStepDurationMs = 15;
+
+    auto makeLedPath = [](const std::string& led, const std::string& op) -> std::string {
+        return "/sys/class/leds/" + led + "/" + op;
+    };
+    auto getScaledDutyPercent = [](int brightness) -> std::string {
+        std::string output;
+        for (int i = 0; i <= kRampSteps; i++) {
+            if (i != 0) {
+                output += ",";
+            }
+            output += std::to_string(i * 512 * brightness / (255 * kRampSteps));
         }
-        default: {
-            LOG(WARNING) << "Unknown torch, on=" << (on ? "true" : "false");
-            torchZeroValue = "0";
-            torchOneValue = "0";
-            break;
+        return output;
+    };
+
+    // Disable all blinking before starting
+    for (const auto& entry : colorValues) {
+        set(makeLedPath(entry.first, "blink"), 0);
+    }
+
+    if (onMs > 0 && offMs > 0) {
+        int pauseLo, pauseHi, stepDuration, index = 0;
+        if (kRampMaxStepDurationMs * kRampSteps > onMs) {
+            stepDuration = onMs / kRampSteps;
+            pauseHi = 0;
+            pauseLo = offMs;
+        } else {
+            stepDuration = kRampMaxStepDurationMs;
+            pauseHi = onMs - kRampSteps * stepDuration;
+            pauseLo = offMs - kRampSteps * stepDuration;
+        }
+
+        for (const auto& entry : colorValues) {
+            set(makeLedPath(entry.first, "lut_flags"), 95);
+            set(makeLedPath(entry.first, "start_idx"), index);
+            set(makeLedPath(entry.first, "duty_pcts"), getScaledDutyPercent(entry.second));
+            set(makeLedPath(entry.first, "pause_lo"), pauseLo);
+            set(makeLedPath(entry.first, "pause_hi"), pauseHi);
+            set(makeLedPath(entry.first, "ramp_step_ms"), stepDuration);
+            index += kRampSteps + 1;
+        }
+
+        // Start blinking
+        for (const auto& entry : colorValues) {
+            set(makeLedPath(entry.first, "blink"), entry.second);
+        }
+    } else {
+        for (const auto& entry : colorValues) {
+            set(makeLedPath(entry.first, "brightness"), entry.second);
         }
     }
 
-    if (!android::base::WriteStringToFile(torchZeroValue, kTorchNodes[0].brightnessPath)) {
-        LOG(ERROR) << "Failed to write to torch zero brightness node!";
-        return ndk::ScopedAStatus::fromExceptionCode(EX_ILLEGAL_STATE);
-    }
-    if (!android::base::WriteStringToFile(torchOneValue, kTorchNodes[1].brightnessPath)) {
-        LOG(ERROR) << "Failed to write to torch one brightness node!";
-        return ndk::ScopedAStatus::fromExceptionCode(EX_ILLEGAL_STATE);
-    }
-    if (!android::base::WriteStringToFile((on ? "1" : "0"), kSwitchBrightnessNode)) {
-        LOG(ERROR) << "Failed to write to switch brightness node!";
-        return ndk::ScopedAStatus::fromExceptionCode(EX_ILLEGAL_STATE);
-    }
+    LOG(DEBUG) << ::android::base::StringPrintf(
+            "handleRgb: mode=%d, color=%08X, onMs=%d, offMs=%d",
+            static_cast<std::underlying_type<FlashMode>::type>(stateToUse.flashMode),
+            stateToUse.color, onMs, offMs);
 
-    if (!on) {
-        if (!android::base::WriteStringToFile("torch0_trigger", kTorchNodes[0].triggerPath)) {
-            LOG(ERROR) << "Failed to write to torch zero trigger node!";
-            return ndk::ScopedAStatus::fromExceptionCode(EX_ILLEGAL_STATE);
-        }
-        if (!android::base::WriteStringToFile("torch1_trigger", kTorchNodes[1].triggerPath)) {
-            LOG(ERROR) << "Failed to write to torch one trigger node!";
-            return ndk::ScopedAStatus::fromExceptionCode(EX_ILLEGAL_STATE);
-        }
-    }
     return ndk::ScopedAStatus::ok();
 }
 
-ndk::ScopedAStatus Lights::getTorches(std::vector<Torch>* torches) {
-    for (const auto& node : kTorchNodes) {
-        if (!fileExists(node.brightnessPath) || !fileExists(node.brightnessMaxPath) ||
-            !fileExists(node.triggerPath)) {
-            continue;
-        }
+ndk::ScopedAStatus Lights::setLightState(int id, const HwLightState& state) {
+    LOG(INFO) << "Lights setting state for id=" << id << " to color " << std::hex << state.color;
 
-        std::string maxBrightnessStr;
-        if (!android::base::ReadFileToString(node.brightnessMaxPath, &maxBrightnessStr, true)) {
-            LOG(ERROR) << "Failed to read max brightness value value for torch with id " << node.id;
-            continue;
-        }
-        maxBrightnessStr = android::base::Trim(maxBrightnessStr);
+    /*
+     * Lock global mutex until light state is updated.
+     */
+    std::lock_guard<std::mutex> lock(mLock);
 
-        Torch torch;
-        torch.id = node.id;
-        torch.type = node.type;
-        torch.maxBrightness = std::stoi(maxBrightnessStr);
-        torches->push_back(torch);
+    const LightType type = static_cast<LightType>(id);
+    switch (type) {
+        case LightType::BACKLIGHT:
+            return handleBacklight(state);
+        case LightType::ATTENTION:
+            return handleRgb(state, 0);
+        case LightType::BATTERY:
+            return handleRgb(state, 2);
+        case LightType::NOTIFICATIONS:
+            return handleRgb(state, 1);
+        default:
+            return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
+    }
+}
+
+ndk::ScopedAStatus Lights::getLights(std::vector<HwLight>* lights) {
+    for (auto const& light : mLights) {
+        lights->push_back(light);
     }
 
     return ndk::ScopedAStatus::ok();
-}
-
-binder_status_t Lights::dump(int fd, const char** /* args */, uint32_t /* numArgs */) {
-    std::vector<Torch> torches;
-    getTorches(&torches);
-
-    dprintf(fd, "Torches:\n");
-    for (const auto& torch : torches) {
-        dprintf(fd, "\t- ID: %d, Type: %s, Max Brightness: %d\n", torch.id,
-                toString(torch.type).c_str(), torch.maxBrightness);
-    }
-
-    return STATUS_OK;
 }
 
 }  // namespace light
-}  // namespace shift
 }  // namespace hardware
+}  // namespace android
 }  // namespace aidl
