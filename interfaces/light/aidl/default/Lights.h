@@ -1,4 +1,5 @@
 /*
+ * Copyright (C) 2019 The Android Open Source Project
  * Copyright (C) 2023 SHIFT GmbH
  *
  * SPDX-License-Identifier: Apache-2.0
@@ -6,33 +7,36 @@
 
 #pragma once
 
-#include <aidl/hardware/shift/light/BnLights.h>
+#include <aidl/android/hardware/light/BnLights.h>
+#include <mutex>
+#include <vector>
 
-#include <android/binder_status.h>
-#include <string>
-#include "android/binder_auto_utils.h"
+using ::aidl::android::hardware::light::HwLight;
+using ::aidl::android::hardware::light::HwLightState;
 
 namespace aidl {
+namespace android {
 namespace hardware {
-namespace shift {
 namespace light {
 
-struct TorchNode {
-    const int id;
-    const TorchType type;
-    const std::string brightnessPath;
-    const std::string brightnessMaxPath;
-    const std::string triggerPath;
-};
+// Default implementation that reports no supported lights.
+class Lights : public BnLights {
+  public:
+    Lights();
 
-struct Lights : public BnLights {
-    ndk::ScopedAStatus setTorchState(const Torch& in_torch, const TorchState& in_state) override;
-    ndk::ScopedAStatus getTorches(std::vector<Torch>* torches) override;
+    ndk::ScopedAStatus setLightState(int id, const HwLightState& state) override;
+    ndk::ScopedAStatus getLights(std::vector<HwLight>* types) override;
 
-    binder_status_t dump(int fd, const char** args, uint32_t numArgs) override;
+  private:
+    ndk::ScopedAStatus handleBacklight(const HwLightState& state);
+    ndk::ScopedAStatus handleRgb(const HwLightState& state, size_t index);
+
+    std::mutex mLock;
+    std::vector<HwLight> mLights;
+    std::array<HwLightState, 3> mLightStates;
 };
 
 }  // namespace light
-}  // namespace shift
 }  // namespace hardware
+}  // namespace android
 }  // namespace aidl
