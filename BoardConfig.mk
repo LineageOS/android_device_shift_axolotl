@@ -10,9 +10,6 @@ include vendor/shift/axolotl/BoardConfigVendor.mk
 
 DEVICE_PATH := device/shift/axolotl
 
-# We copy prebuilt binaries and libs instead of packaging them
-BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
-
 #####
 
 # Architecture
