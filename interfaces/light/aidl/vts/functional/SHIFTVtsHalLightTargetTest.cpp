@@ -133,7 +133,7 @@ TEST_P(SHIFT_LightsAidl, TestLogicalTorchReported) {
 
 GTEST_ALLOW_UNINSTANTIATED_PARAMETERIZED_TEST(SHIFT_LightsAidl);
 INSTANTIATE_TEST_SUITE_P(SHIFT_Lights, SHIFT_LightsAidl,
-                         testing::ValuesIn(android::getAidlHalInstanceNames(ILightsExt::descriptor)),
+                         testing::ValuesIn(android::getAidlHalInstanceNames(ILights::descriptor)),
                          android::PrintInstanceNameToString);
 
 int main(int argc, char** argv) {
