@@ -507,7 +507,7 @@ PRODUCT_PACKAGES += \
 
 # VNDK
 PRODUCT_PACKAGES += \
-    libcomparetf2 \
+    libcomparetf2_shim \
     libgui_vendor \
 
 # WiFi

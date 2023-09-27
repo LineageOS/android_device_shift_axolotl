@@ -60,7 +60,7 @@ function blob_fixup() {
             grep -q "libui_shim.so" "${2}" || "${PATCHELF}" --add-needed "libui_shim.so" "${2}"
             ;;
         vendor/lib64/hw/camera.qcom.so)
-            grep -q "libcomparetf2.so" "${2}" || "${PATCHELF}" --add-needed "libcomparetf2.so" "${2}"
+            grep -q "libcomparetf2_shim.so" "${2}" || "${PATCHELF}" --add-needed "libcomparetf2_shim.so" "${2}"
             ;;
     esac
 }
