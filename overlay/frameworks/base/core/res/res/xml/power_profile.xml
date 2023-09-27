@@ -183,6 +183,7 @@
       <value>2476800</value>
       <value>2553600</value>
       <value>2649600</value>
+      <value>2803200</value>
   </array>
 
   <array name="cpu.core_power.cluster0">
@@ -230,6 +231,7 @@
       <value>313.4</value>
       <value>337.7</value>
       <value>400.8</value>
+      <value>469.3</value>
   </array>
 
   <!-- Total power drawn by the system when CPUs (and the SoC) are in system suspend state. -->
