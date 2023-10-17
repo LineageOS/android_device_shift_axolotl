@@ -41,12 +41,13 @@ TARGET_SCREEN_DENSITY := 420
 TARGET_NO_KERNEL := false
 TARGET_NO_KERNEL_OVERRIDE := false
 
-ifeq ($(TARGET_BUILD_VARIANT),eng)
-    TARGET_KERNEL_CONFIG := lineage_axolotl_eng_defconfig
-else
-    TARGET_KERNEL_CONFIG := lineage_axolotl_defconfig
-endif
 TARGET_KERNEL_SOURCE := kernel/shift/sdm845
+TARGET_KERNEL_CONFIG := vendor/shift/axolotl_defconfig
+ifeq ($(TARGET_BUILD_VARIANT),eng)
+    TARGET_KERNEL_CONFIG += vendor/shift/debug.config
+else
+    TARGET_KERNEL_CONFIG += vendor/debugfs.config
+endif
 
 TARGET_KERNEL_LLVM_BINUTILS := false
 TARGET_KERNEL_CLANG_VERSION := r416183b
