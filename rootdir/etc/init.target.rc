@@ -8,8 +8,6 @@ on early-init
     mount_all /vendor/etc/fstab.persist --early
 
 on init
-    start logd
-
     wait /dev/block/platform/soc/1d84000.ufshc
     symlink /dev/block/platform/soc/1d84000.ufshc /dev/block/bootdevice
 
@@ -30,15 +28,12 @@ on late-fs
     start vendor.hwcomposer-2-3
     start vendor.configstore-hal
     start vendor.qti.hardware.display.allocator
-    start vendor.light-hal-2-0
+    start vendor.light-default
 
     # Wait for hwservicemanager ready since fsck might be triggered in mount_all --late
     # In such case, init won't responce the property_set from hwservicemanager and then
     # cause services for bootanim not running.
     wait_for_prop hwservicemanager.ready true
-
-    # Wait for keymaster
-    exec_start wait_for_keymaster
 
     mount_all /vendor/etc/fstab.qcom --late
 
