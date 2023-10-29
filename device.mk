@@ -464,6 +464,9 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@2.0.vendor \
     libsensorndkbridge \
 
+# Shipping API
+PRODUCT_SHIPPING_API_LEVEL := 29
+
 # Telephony
 PRODUCT_PACKAGES += \
     ims-ext-common \
