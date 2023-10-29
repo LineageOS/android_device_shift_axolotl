@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f0446899_b70a463e",
+        "filename": "device.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 510,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2023-10-29T21:03:01Z",
+      "side": 1,
+      "message": "Remove?",
+      "range": {
+        "startLine": 509,
+        "startChar": 0,
+        "endLine": 510,
+        "endChar": 23
+      },
+      "revId": "8704480ff725bed7157ae45da1aa9da0897a8d4f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
