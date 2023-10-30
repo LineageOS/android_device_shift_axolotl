@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5dc49ffc_b41a89f6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2023-10-30T00:20:00Z",
+      "side": 1,
+      "message": "Maybe a revert of https://github.com/LineageOS/android_device_shift_axolotl/commit/c3ebe8fdddc033cc0999c73e85b56fd66712e475 fits better here in this case, with an explanation?",
+      "revId": "6bdc79ae940c4eda6b14699f0833b6c3fd58cacf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
