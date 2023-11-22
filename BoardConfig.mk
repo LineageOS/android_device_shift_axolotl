@@ -279,19 +279,7 @@ BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_COPY_OUT_VENDOR := vendor
 
 # Reserve space for gapps installation and other customizations
-# product:    1500 MB
-# system:      500 MB
-# system_ext:  500 MB
-# vendor:      250 MB
-ifneq ($(WITH_GMS),true)
-    BOARD_PRODUCTIMAGE_EXTFS_INODE_COUNT := -1
-    BOARD_PRODUCTIMAGE_PARTITION_RESERVED_SIZE := 1572864000
-    BOARD_SYSTEM_EXTIMAGE_EXTFS_INODE_COUNT := -1
-    BOARD_SYSTEM_EXTIMAGE_PARTITION_RESERVED_SIZE := 524288000
-    BOARD_SYSTEMIMAGE_EXTFS_INODE_COUNT := -1
-    BOARD_SYSTEMIMAGE_PARTITION_RESERVED_SIZE := 524288000
-    BOARD_VENDORIMAGE_PARTITION_RESERVED_SIZE := 262144000
-endif
+-include vendor/lineage/config/BoardConfigReservedSize.mk
 
 # Include ShiftOS specific BoardConfig if existing
 -include device/shift/axolotl/shiftos/BoardConfig.mk
