@@ -1,4 +1,4 @@
-# Proprietary files - from SHIFT6MQ.SOS.3.8.G.20220824-RELEASE, unless pinned
+# Proprietary files - from SHIFT6MQ.SOS.3.10.G.20231025-RELEASE, unless pinned
 
 # ADSP
 vendor/bin/adsprpcd
