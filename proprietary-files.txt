@@ -392,12 +392,12 @@ vendor/lib64/vendor.qti.esepowermanager@1.0.so
 #vendor/lib64/vendor.qti.hardware.factory@1.1.so
 
 # Fingerprint
-vendor/lib/hw/fingerprint.default.so:vendor/lib/hw/fingerprint.sdm845.so
-vendor/lib64/hw/fingerprint.default.so:vendor/lib64/hw/fingerprint.sdm845.so
-vendor/lib64/libgf_ca.so
-vendor/lib64/libgf_hal.so
-vendor/lib64/libgoodixhwfingerprint.so
-vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so|8f80d54f6465bcea22f6e36363941df93f3c614f
+vendor/lib/hw/fingerprint.default.so:odm/lib/hw/fingerprint.sdm845.so
+vendor/lib64/hw/fingerprint.default.so:odm/lib64/hw/fingerprint.sdm845.so
+vendor/lib64/libgf_ca.so:odm/lib64/libgf_ca.so
+vendor/lib64/libgf_hal.so:odm/lib64/libgf_hal.so
+vendor/lib64/libgoodixhwfingerprint.so:odm/lib64/libgoodixhwfingerprint.so
+vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so:odm/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so|8f80d54f6465bcea22f6e36363941df93f3c614f
 
 # FM
 product/lib/vendor.qti.hardware.fm@1.0.so:system_ext/lib/vendor.qti.hardware.fm@1.0.so
