@@ -2,6 +2,11 @@
 # product.prop for axolotl
 #
 
+# AAudio - MMAP
+aaudio.mmap_policy=2
+aaudio.mmap_exclusive_policy=2
+aaudio.hw_burst_min_usec=2000
+
 # Dex2oat
 dalvik.vm.dex2oat64.enabled=true
 
