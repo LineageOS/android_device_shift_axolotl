@@ -132,7 +132,7 @@ vendor/lib64/camera/components/libdepthmapwrapper.so
 vendor/lib64/camera/com.qti.sensor.imx519.so
 vendor/lib64/camera/com.qti.sensor.s5k2x7sp.so
 vendor/lib64/camera/com.qti.sensor.s5k3p9sp.so
-vendor/lib64/camera/com.qti.sensormodule.sunny_imx519.bin
+vendor/lib64/camera/com.qti.sensormodule.sunny_imx519.bin|f9a55588b06cd93c3dfdf124f7990cb0a5fc2bfb
 vendor/lib64/camera/com.qti.sensormodule.sunny_s5k2x7sp.bin
 vendor/lib64/camera/com.qti.sensormodule.sunny_s5k3p9sp.bin
 vendor/lib64/camera/com.qti.tuned.default.bin
@@ -143,8 +143,8 @@ vendor/lib64/camera/fdconfigpreview.bin
 vendor/lib64/camera/fdconfigpreviewlite.bin
 vendor/lib64/camera/fdconfigvideo.bin
 vendor/lib64/camera/fdconfigvideolite.bin
-vendor/lib64/hw/camera.qcom.so
-vendor/lib64/hw/com.qti.chi.override.so
+vendor/lib64/hw/camera.qcom.so|a1a1d4ba76000dd368fbbe94cd0b0be1cc37fba1
+vendor/lib64/hw/com.qti.chi.override.so|abb97c8c7d19c313126d7d512a361aa6100ea533
 vendor/lib64/libarcsoft_dualcam_refocus_image.so
 vendor/lib64/libarcsoft_dualcam_refocus_video.so
 vendor/lib64/libarcsoft_high_dynamic_range.so
