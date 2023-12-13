@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b83602f6_58e59887",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19282
+      },
+      "writtenOn": "2023-12-13T09:30:16Z",
+      "side": 1,
+      "message": "This is for the rebased kernel at -\u003e https://github.com/SHIFTPHONES/android_kernel_shift_sdm845/tree/sos-5.x\n\nOnly verified it with lineage-20 yet, not with lineage-21.",
+      "revId": "8ee5247837eda66363c7bedb4f7aed6099945bcb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
