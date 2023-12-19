@@ -21,4 +21,4 @@ telephony.lteOnCdmaDevice=1
 ro.sys.cp_msleeptime=30000
 
 # Vendor
-sys.vendor.shutdown.waittime=2000
+sys.vendor.shutdown.waittime=500
