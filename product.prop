@@ -11,8 +11,8 @@ aaudio.hw_burst_min_usec=2000
 dalvik.vm.dex2oat64.enabled=true
 
 # LMKD
-ro.lmk.critical=1
-ro.lmk.log_stats=true
+ro.lmk.kill_heaviest_task=true
+ro.lmk.kill_timeout_ms=15
 
 # System prop to turn on CdmaLTEPhone always
 telephony.lteOnCdmaDevice=1
