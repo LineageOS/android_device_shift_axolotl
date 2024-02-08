@@ -154,7 +154,7 @@ TARGET_USES_ION := true
 
 # HIDL
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/vintf/manifest.xml
-DEVICE_MATRIX_FILE := $(DEVICE_PATH)/vintf/compatibility_matrix.xml
+DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
 
 # Light
 TARGET_PROVIDES_LIBLIGHT := true
