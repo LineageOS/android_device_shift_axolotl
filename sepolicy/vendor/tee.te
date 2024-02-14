@@ -1,0 +1,6 @@
+# TODO: Remove data_between_core_and_vendor_violators once
+# tee no longer directly accesses /data/vendor_de
+typeattribute tee data_between_core_and_vendor_violators;
+
+allow tee vendor_userdir_file:dir rw_dir_perms;
+allow tee vendor_userdir_file:file create_file_perms;
