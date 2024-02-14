@@ -44,8 +44,8 @@ on post-fs
     write /dev/ipa 1
 
 on post-fs-data
-    chown system system /data/vendor_de/
-    chmod 0777 /data/vendor_de/
+    # TODO: Remove once tee no longer directly accesses /data/vendor_de
+    chown system root /data/vendor_de
 
     mkdir /data/vendor/nnhal 0700 system system
 
