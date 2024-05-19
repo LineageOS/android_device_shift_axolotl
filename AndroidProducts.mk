@@ -7,8 +7,3 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/lineage_axolotl.mk \
-
-COMMON_LUNCH_CHOICES := \
-    lineage_axolotl-eng \
-    lineage_axolotl-userdebug \
-    lineage_axolotl-user \
