@@ -284,6 +284,7 @@ PRODUCT_COPY_FILES += \
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0.vendor \
+    libion.vendor \
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -447,6 +448,7 @@ PRODUCT_PACKAGES += \
     CarrierConfigOverlay \
     libjson \
     librmnetctl \
+    libsqlite.vendor \
 
 # RenderScript
 PRODUCT_PACKAGES += \
