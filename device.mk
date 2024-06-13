@@ -447,6 +447,7 @@ PRODUCT_PACKAGES += \
     CarrierConfigOverlay \
     libjson \
     librmnetctl \
+    libsqlite.vendor \
 
 # RenderScript
 PRODUCT_PACKAGES += \
