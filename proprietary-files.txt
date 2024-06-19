@@ -1045,9 +1045,7 @@ vendor/lib64/vendor.qti.hardware.vpp@1.2.so|ca1906012d0ab6dc9048aa49703833512308
 
 # Widevine DRM
 vendor/lib/libhdcpsrm.so
-vendor/lib/liboemcrypto.so
 vendor/lib64/libhdcpsrm.so
-vendor/lib64/liboemcrypto.so
 
 # Widevine DRM firmware
 vendor/firmware/cppf.b00
