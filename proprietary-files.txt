@@ -56,7 +56,7 @@ vendor/lib64/libcsd-client.so
 vendor/lib64/libqtigef.so
 
 # Audio - Firmware
-vendor/firmware/tfa98xx.cnt
+vendor/firmware/tfa98xx.cnt|5da3eb53d62dd22fc6fd0e368a275dbd8ac45fd3
 
 # Audio FX modules
 system/etc/permissions/audiosphere.xml
