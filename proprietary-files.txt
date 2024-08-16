@@ -335,7 +335,7 @@ system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk|53c2d0eb6669a983db80562aa8c1
 # DPM
 vendor/bin/dpmQmiMgr
 vendor/etc/init/dpmQmiMgr.rc
-vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so
+vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so;MODULE_SUFFIX=_vendor
 vendor/lib64/libdpmqmihal.so
 
 # DRM
