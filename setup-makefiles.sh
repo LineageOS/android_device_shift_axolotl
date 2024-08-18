@@ -49,6 +49,9 @@ function lib_to_package_fixup_vendor_variants() {
         libprotobuf-cpp-full)
             echo "libprotobuf-cpp-full-vendorcompat"
             ;;
+        libOmxCore | \
+            libril | \
+            libwpa_client) ;;
         *)
             return 1
             ;;
