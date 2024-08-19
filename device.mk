@@ -6,7 +6,7 @@
 #
 
 # Inherit from those products. Most specific first.
-ifeq ($(WITH_64_BIT_ONLY),false)
+ifneq ($(WITH_64_BIT_ONLY),true)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 else
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
