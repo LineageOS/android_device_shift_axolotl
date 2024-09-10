@@ -51,6 +51,8 @@ blob_fixups: blob_fixups_user_type = {
     'system_ext/lib64/lib-imsvideocodec.so': blob_fixup()
         .add_needed('libgui_shim.so')
         .add_needed('libui_shim.so'),
+    ('vendor/lib/libwvhidl@1.3.so', 'vendor/lib64/libwvhidl@1.3.so'): blob_fixup()
+        .add_needed('libcrypto_shim.so'),
     'vendor/lib64/hw/camera.qcom.so': blob_fixup()
         .add_needed('libcomparetf2_shim.so'),
     'vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so': blob_fixup()
