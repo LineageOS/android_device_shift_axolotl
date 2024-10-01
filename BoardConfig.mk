@@ -185,9 +185,6 @@ VENDOR_SECURITY_PATCH := 2024-07-05
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
-# Treble
-BOARD_VNDK_VERSION := current
-
 # WLAN
 BOARD_WLAN_DEVICE := qcwcn
 BOARD_HOSTAPD_DRIVER := NL80211
