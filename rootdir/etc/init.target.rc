@@ -44,7 +44,8 @@ on post-fs
 
 on post-fs-data
     # TODO: Remove once tee no longer directly accesses /data/vendor_de
-    chown system root /data/vendor_de
+    chown system system /data/vendor_de/
+    chmod 0777 /data/vendor_de/
 
     mkdir /data/vendor/nnhal 0700 system system
 
