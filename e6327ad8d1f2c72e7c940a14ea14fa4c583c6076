@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b0cf587f_422bbbd2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2195
+      },
+      "writtenOn": "2024-10-10T15:05:08Z",
+      "side": 1,
+      "message": "From Mike\u0027s tests:\n\n```\n$ adb shell ls -la /data/vendor_de\ntotal 161\ndrwxrwxrwx  3 system system  3464 2024-10-10 17:54 .\ndrwxrwx--x 50 system system  4096 2024-10-10 17:48 ..\ndrwxrwx--x  4 root   root    3464 1970-09-10 04:52 0\n-rwx------  1 system system    70 2024-10-10 17:54 auth_token_0.so\n-rwx------  1 system system 59557 2024-10-10 17:54 finger_0_0.so\n-rwx------  1 system system 59557 2024-10-10 17:54 finger_0_0_bak.so\n-rwx------  1 system system 20660 2024-10-10 17:54 gf_calibration.so\n-rwx------  1 system system    80 2024-10-10 17:48 gf_fdt_base.so\n-rwx------  1 system system  3256 2024-10-10 17:54 gf_nav_base.so\n-rwx------  1 system system   116 2024-10-10 17:48 gf_otp_info.so\n\n$ adb shell touch /data/vendor_de/foo\ntouch: \u0027/data/vendor_de/foo\u0027: Permission denied\n\n$ adb shell ls /data/vendor_de\nls: /data/vendor_de: Permission denied\n```",
+      "revId": "e6327ad8d1f2c72e7c940a14ea14fa4c583c6076",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
