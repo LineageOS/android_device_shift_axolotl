@@ -213,6 +213,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service \
+    libhidlbase-v32.vendor \
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.fingerprint.xml \
@@ -513,9 +514,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libcomparetf2_shim \
     libgui_vendor \
-
-PRODUCT_COPY_FILES += \
-    prebuilts/vndk/v32/arm64/arch-arm64-armv8-a/shared/vndk-sp/libhidlbase.so:$(TARGET_COPY_OUT_ODM)/lib64/libhidlbase-v32.so \
 
 # WiFi
 PRODUCT_PACKAGES += \
