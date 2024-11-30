@@ -2,5 +2,7 @@
 vendor/bin/hw/android.hardware.drm@1.3-service.widevine|9c0dd84297efd40b3cad6f698d62cafbbb1bea79
 vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc|a9ce64f68c86725c06c1b1429e90b04ff96ebf60
 vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml|ebebcf8f367641480cf7d512fc06e6ab777527be
+vendor/lib/liboemcrypto.so|9c17921a7c84456f25c4917331a0e124b7561df1
 vendor/lib/libwvhidl@1.3.so|0b0205ba44abdf8f24e28d9a46e2fdeaddbc7fb1
+vendor/lib64/liboemcrypto.so|4a61b40ce1bbe67ceed625d7bd82b02ec6db7628
 vendor/lib64/libwvhidl@1.3.so|e3426d442d79e053d47bfa00513763e3745b384a

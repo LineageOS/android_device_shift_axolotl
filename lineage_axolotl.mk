@@ -21,6 +21,6 @@ PRODUCT_NAME := lineage_axolotl
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE=axolotl \
     PRODUCT_NAME=axolotl \
-    PRIVATE_BUILD_DESC="axolotl-user 10 QSV1.210329.038 20220824 release-keys"
+    PRIVATE_BUILD_DESC="axolotl-user 13 TQ3A.230901.001 20240820 release-keys"
 
-BUILD_FINGERPRINT := SHIFT/axolotl/axolotl:10/QSV1.210329.038/20220824:user/release-keys
+BUILD_FINGERPRINT := SHIFT/axolotl/axolotl:13/TQ3A.230901.001/20240820:user/release-keys

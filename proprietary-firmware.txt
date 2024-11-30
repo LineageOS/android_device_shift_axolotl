@@ -1,4 +1,4 @@
-# Firmware - from SHIFT6MQ.SOS.3.10.G.20231025-RELEASE
+# Firmware - from SHIFT6MQ.SOS.5.0.G.20240820-RELEASE
 
 ImageFv.img;AB
 abl.img;AB

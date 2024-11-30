@@ -1,4 +1,4 @@
-# Proprietary files - from SHIFT6MQ.SOS.3.10.G.20231025-RELEASE, unless pinned
+# Proprietary files - from SHIFT6MQ.SOS.5.0.G.20240820-RELEASE, unless pinned
 
 # ADSP
 vendor/bin/adsprpcd
@@ -56,7 +56,7 @@ vendor/lib64/libcsd-client.so
 vendor/lib64/libqtigef.so
 
 # Audio - Firmware
-vendor/firmware/tfa98xx.cnt|5da3eb53d62dd22fc6fd0e368a275dbd8ac45fd3
+vendor/firmware/tfa98xx.cnt
 
 # Audio FX modules
 system/etc/permissions/audiosphere.xml
@@ -132,7 +132,7 @@ vendor/lib64/camera/components/libdepthmapwrapper.so
 vendor/lib64/camera/com.qti.sensor.imx519.so
 vendor/lib64/camera/com.qti.sensor.s5k2x7sp.so
 vendor/lib64/camera/com.qti.sensor.s5k3p9sp.so
-vendor/lib64/camera/com.qti.sensormodule.sunny_imx519.bin|f9a55588b06cd93c3dfdf124f7990cb0a5fc2bfb
+vendor/lib64/camera/com.qti.sensormodule.sunny_imx519.bin
 vendor/lib64/camera/com.qti.sensormodule.sunny_s5k2x7sp.bin
 vendor/lib64/camera/com.qti.sensormodule.sunny_s5k3p9sp.bin
 vendor/lib64/camera/com.qti.tuned.default.bin
@@ -143,8 +143,8 @@ vendor/lib64/camera/fdconfigpreview.bin
 vendor/lib64/camera/fdconfigpreviewlite.bin
 vendor/lib64/camera/fdconfigvideo.bin
 vendor/lib64/camera/fdconfigvideolite.bin
-vendor/lib64/hw/camera.qcom.so|a1a1d4ba76000dd368fbbe94cd0b0be1cc37fba1
-vendor/lib64/hw/com.qti.chi.override.so|abb97c8c7d19c313126d7d512a361aa6100ea533
+vendor/lib64/hw/camera.qcom.so
+vendor/lib64/hw/com.qti.chi.override.so
 vendor/lib64/libarcsoft_dualcam_refocus_image.so
 vendor/lib64/libarcsoft_dualcam_refocus_video.so
 vendor/lib64/libarcsoft_high_dynamic_range.so
@@ -397,7 +397,7 @@ vendor/lib64/hw/fingerprint.default.so:odm/lib64/hw/fingerprint.sdm845.so
 vendor/lib64/libgf_ca.so:odm/lib64/libgf_ca.so
 vendor/lib64/libgf_hal.so:odm/lib64/libgf_hal.so
 vendor/lib64/libgoodixhwfingerprint.so:odm/lib64/libgoodixhwfingerprint.so
-vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so:odm/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so|8f80d54f6465bcea22f6e36363941df93f3c614f
+vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so:odm/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so
 
 # FM
 product/lib/vendor.qti.hardware.fm@1.0.so:system_ext/lib/vendor.qti.hardware.fm@1.0.so
@@ -434,8 +434,8 @@ vendor/lib64/libizat_client_api.so
 vendor/lib64/libizat_core.so
 vendor/lib64/libjnihelper.so
 vendor/lib64/liblbs_core.so
-vendor/lib64/libloc_api_v02.so|102ae80b20d1300a66a09f56b667a3b0f05d8642
-vendor/lib64/libloc_socket.so|bd99742beb9436322b26ae9cab97304b825ea8ab
+vendor/lib64/libloc_api_v02.so
+vendor/lib64/libloc_socket.so
 vendor/lib64/liblocationservice.so
 vendor/lib64/liblocationservice_glue.so
 vendor/lib64/liblowi_client.so
@@ -871,7 +871,7 @@ vendor/lib64/libsns_registry_skel.so
 vendor/lib64/libsnsdiaglog.so
 vendor/lib64/libssc.so
 vendor/lib64/libssc_default_listener.so
-vendor/lib64/sensors.ssc.so|9d8dbb36cf249f1915817db8eaae8ee10fd10e4e
+vendor/lib64/sensors.ssc.so
 vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
 
 # Sensors configs
@@ -1027,9 +1027,7 @@ vendor/lib64/vendor.qti.hardware.vpp@1.2.so|ca1906012d0ab6dc9048aa49703833512308
 
 # Widevine DRM
 vendor/lib/libhdcpsrm.so
-vendor/lib/liboemcrypto.so
 vendor/lib64/libhdcpsrm.so
-vendor/lib64/liboemcrypto.so
 
 # Widevine DRM firmware
 vendor/firmware/cppf.b00
