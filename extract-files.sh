@@ -63,6 +63,10 @@ fi
 
 function blob_fixup() {
     case "${1}" in
+        odm/lib64/hw/fingerprint.sdm845.so)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF_0_17_2}" --set-soname "fingerprint.sdm845.so" "${2}"
+            ;;
         system_ext/lib64/lib-imsvideocodec.so)
             [ "$2" = "" ] && return 0
             grep -q "libgui_shim.so" "${2}" || "${PATCHELF}" --add-needed "libgui_shim.so" "${2}"
