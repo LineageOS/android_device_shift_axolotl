@@ -254,11 +254,9 @@ PRODUCT_COPY_FILES += \
 # Fstab
 PRODUCT_PACKAGES += \
     fstab.persist \
+    fstab.persist.ramdisk \
     fstab.qcom \
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.axolotl:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom \
-    $(LOCAL_PATH)/rootdir/etc/fstab.persist:$(TARGET_COPY_OUT_RAMDISK)/fstab.persist \
+    fstab.qcom.ramdisk \
 
 # GPS
 PRODUCT_PACKAGES += \
