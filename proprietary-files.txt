@@ -1,7 +1,6 @@
 # Proprietary files - from SHIFT6MQ.SOS.5.0.G.20240820-RELEASE, unless pinned
 
 # libOmxVpp depends on libOmxCore, which is a gnu makefile target
-# libantradio depends on unresolved symbol jniThrowException@LIBNATIVEHELPER_1
 # libcne, libwqe, lowi-server, imsdatadaemon depend on libwpa_client, which is a gnu makefile target
 
 # ADSP
@@ -31,8 +30,8 @@ vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so
 # ANT+ (system)
 product/lib/com.qualcomm.qti.ant@1.0.so:system_ext/lib/com.qualcomm.qti.ant@1.0.so
 product/lib64/com.qualcomm.qti.ant@1.0.so:system_ext/lib64/com.qualcomm.qti.ant@1.0.so
-system/lib/libantradio.so:system_ext/lib/libantradio.so;DISABLE_CHECKELF
-system/lib64/libantradio.so:system_ext/lib64/libantradio.so;DISABLE_CHECKELF
+system/lib/libantradio.so:system_ext/lib/libantradio.so
+system/lib64/libantradio.so:system_ext/lib64/libantradio.so
 
 # ANT+ (vendor)
 vendor/lib/com.qualcomm.qti.ant@1.0.so;MODULE_SUFFIX=_vendor
