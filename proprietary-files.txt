@@ -1,6 +1,6 @@
 # Proprietary files - from SHIFT6MQ.SOS.5.0.G.20240820-RELEASE, unless pinned
 
-# libOmxVpp depends on libOmxCore, which is a gnu makefile target
+# Current blobs with ELF checks disabled:
 # libcne, libwqe, lowi-server, imsdatadaemon depend on libwpa_client, which is a gnu makefile target
 
 # ADSP
@@ -642,7 +642,7 @@ vendor/lib64/unnhal-acc-hvx.so|772034f1a81a9f8d334db808af8bf3f7857d22b4
 vendor/lib/libpn553_fw.so:vendor/lib64/libpn553_fw.so
 
 # OMX
-vendor/lib/libOmxVpp.so;DISABLE_CHECKELF
+vendor/lib/libOmxVpp.so
 
 # Peripheral manager
 vendor/bin/pm-proxy
