@@ -1,6 +1,6 @@
 #
 # Copyright (C) 2021 SHIFT GmbH
-# Copyright (C) 2021 The LineageOS Project
+# Copyright (C) 2021-2025 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -201,7 +201,6 @@ PRODUCT_COPY_FILES += \
 # FM packages
 PRODUCT_PACKAGES += \
     FM2 \
-    qcom.fmradio \
 
 # Framework permissions
 PRODUCT_COPY_FILES += \
