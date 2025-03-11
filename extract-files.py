@@ -9,7 +9,6 @@ from extract_utils.fixups_blob import (
     blob_fixups_user_type,
 )
 from extract_utils.fixups_lib import (
-    lib_fixup_remove,
     lib_fixups,
     lib_fixups_user_type,
 )
@@ -38,9 +37,6 @@ lib_fixups: lib_fixups_user_type = {
         'com.qualcomm.qti.dpm.api@1.0',
         'vendor.qti.hardware.fm@1.0',
     ): lib_fixup_vendor_suffix,
-    (
-        'libwpa_client',
-    ): lib_fixup_remove,
 }
 
 blob_fixups: blob_fixups_user_type = {
