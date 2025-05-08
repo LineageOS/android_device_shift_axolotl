@@ -16,5 +16,8 @@ media.stagefright.thumbnail.prefer_hw_codecs=true
 # Radio
 ril.subscription.types=NV,RUIM
 
+# Telephony
+ro.telephony.handle_audio_direction_changes_between_call_state_changes=false
+
 # Vendor
 ro.vendor.qti.va_aosp.support=1
