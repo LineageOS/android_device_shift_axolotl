@@ -57,10 +57,6 @@ AB_OTA_POSTINSTALL_CONFIG += \
     FILESYSTEM_TYPE_vendor=ext4 \
     POSTINSTALL_OPTIONAL_vendor=true \
 
-# ANT+
-PRODUCT_PACKAGES += \
-    AntHalService \
-
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl \
